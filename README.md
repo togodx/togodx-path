@@ -1,1 +1,1 @@
-# togodx-path
+# TogoDX path
