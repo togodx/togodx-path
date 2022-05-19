@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Togo-DX path</title>
+        <script src='https://cdn.jsdelivr.net/gh/blitzboard/blitzboard@master/blitzboard.js'></script>
+        <script src='https://cdn.jsdelivr.net/gh/blitzboard/blitzboard@master/vis-network.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/gh/blitzboard/blitzboard@master/lib/pg_parser_browserified.js' type='text/javascript'></script>
+    </head>
+    <body>
+        <div id='main-area'></div>
+        <script>
+         const child = document.createElement('div');
+         child.style = 'width: 800px; height: 600px; border: solid 1px silver;';
+         document.querySelector('#main-area').appendChild(child);
+         let blitzboard = new Blitzboard(child);
+         fetch('https://raw.githubusercontent.com/hchiba1/togodx/main/path/graph.pg').then(res => {
+             return res.text();
+         }).then(graph => {
+             blitzboard.setGraph(graph, false);
+             fetch('https://raw.githubusercontent.com/hchiba1/togodx/main/path/config.js').then(res => {
+                 return res.text();
+             }).then(config => {
+                 blitzboard.setConfig(Function('blitzboard', `"use strict";return (${config})`)(blitzboard), true);
+                 let stabilizing = true;
+                 blitzboard.network.on('stabilizationIterationsDone', () => {
+                     stabilizing = false;
+                 });
+                 blitzboard.network.on('stabilized', () => {
+                     stabilizing = false;
+                 });
+                 blitzboard.network.on('afterDrawing', () => {
+                     if (stabilizing) {
+                         blitzboard.network.fit();
+                     }
+                 });
+             });
+         });
+        </script>
+    </body>
+</html>
