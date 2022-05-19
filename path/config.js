@@ -2,12 +2,11 @@
   node: {
     caption: ['id'],
     defaultIcon: false,
-    size: '@size',
     color: '@color',
   },
   edge: {
-    caption: ['label'],
-    width: '@width',
+    caption: [],
+    width: 4,
     color: '@color',
     opacity: 0.6,
   },
