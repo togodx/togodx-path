@@ -1,11 +1,11 @@
 {
   node: {
-    caption: ['name'],
+    caption: ['displayLabel'],
     defaultIcon: false,
     color: '@color',
   },
   edge: {
-    caption: [],
+    caption: ['displayLabel'],
     width: 4,
     color: '@color',
     opacity: 0.6,
