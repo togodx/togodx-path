@@ -80,151 +80,201 @@ glytoucan
   color: "#673AA6"
 chembl_compound -> chebi
   name: "chembl_compound-chebi"
+  comment: "is equivalent to"
   color: "#A63A94"
 chembl_compound -> chembl_target
   name: "chembl_compound-chembl_target"
+  comment: "interacts with"
   color: "#A63A94"
 chembl_compound -> mesh
   name: "chembl_compound-mesh"
+  comment: "has related disease"
   color: "#A63A94"
 chembl_compound -> pubchem_compound
   name: "chembl_compound-pubchem_compound"
+  comment: "is nearly equivalent to"
   color: "#A63A94"
 chembl_target -> ensembl_gene
   name: "chembl_target-ensembl_gene"
+  comment: "is product of gene"
   color: "#79A63A"
 chembl_target -> pdb
   name: "chembl_target-pdb"
+  comment: "has 3D structure"
   color: "#79A63A"
 chembl_target -> uniprot
   name: "chembl_target-uniprot"
+  comment: "is equivalent to"
   color: "#79A63A"
 doid -> mesh
   name: "doid-mesh"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 doid -> omim_phenotype
   name: "doid-omim_phenotype"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 ensembl_gene -> hgnc
   name: "ensembl_gene-hgnc"
+  comment: "is nearly equivalent to"
   color: "#3AA64C"
 ensembl_gene -> ncbigene
   name: "ensembl_gene-ncbigene"
+  comment: "is nearly equivalent to"
   color: "#3AA64C"
 ensembl_gene -> uniprot
   name: "ensembl_gene-uniprot"
+  comment: "has gene product"
   color: "#3AA64C"
 glytoucan -> doid
   name: "glytoucan-doid"
+  comment: "has related disease"
   color: "#673AA6"
 glytoucan -> uniprot
   name: "glytoucan-uniprot"
+  comment: "is attached to"
   color: "#673AA6"
 hgnc -> ensembl_gene
   name: "hgnc-ensembl_gene"
+  comment: "is nearly equivalent to"
   color: "#3AA64C"
 hgnc -> ncbigene
   name: "hgnc-ncbigene"
+  comment: "is nearly equivalent to"
   color: "#3AA64C"
 hgnc -> uniprot
   name: "hgnc-uniprot"
+  comment: "has gene product"
   color: "#3AA64C"
 medgen -> hp
   name: "medgen-hp"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 medgen -> mesh
   name: "medgen-mesh"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 medgen -> mondo
   name: "medgen-mondo"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 medgen -> ncbigene
   name: "medgen-ncbigene"
+  comment: "is related with"
   color: "#3A5EA6"
 medgen -> omim_phenotype
   name: "medgen-omim_phenotype"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 medgen -> orphanet
   name: "medgen-orphanet"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 mondo -> doid
   name: "mondo-doid"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 mondo -> hp
   name: "mondo-hp"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 mondo -> mesh
   name: "mondo-mesh"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 mondo -> omim_phenotype
   name: "mondo-omim_phenotype"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 mondo -> orphanet
   name: "mondo-orphanet"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 nando -> mondo
   name: "nando-mondo"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 ncbigene -> ensembl_gene
   name: "ncbigene-ensembl_gene"
+  comment: "is nearly equivalent to"
   color: "#3AA64C"
 ncbigene -> hgnc
   name: "ncbigene-hgnc"
+  comment: "is nearly equivalent to"
   color: "#3AA64C"
 orphanet -> mesh
   name: "orphanet-mesh"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 orphanet -> omim_phenotype
   name: "orphanet-omim_phenotype"
+  comment: "is nearly equivalent to"
   color: "#3A5EA6"
 pdb -> uniprot
   name: "pdb-uniprot"
+  comment: "is 3D structure of"
   color: "#A6823A"
 pubchem_compound -> chebi
   name: "pubchem_compound-chebi"
+  comment: "is nearly equivalent to"
   color: "#A63A94"
 pubchem_compound -> chembl_compound
   name: "pubchem_compound-chembl_compound"
+  comment: "is nearly equivalent to"
   color: "#A63A94"
 pubchem_compound -> glytoucan
   name: "pubchem_compound-glytoucan"
+  comment: "is nearly equivalent to"
   color: "#A63A94"
 reactome_reaction -> chebi
   name: "reactome_reaction-chebi"
+  comment: "has participant molecule"
   color: "#A63A43"
 reactome_reaction -> uniprot
   name: "reactome_reaction-uniprot"
+  comment: "has participant molecule"
   color: "#A63A43"
 togovar -> ensembl_gene
   name: "togovar-ensembl_gene"
+  comment: "is located in"
   color: "#3AA69D"
 togovar -> hgnc
   name: "togovar-hgnc"
+  comment: "is located in"
   color: "#3AA69D"
 togovar -> medgen
   name: "togovar-medgen"
+  comment: "has related disease"
   color: "#3AA69D"
 togovar -> ncbigene
   name: "togovar-ncbigene"
+  comment: "is located in"
   color: "#3AA69D"
 uniprot -> chembl_target
   name: "uniprot-chembl_target"
+  comment: "is equivalent to"
   color: "#79A63A"
 uniprot -> ensembl_gene
   name: "uniprot-ensembl_gene"
+  comment: "is product of gene"
   color: "#79A63A"
 uniprot -> hgnc
   name: "uniprot-hgnc"
+  comment: "is product of gene"
   color: "#79A63A"
 uniprot -> ncbigene
   name: "uniprot-ncbigene"
+  comment: "is product of gene"
   color: "#79A63A"
 uniprot -> omim_phenotype
   name: "uniprot-omim_phenotype"
+  comment: "has related disease"
   color: "#79A63A"
 uniprot -> orphanet
   name: "uniprot-orphanet"
+  comment: "has related disease"
   color: "#79A63A"
 uniprot -> pdb
   name: "uniprot-pdb"
+  comment: "has 3D structure"
   color: "#79A63A"
