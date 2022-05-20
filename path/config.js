@@ -1,6 +1,6 @@
 {
   node: {
-    caption: ['id'],
+    caption: ['name'],
     defaultIcon: false,
     color: '@color',
   },
