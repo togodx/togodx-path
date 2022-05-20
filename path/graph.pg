@@ -79,102 +79,152 @@ glytoucan
   name: "GlyTouCan"
   color: "#673AA6"
 chembl_compound -> chebi
+  name: "chembl_compound-chebi"
   color: "#A63A94"
 chembl_compound -> chembl_target
+  name: "chembl_compound-chembl_target"
   color: "#A63A94"
 chembl_compound -> mesh
+  name: "chembl_compound-mesh"
   color: "#A63A94"
 chembl_compound -> pubchem_compound
+  name: "chembl_compound-pubchem_compound"
   color: "#A63A94"
 chembl_target -> ensembl_gene
+  name: "chembl_target-ensembl_gene"
   color: "#79A63A"
 chembl_target -> pdb
+  name: "chembl_target-pdb"
   color: "#79A63A"
 chembl_target -> uniprot
+  name: "chembl_target-uniprot"
   color: "#79A63A"
 doid -> mesh
+  name: "doid-mesh"
   color: "#3A5EA6"
 doid -> omim_phenotype
+  name: "doid-omim_phenotype"
   color: "#3A5EA6"
 ensembl_gene -> hgnc
+  name: "ensembl_gene-hgnc"
   color: "#3AA64C"
 ensembl_gene -> ncbigene
+  name: "ensembl_gene-ncbigene"
   color: "#3AA64C"
 ensembl_gene -> uniprot
+  name: "ensembl_gene-uniprot"
   color: "#3AA64C"
 glytoucan -> doid
+  name: "glytoucan-doid"
   color: "#673AA6"
 glytoucan -> uniprot
+  name: "glytoucan-uniprot"
   color: "#673AA6"
 hgnc -> ensembl_gene
+  name: "hgnc-ensembl_gene"
   color: "#3AA64C"
 hgnc -> ncbigene
+  name: "hgnc-ncbigene"
   color: "#3AA64C"
 hgnc -> uniprot
+  name: "hgnc-uniprot"
   color: "#3AA64C"
 medgen -> hp
+  name: "medgen-hp"
   color: "#3A5EA6"
 medgen -> mesh
+  name: "medgen-mesh"
   color: "#3A5EA6"
 medgen -> mondo
+  name: "medgen-mondo"
   color: "#3A5EA6"
 medgen -> ncbigene
+  name: "medgen-ncbigene"
   color: "#3A5EA6"
 medgen -> omim_phenotype
+  name: "medgen-omim_phenotype"
   color: "#3A5EA6"
 medgen -> orphanet
+  name: "medgen-orphanet"
   color: "#3A5EA6"
 mondo -> doid
+  name: "mondo-doid"
   color: "#3A5EA6"
 mondo -> hp
+  name: "mondo-hp"
   color: "#3A5EA6"
 mondo -> mesh
+  name: "mondo-mesh"
   color: "#3A5EA6"
 mondo -> omim_phenotype
+  name: "mondo-omim_phenotype"
   color: "#3A5EA6"
 mondo -> orphanet
+  name: "mondo-orphanet"
   color: "#3A5EA6"
 nando -> mondo
+  name: "nando-mondo"
   color: "#3A5EA6"
 ncbigene -> ensembl_gene
+  name: "ncbigene-ensembl_gene"
   color: "#3AA64C"
 ncbigene -> hgnc
+  name: "ncbigene-hgnc"
   color: "#3AA64C"
 orphanet -> mesh
+  name: "orphanet-mesh"
   color: "#3A5EA6"
 orphanet -> omim_phenotype
+  name: "orphanet-omim_phenotype"
   color: "#3A5EA6"
 pdb -> uniprot
+  name: "pdb-uniprot"
   color: "#A6823A"
 pubchem_compound -> chebi
+  name: "pubchem_compound-chebi"
   color: "#A63A94"
 pubchem_compound -> chembl_compound
+  name: "pubchem_compound-chembl_compound"
   color: "#A63A94"
 pubchem_compound -> glytoucan
+  name: "pubchem_compound-glytoucan"
   color: "#A63A94"
 reactome_reaction -> chebi
+  name: "reactome_reaction-chebi"
   color: "#A63A43"
 reactome_reaction -> uniprot
+  name: "reactome_reaction-uniprot"
   color: "#A63A43"
 togovar -> ensembl_gene
+  name: "togovar-ensembl_gene"
   color: "#3AA69D"
 togovar -> hgnc
+  name: "togovar-hgnc"
   color: "#3AA69D"
 togovar -> medgen
+  name: "togovar-medgen"
   color: "#3AA69D"
 togovar -> ncbigene
+  name: "togovar-ncbigene"
   color: "#3AA69D"
 uniprot -> chembl_target
+  name: "uniprot-chembl_target"
   color: "#79A63A"
 uniprot -> ensembl_gene
+  name: "uniprot-ensembl_gene"
   color: "#79A63A"
 uniprot -> hgnc
+  name: "uniprot-hgnc"
   color: "#79A63A"
 uniprot -> ncbigene
+  name: "uniprot-ncbigene"
   color: "#79A63A"
 uniprot -> omim_phenotype
+  name: "uniprot-omim_phenotype"
   color: "#79A63A"
 uniprot -> orphanet
+  name: "uniprot-orphanet"
   color: "#79A63A"
 uniprot -> pdb
+  name: "uniprot-pdb"
   color: "#79A63A"
