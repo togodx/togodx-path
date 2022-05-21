@@ -1,3 +1,3 @@
 # TogoDX path
 
-https://togodx.github.io/togodx-path/path.html
+https://togodx.github.io/togodx-path/path-simple.html
