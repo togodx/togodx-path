@@ -11,4 +11,9 @@
     opacity: 0.6,
   },
   layout: 'default',
+  extraOptions: {
+    physics: {
+      stabilization: true
+    }
+  }
 }
