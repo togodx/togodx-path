@@ -24,18 +24,7 @@
                  return res.text();
              }).then(config => {
                  blitzboard.setConfig(Function('blitzboard', `"use strict";return (${config})`)(blitzboard), true);
-                 let stabilizing = true;
-                 blitzboard.network.on('stabilizationIterationsDone', () => {
-                     stabilizing = false;
-                 });
-                 blitzboard.network.on('stabilized', () => {
-                     stabilizing = false;
-                 });
-                 blitzboard.network.on('afterDrawing', () => {
-                     if (stabilizing) {
-                         blitzboard.network.fit();
-                     }
-                 });
+                 blitzboard.network.stabilize();
              });
          });
         </script>
