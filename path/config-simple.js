@@ -1,6 +1,6 @@
 {
   node: {
-    caption: ['displayLabel'],
+    caption: ['display_label'],
     defaultIcon: false,
     color: '@color',
   },
