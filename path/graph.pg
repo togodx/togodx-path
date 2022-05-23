@@ -1,280 +1,280 @@
 chebi
   :Compound
-  displayLabel: "ChEBI compound"
+  display_label: "ChEBI compound"
   color: "#A63A94"
 chembl_compound
   :Compound
-  displayLabel: "ChEMBL compound"
+  display_label: "ChEMBL compound"
   color: "#A63A94"
 chembl_target
   :Protein
-  displayLabel: "ChEMBL target"
+  display_label: "ChEMBL target"
   color: "#79A63A"
 doid
   :Disease
-  displayLabel: "Disease ontology"
+  display_label: "Disease ontology"
   color: "#3A5EA6"
 ensembl_gene
   :Gene
-  displayLabel: "Ensembl gene"
+  display_label: "Ensembl gene"
   color: "#3AA64C"
 hgnc
   :Gene
-  displayLabel: "HGNC"
+  display_label: "HGNC"
   color: "#3AA64C"
 hp
   :Disease
-  displayLabel: "Human Phenotype Ontology"
+  display_label: "Human Phenotype Ontology"
   color: "#3A5EA6"
 medgen
   :Disease
-  displayLabel: "MedGen"
+  display_label: "MedGen"
   color: "#3A5EA6"
 mesh
   :Disease
-  displayLabel: "MeSH"
+  display_label: "MeSH"
   color: "#3A5EA6"
 mondo
   :Disease
-  displayLabel: "MONDO"
+  display_label: "MONDO"
   color: "#3A5EA6"
 nando
   :Disease
-  displayLabel: "NANDO"
+  display_label: "NANDO"
   color: "#3A5EA6"
 ncbigene
   :Gene
-  displayLabel: "NCBI gene"
+  display_label: "NCBI gene"
   color: "#3AA64C"
 omim_phenotype
   :Disease
-  displayLabel: "OMIM phenotype"
+  display_label: "OMIM phenotype"
   color: "#3A5EA6"
 orphanet
   :Disease
-  displayLabel: "Orphanet"
+  display_label: "Orphanet"
   color: "#3A5EA6"
 pdb
   :Structure
-  displayLabel: "PDB"
+  display_label: "PDB"
   color: "#A6823A"
 pubchem_compound
   :Compound
-  displayLabel: "PubChem compound"
+  display_label: "PubChem compound"
   color: "#A63A94"
 reactome_reaction
   :Interaction
-  displayLabel: "Reactome reaction"
+  display_label: "Reactome reaction"
   color: "#A63A43"
 togovar
   :Variant
-  displayLabel: "TogoVar variant"
+  display_label: "TogoVar variant"
   color: "#3AA69D"
 uniprot
   :Protein
-  displayLabel: "UniProt"
+  display_label: "UniProt"
   color: "#79A63A"
 glytoucan
   :Glycan
-  displayLabel: "GlyTouCan"
+  display_label: "GlyTouCan"
   color: "#673AA6"
 chembl_compound -> chebi
   link: "chembl_compound-chebi"
-  displayLabel: "is equivalent to"
+  display_label: "is equivalent to"
   color: "#A63A94"
 chembl_compound -> chembl_target
   link: "chembl_compound-chembl_target"
-  displayLabel: "interacts with"
+  display_label: "interacts with"
   color: "#A63A94"
 chembl_compound -> mesh
   link: "chembl_compound-mesh"
-  displayLabel: "has related disease"
+  display_label: "has related disease"
   color: "#A63A94"
 chembl_compound -> pubchem_compound
   link: "chembl_compound-pubchem_compound"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#A63A94"
 chembl_target -> ensembl_gene
   link: "chembl_target-ensembl_gene"
-  displayLabel: "is product of gene"
+  display_label: "is product of gene"
   color: "#79A63A"
 chembl_target -> pdb
   link: "chembl_target-pdb"
-  displayLabel: "has 3D structure"
+  display_label: "has 3D structure"
   color: "#79A63A"
 chembl_target -> uniprot
   link: "chembl_target-uniprot"
-  displayLabel: "is equivalent to"
+  display_label: "is equivalent to"
   color: "#79A63A"
 doid -> mesh
   link: "doid-mesh"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 doid -> omim_phenotype
   link: "doid-omim_phenotype"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 ensembl_gene -> hgnc
   link: "ensembl_gene-hgnc"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3AA64C"
 ensembl_gene -> ncbigene
   link: "ensembl_gene-ncbigene"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3AA64C"
 ensembl_gene -> uniprot
   link: "ensembl_gene-uniprot"
-  displayLabel: "has gene product"
+  display_label: "has gene product"
   color: "#3AA64C"
 glytoucan -> doid
   link: "glytoucan-doid"
-  displayLabel: "has related disease"
+  display_label: "has related disease"
   color: "#673AA6"
 glytoucan -> uniprot
   link: "glytoucan-uniprot"
-  displayLabel: "is attached to"
+  display_label: "is attached to"
   color: "#673AA6"
 hgnc -> ensembl_gene
   link: "hgnc-ensembl_gene"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3AA64C"
 hgnc -> ncbigene
   link: "hgnc-ncbigene"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3AA64C"
 hgnc -> uniprot
   link: "hgnc-uniprot"
-  displayLabel: "has gene product"
+  display_label: "has gene product"
   color: "#3AA64C"
 medgen -> hp
   link: "medgen-hp"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 medgen -> mesh
   link: "medgen-mesh"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 medgen -> mondo
   link: "medgen-mondo"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 medgen -> ncbigene
   link: "medgen-ncbigene"
-  displayLabel: "is related with"
+  display_label: "is related with"
   color: "#3A5EA6"
 medgen -> omim_phenotype
   link: "medgen-omim_phenotype"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 medgen -> orphanet
   link: "medgen-orphanet"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 mondo -> doid
   link: "mondo-doid"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 mondo -> hp
   link: "mondo-hp"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 mondo -> mesh
   link: "mondo-mesh"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 mondo -> omim_phenotype
   link: "mondo-omim_phenotype"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 mondo -> orphanet
   link: "mondo-orphanet"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 nando -> mondo
   link: "nando-mondo"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 ncbigene -> ensembl_gene
   link: "ncbigene-ensembl_gene"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3AA64C"
 ncbigene -> hgnc
   link: "ncbigene-hgnc"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3AA64C"
 orphanet -> mesh
   link: "orphanet-mesh"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 orphanet -> omim_phenotype
   link: "orphanet-omim_phenotype"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 pdb -> uniprot
   link: "pdb-uniprot"
-  displayLabel: "is 3D structure of"
+  display_label: "is 3D structure of"
   color: "#A6823A"
 pubchem_compound -> chebi
   link: "pubchem_compound-chebi"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#A63A94"
 pubchem_compound -> chembl_compound
   link: "pubchem_compound-chembl_compound"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#A63A94"
 pubchem_compound -> glytoucan
   link: "pubchem_compound-glytoucan"
-  displayLabel: "is nearly equivalent to"
+  display_label: "is nearly equivalent to"
   color: "#A63A94"
 reactome_reaction -> chebi
   link: "reactome_reaction-chebi"
-  displayLabel: "has participant molecule"
+  display_label: "has participant molecule"
   color: "#A63A43"
 reactome_reaction -> uniprot
   link: "reactome_reaction-uniprot"
-  displayLabel: "has participant molecule"
+  display_label: "has participant molecule"
   color: "#A63A43"
 togovar -> ensembl_gene
   link: "togovar-ensembl_gene"
-  displayLabel: "is located in"
+  display_label: "is located in"
   color: "#3AA69D"
 togovar -> hgnc
   link: "togovar-hgnc"
-  displayLabel: "is located in"
+  display_label: "is located in"
   color: "#3AA69D"
 togovar -> medgen
   link: "togovar-medgen"
-  displayLabel: "has related disease"
+  display_label: "has related disease"
   color: "#3AA69D"
 togovar -> ncbigene
   link: "togovar-ncbigene"
-  displayLabel: "is located in"
+  display_label: "is located in"
   color: "#3AA69D"
 uniprot -> chembl_target
   link: "uniprot-chembl_target"
-  displayLabel: "is equivalent to"
+  display_label: "is equivalent to"
   color: "#79A63A"
 uniprot -> ensembl_gene
   link: "uniprot-ensembl_gene"
-  displayLabel: "is product of gene"
+  display_label: "is product of gene"
   color: "#79A63A"
 uniprot -> hgnc
   link: "uniprot-hgnc"
-  displayLabel: "is product of gene"
+  display_label: "is product of gene"
   color: "#79A63A"
 uniprot -> ncbigene
   link: "uniprot-ncbigene"
-  displayLabel: "is product of gene"
+  display_label: "is product of gene"
   color: "#79A63A"
 uniprot -> omim_phenotype
   link: "uniprot-omim_phenotype"
-  displayLabel: "has related disease"
+  display_label: "has related disease"
   color: "#79A63A"
 uniprot -> orphanet
   link: "uniprot-orphanet"
-  displayLabel: "has related disease"
+  display_label: "has related disease"
   color: "#79A63A"
 uniprot -> pdb
   link: "uniprot-pdb"
-  displayLabel: "has 3D structure"
+  display_label: "has 3D structure"
   color: "#79A63A"
