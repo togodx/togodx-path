@@ -16,16 +16,21 @@
          child.style = 'width: 800px; height: 600px; border: solid 1px silver;';
          document.querySelector('#graph-area').appendChild(child);
          let blitzboard = new Blitzboard(child);
-         fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/path/graph.pg').then(res => {
+         let graph, config;
+         const graphPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/path/graph.pg').then(res => {
              return res.text();
-         }).then(graph => {
+         }).then(res => {
+             graph = res;
+         });
+         const configPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/path/config-simple.js').then(res => {
+             return res.text();
+         }).then(res => {
+             config = res;
+         });
+         Promise.all([graphPromise, configPromise]).then(() => {
              blitzboard.setGraph(graph, false);
-             fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/path/config-simple.js').then(res => {
-                 return res.text();
-             }).then(config => {
-                 blitzboard.setConfig(Function('blitzboard', `"use strict";return (${config})`)(blitzboard), true);
-                 blitzboard.network.stabilize();
-             });
+             blitzboard.setConfig(Function('blitzboard', `"use strict";return (${config})`)(blitzboard), true);
+             blitzboard.network.stabilize();
          });
         </script>
     </body>
