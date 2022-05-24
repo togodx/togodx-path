@@ -1,0 +1,52 @@
+source	target	display_label
+chembl_compound	chebi	is equivalent to
+chembl_compound	chembl_target	interacts with
+chembl_compound	mesh	has related disease
+chembl_compound	pubchem_compound	is nearly equivalent to
+chembl_target	ensembl_gene	is product of gene
+chembl_target	pdb	has 3D structure
+chembl_target	uniprot	is equivalent to
+clinvar	medgen	has related disease
+doid	mesh	is nearly equivalent to
+doid	omim_phenotype	is nearly equivalent to
+ensembl_gene	hgnc	is nearly equivalent to
+ensembl_gene	ncbigene	is nearly equivalent to
+ensembl_gene	uniprot	has gene product
+glytoucan	doid	has related disease
+glytoucan	uniprot	is attached to
+hgnc	ensembl_gene	is nearly equivalent to
+hgnc	ncbigene	is nearly equivalent to
+hgnc	uniprot	has gene product
+medgen	hp	is nearly equivalent to
+medgen	mesh	is nearly equivalent to
+medgen	mondo	is nearly equivalent to
+medgen	ncbigene	is related with
+medgen	omim_phenotype	is nearly equivalent to
+medgen	orphanet	is nearly equivalent to
+mondo	doid	is nearly equivalent to
+mondo	hp	is nearly equivalent to
+mondo	mesh	is nearly equivalent to
+mondo	omim_phenotype	is nearly equivalent to
+mondo	orphanet	is nearly equivalent to
+nando	mondo	is nearly equivalent to
+ncbigene	ensembl_gene	is nearly equivalent to
+ncbigene	hgnc	is nearly equivalent to
+orphanet	mesh	is nearly equivalent to
+orphanet	omim_phenotype	is nearly equivalent to
+pdb	uniprot	is 3D structure of
+pubchem_compound	chebi	is nearly equivalent to
+pubchem_compound	chembl_compound	is nearly equivalent to
+pubchem_compound	glytoucan	is nearly equivalent to
+reactome_reaction	chebi	has participant molecule
+reactome_reaction	uniprot	has participant molecule
+togovar	clinvar	has clinical significance
+togovar	ensembl_gene	is located in
+togovar	hgnc	is located in
+togovar	ncbigene	is located in
+uniprot	chembl_target	is equivalent to
+uniprot	ensembl_gene	is product of gene
+uniprot	hgnc	is product of gene
+uniprot	ncbigene	is product of gene
+uniprot	omim_phenotype	has related disease
+uniprot	orphanet	has related disease
+uniprot	pdb	has 3D structure
