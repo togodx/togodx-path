@@ -10,6 +10,10 @@ chembl_target
   :Protein
   display_label: "ChEMBL target"
   color: "#79A63A"
+clinvar
+  :Variant
+  display_label: "ClinVar variant"
+  color: "#3AA69D"
 doid
   :Disease
   display_label: "Disease ontology"
@@ -18,6 +22,10 @@ ensembl_gene
   :Gene
   display_label: "Ensembl gene"
   color: "#3AA64C"
+glytoucan
+  :Glycan
+  display_label: "GlyTouCan"
+  color: "#673AA6"
 hgnc
   :Gene
   display_label: "HGNC"
@@ -74,10 +82,6 @@ uniprot
   :Protein
   display_label: "UniProt"
   color: "#79A63A"
-glytoucan
-  :Glycan
-  display_label: "GlyTouCan"
-  color: "#673AA6"
 chembl_compound -> chebi
   link: "chembl_compound-chebi"
   display_label: "is equivalent to"
@@ -106,6 +110,10 @@ chembl_target -> uniprot
   link: "chembl_target-uniprot"
   display_label: "is equivalent to"
   color: "#79A63A"
+clinvar -> medgen
+  link: "clinvar-medgen"
+  display_label: "has related disease"
+  color: "#3AA69D"
 doid -> mesh
   link: "doid-mesh"
   display_label: "is nearly equivalent to"
@@ -234,6 +242,10 @@ reactome_reaction -> uniprot
   link: "reactome_reaction-uniprot"
   display_label: "has participant molecule"
   color: "#A63A43"
+togovar -> clinvar
+  link: "togovar-clinvar"
+  display_label: "has clinical significance"
+  color: "#3AA69D"
 togovar -> ensembl_gene
   link: "togovar-ensembl_gene"
   display_label: "is located in"
@@ -241,10 +253,6 @@ togovar -> ensembl_gene
 togovar -> hgnc
   link: "togovar-hgnc"
   display_label: "is located in"
-  color: "#3AA69D"
-togovar -> medgen
-  link: "togovar-medgen"
-  display_label: "has related disease"
   color: "#3AA69D"
 togovar -> ncbigene
   link: "togovar-ncbigene"
