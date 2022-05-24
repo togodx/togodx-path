@@ -1,7 +1,10 @@
 # TogoDX path
 
-https://togodx.github.io/togodx-path/path-simple.html
+Graph without showing display_label
+* https://togodx.github.io/togodx-path/path-simple.html
 
-https://togodx.github.io/togodx-path/path.html
+Graph showing display_label
+* https://togodx.github.io/togodx-path/path.html
 
-https://github.com/togodx/togodx-path/blob/main/path.tsv
+TSV file
+* https://github.com/togodx/togodx-path/blob/main/path.tsv
