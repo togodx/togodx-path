@@ -10,12 +10,9 @@
     <body>
         ID links between 21 datasets from 8 categories used in TogoDX/Human (see <a href="https://github.com/togodx/togodx-path/blob/main/path.tsv">here</a> for the list of links)
         <br><br>
-        <div id='graph-area'></div>
+        <div id='graph-area' style='width: 800px; height: 600px; border: solid 1px silver;'></div>
         <script>
-         const child = document.createElement('div');
-         child.style = 'width: 800px; height: 600px; border: solid 1px silver;';
-         document.querySelector('#graph-area').appendChild(child);
-         let blitzboard = new Blitzboard(child);
+         let blitzboard = new Blitzboard(document.getElementById('graph-area'));
          let graph, config;
          const graphPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/path/graph.pg').then(res => {
              return res.text();
