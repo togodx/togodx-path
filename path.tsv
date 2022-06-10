@@ -1,4 +1,4 @@
-source	source_category	target	target_category	display_label (biological meaning)
+source	source category	target	target category	display_label (biological meaning)
 chembl_compound	Compound	chebi	Compound	is equivalent to
 chembl_compound	Compound	chembl_target	Protein	interacts with
 chembl_compound	Compound	mesh	Disease	has related disease
