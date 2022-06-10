@@ -1,9 +1,9 @@
 # TogoDX path
 
-Graph with display_label
+Graph with dataset relation
 * https://togodx.github.io/togodx-path/path.html
 
-Graph without display_label
+Graph without dataset relation
 * https://togodx.github.io/togodx-path/path-simple.html
 
 TSV file
