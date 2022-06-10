@@ -3,8 +3,9 @@
     cursor: pointer;
     border: solid 1px gray;
     border-radius: 0.8em;
+    opacity: 0.75;
 }
 .rounded-button:hover {
-    transform: translateY(0.05rem);
-    opacity: 0.95;
+    /* transform: translateY(0.05rem); */
+    opacity: 1;
 }
