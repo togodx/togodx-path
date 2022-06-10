@@ -1,0 +1,10 @@
+.rounded-button {
+    width: 8em;
+    cursor: pointer;
+    border: solid 1px gray;
+    border-radius: 0.8em;
+}
+.rounded-button:hover {
+    transform: translateY(0.05rem);
+    opacity: 0.95;
+}
