@@ -17,17 +17,17 @@
             <div id='child-area' style='width: 800px; height: 600px;'></div>
         </div>
         <script>
-         let blitzboard = new Blitzboard(document.getElementById('child-area'));
+         const blitzboard = new Blitzboard(document.getElementById('child-area'));
          let graph, config;
          const graphPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/path/graph.pg').then(res => {
              return res.text();
-         }).then(res => {
-             graph = res;
+         }).then(text => {
+             graph = text;
          });
          const configPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/path/config-simple.js').then(res => {
              return res.text();
-         }).then(res => {
-             config = res;
+         }).then(text => {
+             config = text;
          });
          Promise.all([graphPromise, configPromise]).then(() => {
              blitzboard.setGraph(graph, false);
