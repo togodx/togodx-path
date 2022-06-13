@@ -7,4 +7,4 @@ Graph with labels for relations
 * https://togodx.github.io/togodx-path/path-details.html
 
 TSV file for the list of relations
-* https://github.com/togodx/togodx-path/blob/main/path.tsv
+* https://github.com/togodx/togodx-path/blob/main/path-selected.tsv
