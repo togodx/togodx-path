@@ -10,14 +10,17 @@ chembl_target
   :Protein
   display_label: "ChEMBL target"
   color: "#79A63A"
+  size: 10
 clinvar
   :Variant
   display_label: "ClinVar variant"
   color: "#3AA69D"
+  size: 10
 doid
   :Disease
   display_label: "Disease ontology"
   color: "#3A5EA6"
+  size: 10
 ensembl_gene
   :Gene
   display_label: "Ensembl gene"
@@ -30,6 +33,7 @@ hgnc
   :Gene
   display_label: "HGNC"
   color: "#3AA64C"
+  size: 10
 hp
   :Disease
   display_label: "Human Phenotype Ontology"
@@ -38,6 +42,7 @@ medgen
   :Disease
   display_label: "MedGen"
   color: "#3A5EA6"
+  size: 10
 mesh
   :Disease
   display_label: "MeSH"
@@ -66,6 +71,7 @@ reactome_reaction
   :Interaction
   display_label: "Reactome reaction"
   color: "#A63A43"
+  size: 10
 togovar
   :Variant
   display_label: "TogoVar variant"
