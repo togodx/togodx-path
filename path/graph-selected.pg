@@ -54,14 +54,6 @@ ncbigene
   :Gene
   display_label: "NCBI gene"
   color: "#3AA64C"
-omim_phenotype
-  :Disease
-  display_label: "OMIM phenotype"
-  color: "#3A5EA6"
-orphanet
-  :Disease
-  display_label: "Orphanet"
-  color: "#3A5EA6"
 pdb
   :Structure
   display_label: "PDB"
