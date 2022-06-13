@@ -98,14 +98,6 @@ chembl_compound -> pubchem_compound
   link: "chembl_compound-pubchem_compound"
   display_label: "is nearly equivalent to"
   color: "#A63A94"
-chembl_target -> ensembl_gene
-  link: "chembl_target-ensembl_gene"
-  display_label: "is product of gene"
-  color: "#79A63A"
-chembl_target -> pdb
-  link: "chembl_target-pdb"
-  display_label: "has 3D structure"
-  color: "#79A63A"
 chembl_target -> uniprot
   link: "chembl_target-uniprot"
   display_label: "is equivalent to"
@@ -114,18 +106,6 @@ clinvar -> medgen
   link: "clinvar-medgen"
   display_label: "has related disease"
   color: "#3AA69D"
-doid -> mesh
-  link: "doid-mesh"
-  display_label: "is nearly equivalent to"
-  color: "#3A5EA6"
-doid -> omim_phenotype
-  link: "doid-omim_phenotype"
-  display_label: "is nearly equivalent to"
-  color: "#3A5EA6"
-ensembl_gene -> hgnc
-  link: "ensembl_gene-hgnc"
-  display_label: "is nearly equivalent to"
-  color: "#3AA64C"
 ensembl_gene -> ncbigene
   link: "ensembl_gene-ncbigene"
   display_label: "is nearly equivalent to"
@@ -142,14 +122,6 @@ glytoucan -> uniprot
   link: "glytoucan-uniprot"
   display_label: "is attached to"
   color: "#673AA6"
-hgnc -> ensembl_gene
-  link: "hgnc-ensembl_gene"
-  display_label: "is nearly equivalent to"
-  color: "#3AA64C"
-hgnc -> ncbigene
-  link: "hgnc-ncbigene"
-  display_label: "is nearly equivalent to"
-  color: "#3AA64C"
 hgnc -> uniprot
   link: "hgnc-uniprot"
   display_label: "has gene product"
@@ -170,32 +142,12 @@ medgen -> ncbigene
   link: "medgen-ncbigene"
   display_label: "is related with"
   color: "#3A5EA6"
-medgen -> omim_phenotype
-  link: "medgen-omim_phenotype"
-  display_label: "is nearly equivalent to"
-  color: "#3A5EA6"
-medgen -> orphanet
-  link: "medgen-orphanet"
-  display_label: "is nearly equivalent to"
-  color: "#3A5EA6"
 mondo -> doid
   link: "mondo-doid"
   display_label: "is nearly equivalent to"
   color: "#3A5EA6"
-mondo -> hp
-  link: "mondo-hp"
-  display_label: "is nearly equivalent to"
-  color: "#3A5EA6"
 mondo -> mesh
   link: "mondo-mesh"
-  display_label: "is nearly equivalent to"
-  color: "#3A5EA6"
-mondo -> omim_phenotype
-  link: "mondo-omim_phenotype"
-  display_label: "is nearly equivalent to"
-  color: "#3A5EA6"
-mondo -> orphanet
-  link: "mondo-orphanet"
   display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 nando -> mondo
@@ -206,18 +158,6 @@ ncbigene -> ensembl_gene
   link: "ncbigene-ensembl_gene"
   display_label: "is nearly equivalent to"
   color: "#3AA64C"
-ncbigene -> hgnc
-  link: "ncbigene-hgnc"
-  display_label: "is nearly equivalent to"
-  color: "#3AA64C"
-orphanet -> mesh
-  link: "orphanet-mesh"
-  display_label: "is nearly equivalent to"
-  color: "#3A5EA6"
-orphanet -> omim_phenotype
-  link: "orphanet-omim_phenotype"
-  display_label: "is nearly equivalent to"
-  color: "#3A5EA6"
 pdb -> uniprot
   link: "pdb-uniprot"
   display_label: "is 3D structure of"
@@ -273,14 +213,6 @@ uniprot -> hgnc
 uniprot -> ncbigene
   link: "uniprot-ncbigene"
   display_label: "is product of gene"
-  color: "#79A63A"
-uniprot -> omim_phenotype
-  link: "uniprot-omim_phenotype"
-  display_label: "has related disease"
-  color: "#79A63A"
-uniprot -> orphanet
-  link: "uniprot-orphanet"
-  display_label: "has related disease"
   color: "#79A63A"
 uniprot -> pdb
   link: "uniprot-pdb"
