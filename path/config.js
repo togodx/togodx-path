@@ -3,6 +3,7 @@
     caption: ['display_label'],
     defaultIcon: false,
     color: '@color',
+    size: '@size',
   },
   edge: {
     caption: ['display_label'],
