@@ -10,7 +10,7 @@
     </head>
     <body>
         <table width="800">
-            <tr><td>ID links between datasets from 8 categories covered by TogoDX/Human (see <a href="https://github.com/togodx/togodx-path/blob/main/path/path.tsv">here</a> for the list of links)</td></tr>
+            <tr><td>ID links between datasets from 8 categories covered by TogoDX/Human (see <a href="https://github.com/togodx/togodx-path/blob/main/graph/path.tsv">here</a> for the list of links)</td></tr>
             <tr><td align="right"><button type="button" class="rounded-button" onclick="location.href='https://togodx.github.io/togodx-path/path.html'">Hide Labels</button></td></tr>
         </table>
         <div id='graph-area' style='width: 800px; height: 600px; border: solid 1px silver;'>
@@ -19,12 +19,12 @@
         <script>
          const blitzboard = new Blitzboard(document.getElementById('child-area'));
          let graph, config;
-         const graphPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/path/graph.pg').then(res => {
+         const graphPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/graph/graph.pg').then(res => {
              return res.text();
          }).then(text => {
              graph = text;
          });
-         const configPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/path/config-label.js').then(res => {
+         const configPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/graph/config-label.js').then(res => {
              return res.text();
          }).then(text => {
              config = text;
