@@ -9,7 +9,7 @@ Graph with labels for relations
 TSV file for the list of relations
 * https://github.com/togodx/togodx-path/blob/main/path-selected.tsv
 
-Command for creating the graph
+Command for reproducing the graph
 ```
 $ ./bin/make_graph.pl > path/graph-selected.pg
 ```
