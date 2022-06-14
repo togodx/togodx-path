@@ -10,11 +10,15 @@ my $USAGE=
 my %OPT;
 getopts('', \%OPT);
 
-my $TOGOID_ONTOLOGY_TMP = "bin/node_label.tmp";
-my $TOGOID_CONFIG_TMP = "bin/js/list-togoid-config.tmp";
-my $TOGOID_ROUTE_TMP = "bin/js/togoid-route.tmp";
 my $TOGOID_ROUTE_JS = "./bin/js/togoid-route.js";
 my $TOGOID_CONFIG_JS = "./bin/js/list-togoid-config.js";
+
+if (!-d "tmp") {
+    mkdir("tmp") or die "$!";
+}
+my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
+my $TOGOID_CONFIG_TMP = "tmp/togoid-config";
+my $TOGOID_ROUTE_TMP = "tmp/togoid-route";
 
 my %TARGET = (
     'ncbigene' => 1, 
