@@ -12,6 +12,9 @@ getopts('', \%OPT);
 
 my $TOGOID_ROUTE_JS = "./bin/js/togoid-route.js";
 my $TOGOID_CONFIG_JS = "./bin/js/list-togoid-config.js";
+if (!-d "bin/js/node_modules") {
+    system "cd bin/js; npm install";
+}
 
 if (!-d "tmp") {
     mkdir("tmp") or die "$!";
