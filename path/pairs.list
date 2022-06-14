@@ -24,7 +24,6 @@ medgen	clinvar
 medgen	hp
 medgen	mesh
 medgen	mondo
-medgen	nando
 medgen	ncbigene
 mesh	chembl_compound
 mesh	medgen
@@ -33,7 +32,6 @@ mondo	doid
 mondo	medgen
 mondo	mesh
 mondo	nando
-nando	medgen
 nando	mondo
 ncbigene	ensembl_gene
 ncbigene	medgen
