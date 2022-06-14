@@ -11,7 +11,7 @@ my %OPT;
 getopts('', \%OPT);
 
 my $TOGOID_ROUTE_JS = "./bin/js/togoid-route.js";
-my $TOGOID_CONFIG_JS = "./bin/js/list-togoid-config.js";
+my $TOGOID_EDGES_JS = "./bin/js/list-togoid-config.js";
 if (!-d "bin/js/node_modules") {
     system "cd bin/js; npm install";
 }
@@ -20,7 +20,7 @@ if (!-d "tmp") {
     mkdir("tmp") or die "$!";
 }
 my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
-my $TOGOID_CONFIG_TMP = "tmp/togoid-config";
+my $TOGOID_EDGES_TMP = "tmp/togoid-edges";
 my $TOGOID_ROUTE_TMP = "tmp/togoid-route";
 
 my %TARGET = (
@@ -102,14 +102,14 @@ for my $edge (@EDGE) {
 ################################################################################
 sub get_all_togoid_edges {
 
-    if (!-f $TOGOID_CONFIG_TMP) {
-        if (-f $TOGOID_CONFIG_JS) {
-            system "$TOGOID_CONFIG_JS > $TOGOID_CONFIG_TMP";
+    if (!-f $TOGOID_EDGES_TMP) {
+        if (-f $TOGOID_EDGES_JS) {
+            system "$TOGOID_EDGES_JS > $TOGOID_EDGES_TMP";
         } else {
             die;
         }
     }
-    open(LIST, $TOGOID_CONFIG_TMP) || die "$!";
+    open(LIST, $TOGOID_EDGES_TMP) || die "$!";
     my @edge = <LIST>;
     chomp(@edge);
     close(LIST);
