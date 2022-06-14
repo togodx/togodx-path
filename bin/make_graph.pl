@@ -10,8 +10,8 @@ my $USAGE=
 my %OPT;
 getopts('', \%OPT);
 
-my $TOGOID_ROUTE_JS = "./bin/js/togoid-route.js";
 my $TOGOID_EDGES_JS = "./bin/js/togoid-edges.js";
+my $TOGOID_ROUTE_JS = "./bin/js/togoid-route.js";
 if (!-d "bin/js/node_modules") {
     system "cd bin/js; npm install";
 }
@@ -19,9 +19,9 @@ if (!-d "bin/js/node_modules") {
 if (!-d "tmp") {
     mkdir("tmp") or die "$!";
 }
-my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
 my $TOGOID_EDGES_TMP = "tmp/togoid-edges";
 my $TOGOID_ROUTE_TMP = "tmp/togoid-route";
+my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
 
 my %TARGET = (
     'ncbigene' => 1, 
