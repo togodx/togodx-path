@@ -15,7 +15,7 @@ my $source;
 my $target;
 my $node;
 my %CATEGORY = ();
-print "source\tsource_category\ttarget\ttarget_category\tdisplay_label\n";
+print "source\tsource category\ttarget\ttarget category\tdisplay_label (biological meaning)\n";
 while (<>) {
     chomp;
     if (/^([_a-z]+)$/) {
