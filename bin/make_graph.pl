@@ -11,7 +11,7 @@ my %OPT;
 getopts('', \%OPT);
 
 my $TOGOID_EDGES_JS = "./bin/js/togoid-edges.js";
-my $TOGOID_ROUTE_JS = "./bin/js/togoid-route.js";
+my $TOGODX_ROUTE_JS = "./bin/js/togodx-route.js";
 if (!-d "bin/js/node_modules") {
     system "cd bin/js; npm install";
 }
@@ -20,7 +20,7 @@ if (!-d "tmp") {
     mkdir("tmp") or die "$!";
 }
 my $TOGOID_EDGES_TMP = "tmp/togoid-edges";
-my $TOGOID_ROUTE_TMP = "tmp/togoid-route";
+my $TOGODX_ROUTE_TMP = "tmp/togodx-route";
 my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
 
 my %TARGET = (
@@ -172,14 +172,14 @@ sub get_node_label {
 
 sub get_togodx_node_and_route {
 
-    if (!-f $TOGOID_ROUTE_TMP) {
-        if (-f $TOGOID_ROUTE_JS) {
-            system "$TOGOID_ROUTE_JS | sort -u > $TOGOID_ROUTE_TMP";
+    if (!-f $TOGODX_ROUTE_TMP) {
+        if (-f $TOGODX_ROUTE_JS) {
+            system "$TOGODX_ROUTE_JS | sort -u > $TOGODX_ROUTE_TMP";
         } else {
             die;
         }
     }
-    open(ROUTE, "$TOGOID_ROUTE_TMP") || die "$!";
+    open(ROUTE, "$TOGODX_ROUTE_TMP") || die "$!";
     my @route = <ROUTE>;
     chomp(@route);
     close(ROUTE);
