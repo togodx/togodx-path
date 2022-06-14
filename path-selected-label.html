@@ -19,7 +19,7 @@
         <script>
          const blitzboard = new Blitzboard(document.getElementById('child-area'));
          let graph, config;
-         const graphPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/graph/graph-selected.pg').then(res => {
+         const graphPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/graph/path-selected.pg').then(res => {
              return res.text();
          }).then(text => {
              graph = text;
