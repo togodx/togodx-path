@@ -12,6 +12,7 @@ TSV file for the list of relations
 Command for reproducing the graph
 ```
 $ ./bin/make_graph.pl > graph/path-selected.pg
+$ rm -rf ./tmp/
 ```
 ```
 $ ./bin/make_tsv.pl graph/path-selected.pg > graph/path-selected.tsv
