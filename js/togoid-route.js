@@ -1,5 +1,11 @@
 #!/usr/bin/env node
+const program = require('commander');
 const axios = require('axios');
+
+let opts = program
+  .option('-v, --verbose', 'verbose')
+  .parse(process.argv)
+  .opts();
 
 const targetDatasets = ['ncbigene', 'ensembl_gene', 'uniprot', 'pdb', 'chebi', 'chembl_compound', 'pubchem_compound', 'glytoucan', 'mondo', 'mesh', 'nando', 'hp', 'togovar'];
 
@@ -8,7 +14,10 @@ targetDatasets.forEach((source) => {
     if (source !== target) {
       let api = `https://integbio.jp/togosite_dev/sparqlist/api/togoid_route?source=${source}&target=${target}`;
       axios.get(api).then(res => {
-        console.log(api);
+        if (opts.verbose) {
+          console.log();
+          console.log(api);
+        }
         printPaths(res.data);
       }).catch(err => {
         console.error(`cannot open ${api}`);
@@ -20,7 +29,9 @@ targetDatasets.forEach((source) => {
 
 function printPaths(paths) {
   paths.forEach((path) => {
-    console.log(path);
+    if (opts.verbose) {
+      console.log(path);
+    }
     for (let i = 0; i<path.length-1; i++) {
       console.log(path[i] + '\t' + path[i+1]);
     }
