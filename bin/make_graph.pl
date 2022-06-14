@@ -11,7 +11,7 @@ my %OPT;
 getopts('', \%OPT);
 
 my $TOGOID_ROUTE_JS = "./bin/js/togoid-route.js";
-my $TOGOID_EDGES_JS = "./bin/js/list-togoid-config.js";
+my $TOGOID_EDGES_JS = "./bin/js/togoid-edges.js";
 if (!-d "bin/js/node_modules") {
     system "cd bin/js; npm install";
 }
