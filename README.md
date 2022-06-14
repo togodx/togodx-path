@@ -14,5 +14,5 @@ Command for reproducing the graph
 $ ./bin/make_graph.pl > path/graph-selected.pg
 ```
 ```
-$ ./bin/make_tsv.pl path/graph-selected.pg > path-selected.tsv
+$ ./bin/make_tsv.pl path/graph-selected.pg > path/path-selected.tsv
 ```
