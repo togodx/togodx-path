@@ -60,11 +60,13 @@ get_togodx_node_and_route();
 
 ### Print nodes
 for my $node (sort keys %TOGODX_NODE) {
+    my $node_label = $NODE_LABEL{$node} || die;
     my $category = $CATEGORY{$node} || die;
+    my $color = $COLOR{$category} || die;
     print "$node\n";
     print "  :$category\n";
-    print "  display_label: \"$NODE_LABEL{$node}\"\n";
-    print "  color: \"$COLOR{$category}\"\n";
+    print "  display_label: \"$node_label\"\n";
+    print "  color: \"$color\"\n";
     if (!$TARGET{$node}) {
         print "  size: 10\n";
     }
@@ -78,11 +80,13 @@ for my $edge (@EDGE) {
     }
     my ($source, $target) = @f;
     if ($TOGODX_ROUTE{$source}{$target}) {
+        my $edge_label = $EDGE_LABEL{$source}{$target} || die;
         my $category = $CATEGORY{$source} || die;
+        my $color = $COLOR{$category} || die;
         print "$source -> $target\n";
         print "  link: \"$source-$target\"\n";
-        print "  display_label: \"$EDGE_LABEL{$source}{$target}\"\n";
-        print "  color: \"$COLOR{$category}\"\n";
+        print "  display_label: \"$edge_label\"\n";
+        print "  color: \"$color\"\n";
     }
 }
 
