@@ -33,8 +33,8 @@ function printPaths(paths) {
     if (opts.verbose) {
       console.log(path);
     }
-    for (let i = 0; i<path.length-1; i++) {
-      console.log(path[i] + '\t' + path[i+1]);
+    for (let i = 0; i < path.length - 1; i++) {
+      console.log(path[i] + '\t' + path[i + 1]);
     }
   });
 }
