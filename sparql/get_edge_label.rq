@@ -1,0 +1,19 @@
+#!/usr/bin/env spang2
+# @option -vac
+# @endpoint https://orth.dbcls.jp/sparql-test
+# @param start=uniprot
+# @param end=orphanet
+
+SELECT DISTINCT ?start_label ?end_label ?start_category ?end_category ?edge ?edge_label ?display_label
+WHERE {
+  ?edge rdfs:label ?edge_label ;
+      tio:display_label ?display_label ;
+      rdfs:domain ?start_category ;
+      rdfs:range ?end_category .
+  ?start dct:identifier ?start_label ;
+      rdfs:subClassOf* ?start_category .
+  ?end dct:identifier ?end_label ;
+      rdfs:subClassOf* ?end_category .
+  VALUES (?start_label ?end_label) { ( "${start}" "${end}" ) }  
+}
+ORDER BY ?start_category ?end_category
