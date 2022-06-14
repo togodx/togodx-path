@@ -12,7 +12,8 @@ TSV file for the list of relations
 Command for reproducing the graph
 ```
 $ ./bin/make_graph.pl > graph/path-selected.pg
-$ rm -rf ./tmp/ # remove cached files after creation
+
+$ rm -rf ./tmp/       # Remove temporary (cached) files after creating graph
 ```
 ```
 $ ./bin/make_tsv.pl graph/path-selected.pg > graph/path-selected.tsv
