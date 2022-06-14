@@ -2,20 +2,18 @@
 const axios = require('axios');
 
 axios.get('https://api.github.com/repos/togoid/togoid-config/git/trees/main').then(res => {
-  json = JSON.parse(JSON.stringify(res.data));
-  for (let dir of json.tree) {
+  for (let dir of res.data.tree) {
     if (dir.path === 'config') {
       listConfigDir(dir.url);
     }
   }
 }).catch(err => {
   console.error(err);
-});;
+});
 
-function listConfigDir(url) {
-  axios.get(url).then((res) => {
-    json = JSON.parse(JSON.stringify(res.data));
-    for (let dir of json.tree) {
+function listConfigDir(configDir) {
+  axios.get(configDir).then((res) => {
+    for (let dir of res.data.tree) {
       if (dir.path.includes('-')) {
         console.log(dir.path);
       }
