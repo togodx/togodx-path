@@ -2,10 +2,11 @@
 const program = require('commander');
 const axios = require('axios');
 
-let opts = program
+program
   .option('-v, --verbose', 'verbose')
-  .parse(process.argv)
-  .opts();
+  .parse(process.argv);
+
+let opts = program.opts();
 
 const targetDatasets = ['ncbigene', 'ensembl_gene', 'uniprot', 'pdb', 'chebi', 'chembl_compound', 'pubchem_compound', 'glytoucan', 'mondo', 'mesh', 'nando', 'hp', 'togovar'];
 
