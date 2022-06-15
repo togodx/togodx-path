@@ -21,15 +21,17 @@ my $CATEGORY_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzf
 
 my $TOGOID_EDGES_JS = "./bin/js/togoid-edges.js";
 my $TOGODX_ROUTE_JS = "./bin/js/togodx-route.js";
-if (!-d "bin/js/node_modules") {
-    system "cd bin/js; npm install";
-}
 
+### Temporary created files ###
 my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
 my $TOGOID_EDGES_TMP = "tmp/togoid-edges";
 my $TOGODX_ROUTE_TMP = "tmp/togodx-route";
 if (!-d "tmp") {
     mkdir("tmp") or die "$!";
+}
+
+if (!-d "bin/js/node_modules") {
+    system "cd bin/js; npm install";
 }
 ####################
 
