@@ -1,45 +1,9 @@
 #!/usr/bin/perl -w
 use strict;
-use File::Basename;
-use Getopt::Std;
-my $PROGRAM = basename $0;
-my $USAGE=
-"Usage: $PROGRAM
-";
 
-my %OPT;
-getopts('', \%OPT);
+my @TARGET_DATASET = ("ncbigene", "ensembl_gene", "uniprot", "pdb", "chebi", "chembl_compound", "pubchem_compound", "glytoucan", "mondo", "mesh", "nando", "hp", "togovar");
 
-my $TOGOID_EDGES_JS = "./bin/js/togoid-edges.js";
-my $TOGODX_ROUTE_JS = "./bin/js/togodx-route.js";
-if (!-d "bin/js/node_modules") {
-    system "cd bin/js; npm install";
-}
-
-if (!-d "tmp") {
-    mkdir("tmp") or die "$!";
-}
-my $TOGOID_EDGES_TMP = "tmp/togoid-edges";
-my $TOGODX_ROUTE_TMP = "tmp/togodx-route";
-my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
-
-my %TARGET = (
-    'ncbigene' => 1, 
-    'ensembl_gene' => 1,
-    'uniprot' => 1,
-    'pdb' => 1,
-    'chebi' => 1,
-    'chembl_compound' => 1,
-    'pubchem_compound' => 1,
-    'glytoucan' => 1, 
-    'mondo' => 1,
-    'mesh' => 1,
-    'nando' => 1,
-    'hp' => 1,
-    'togovar' => 1
-    );
-
-my %COLOR = (
+my %CATEGORY_COLOR = (
     "Gene" => "#3AA64C",
     "Protein" => "#79A63A",
     "Structure" => "#A6823A",
@@ -50,37 +14,61 @@ my %COLOR = (
     "Variant" => "#3AA69D",
     );
 
-my @EDGE = get_all_togoid_edges();
+### External files ###
+my $TOGOID_ONTOLOGY = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/togoid-ontology.ttl";
+my $EDGE_LABEL_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=1295950655";
+my $CATEGORY_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=927983300";
 
-my %EDGE_LABEL = ();
-get_edge_label();
+my $TOGOID_EDGES_JS = "./bin/js/togoid-edges.js";
+my $TOGODX_ROUTE_JS = "./bin/js/togodx-route.js";
+if (!-d "bin/js/node_modules") {
+    system "cd bin/js; npm install";
+}
 
-my %NODE_LABEL = ();
-get_node_label();
+my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
+my $TOGOID_EDGES_TMP = "tmp/togoid-edges";
+my $TOGODX_ROUTE_TMP = "tmp/togodx-route";
+if (!-d "tmp") {
+    mkdir("tmp") or die "$!";
+}
+####################
 
-my %CATEGORY = ();
-get_category();
+my @ALL_EDGE = get_all_togoid_edges($TOGOID_EDGES_JS, $TOGOID_EDGES_TMP);
 
 my %TOGODX_NODE = ();
 my %TOGODX_ROUTE = ();
-get_togodx_node_and_route();
+get_togodx_route_and_node($TOGODX_ROUTE_JS, $TOGODX_ROUTE_TMP);
 
-### Print nodes
+my %NODE_LABEL = ();
+get_node_label($TOGOID_ONTOLOGY, $TOGOID_ONTOLOGY_TMP);
+
+my %EDGE_LABEL = ();
+get_edge_label($EDGE_LABEL_SHEET);
+
+my %DATASET_CATEGORY = ();
+get_dataset_category($CATEGORY_SHEET);
+
+### Print nodes ###
+my %TARGET_DATASET = ();
+for my $dataset (@TARGET_DATASET) {
+    $TARGET_DATASET{$dataset} = 1;
+}
+
 for my $node (sort keys %TOGODX_NODE) {
     my $node_label = $NODE_LABEL{$node} || die;
-    my $category = $CATEGORY{$node} || die;
-    my $color = $COLOR{$category} || die;
+    my $category = $DATASET_CATEGORY{$node} || die;
+    my $color = $CATEGORY_COLOR{$category} || die;
     print "$node\n";
     print "  :$category\n";
     print "  display_label: \"$node_label\"\n";
     print "  color: \"$color\"\n";
-    if (!$TARGET{$node}) {
+    if (!$TARGET_DATASET{$node}) {
         print "  size: 10\n";
     }
 }
 
-### Print edges
-for my $edge (@EDGE) {
+### Print edges ###
+for my $edge (@ALL_EDGE) {
     my @f = split("-", $edge);
     if (@f != 2) {
         die;
@@ -88,8 +76,8 @@ for my $edge (@EDGE) {
     my ($source, $target) = @f;
     if ($TOGODX_ROUTE{$source}{$target}) {
         my $edge_label = $EDGE_LABEL{$source}{$target} || die;
-        my $category = $CATEGORY{$source} || die;
-        my $color = $COLOR{$category} || die;
+        my $category = $DATASET_CATEGORY{$source} || die;
+        my $color = $CATEGORY_COLOR{$category} || die;
         print "$source -> $target\n";
         print "  link: \"$source-$target\"\n";
         print "  display_label: \"$edge_label\"\n";
@@ -101,15 +89,16 @@ for my $edge (@EDGE) {
 ### Function ###################################################################
 ################################################################################
 sub get_all_togoid_edges {
+    my ($togoid_edges_js, $togoid_edges_tmp) = @_;
 
-    if (!-f $TOGOID_EDGES_TMP) {
-        if (-f $TOGOID_EDGES_JS) {
-            system "$TOGOID_EDGES_JS > $TOGOID_EDGES_TMP";
+    if (!-f $togoid_edges_tmp) {
+        if (-f $togoid_edges_js) {
+            system "$togoid_edges_js > $togoid_edges_tmp";
         } else {
             die;
         }
     }
-    open(LIST, $TOGOID_EDGES_TMP) || die "$!";
+    open(LIST, $togoid_edges_tmp) || die "$!";
     my @edge = <LIST>;
     chomp(@edge);
     close(LIST);
@@ -118,8 +107,9 @@ sub get_all_togoid_edges {
 }
 
 sub get_edge_label {
+    my ($edge_label_sheet) = @_;
 
-    my @table = `curl -LSsf "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=1295950655"`;
+    my @table = `curl -LSsf "$edge_label_sheet"`;
     chomp(@table);
 
     for my $line (@table) {
@@ -131,29 +121,31 @@ sub get_edge_label {
     }
 }
 
-sub get_category {
+sub get_dataset_category {
+    my ($category_sheet) = @_;
 
-    my @category = `curl -LSsf "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=927983300"`;
+    my @category = `curl -LSsf "$category_sheet"`;
     chomp(@category);
 
     for my $line (@category) {
         my @f = split("\t", $line);
         my $dataset = $f[0];
         my $category = $f[1];
-        $CATEGORY{$dataset} = $category;
-        ### to be checked ###
+        $DATASET_CATEGORY{$dataset} = $category;
+        ### Reaction => Interaction ###
         if ($category eq "Reaction") {
-            $CATEGORY{$dataset} = "Interaction";
+            $DATASET_CATEGORY{$dataset} = "Interaction";
         }
     }
 }
 
 sub get_node_label {
+    my ($togoid_ontology, $togoid_ontology_tmp) = @_;
 
-    if (!-s $TOGOID_ONTOLOGY_TMP) {
-        system "curl -LSsf https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/togoid-ontology.ttl > $TOGOID_ONTOLOGY_TMP";
+    if (!-s $togoid_ontology_tmp) {
+        system "curl -LSsf $togoid_ontology > $togoid_ontology_tmp";
     }
-    open(ONTOLOGY, $TOGOID_ONTOLOGY_TMP) || die "$!";
+    open(ONTOLOGY, $togoid_ontology_tmp) || die "$!";
     my @ontology = <ONTOLOGY>;
     chomp(@ontology);
 
@@ -170,16 +162,17 @@ sub get_node_label {
     close(ONTOLOGY);
 }
 
-sub get_togodx_node_and_route {
+sub get_togodx_route_and_node {
+    my ($togodx_route_js, $togodx_route_tmp) = @_;
 
-    if (!-f $TOGODX_ROUTE_TMP) {
-        if (-f $TOGODX_ROUTE_JS) {
-            system "$TOGODX_ROUTE_JS | sort -u > $TOGODX_ROUTE_TMP";
+    if (!-f $togodx_route_tmp) {
+        if (-f $togodx_route_js) {
+            system "$togodx_route_js | sort -u > $togodx_route_tmp";
         } else {
             die;
         }
     }
-    open(ROUTE, "$TOGODX_ROUTE_TMP") || die "$!";
+    open(ROUTE, "$togodx_route_tmp") || die "$!";
     my @route = <ROUTE>;
     chomp(@route);
     close(ROUTE);
