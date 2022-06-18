@@ -1,5 +1,7 @@
 #!/usr/bin/perl -w
 use strict;
+use File::Basename;
+use Cwd 'realpath';
 
 my @TARGET_DATASET = ("ncbigene", "ensembl_gene", "uniprot", "pdb", "chebi", "chembl_compound", "pubchem_compound", "glytoucan", "mondo", "mesh", "nando", "hp", "togovar");
 
@@ -22,16 +24,22 @@ my $CATEGORY_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzf
 my $TOGOID_EDGES_JS = "./bin/js/togoid-edges.js";
 my $TOGODX_ROUTE_JS = "./bin/js/togodx-route.js";
 
-### Temporary created files ###
+my $DIR = dirname(realpath($0));
+chdir "$DIR/.." or die "Cannot chdir to $DIR/..: $!";
+if (-f $TOGOID_EDGES_JS && -f $TOGODX_ROUTE_JS) {
+    if (!-d "bin/js/node_modules") {
+        system "cd bin/js; npm install";
+    }
+} else {
+    die "Not found: $TOGOID_EDGES_JS $TOGODX_ROUTE_JS\n";
+}
+
+### Temporary files
 my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
 my $TOGOID_EDGES_TMP = "tmp/togoid-edges";
 my $TOGODX_ROUTE_TMP = "tmp/togodx-route";
 if (!-d "tmp") {
     mkdir("tmp") or die "$!";
-}
-
-if (!-d "bin/js/node_modules") {
-    system "cd bin/js; npm install";
 }
 ####################
 
