@@ -6,9 +6,13 @@
     size: '@size',
     onClick: (n) => {
       blitzboard.pathSrc = n.id;
+      pathSourceNode.textContent = `${n.id}`;
+      pathArrow.textContent = ' =>';
+      pathTargetNode.textContent = '';
     },
     onHover: (n) => {
       if (blitzboard.pathSrc && pathList[blitzboard.pathSrc] && pathList[blitzboard.pathSrc][n.id]) {
+        pathTargetNode.textContent = '' + n.id;
         let edgeIds = [];
         pathList[blitzboard.pathSrc][n.id].forEach((path) => {
           for (let i = 0; i < path.length - 1; i++) {
