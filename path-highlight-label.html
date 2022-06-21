@@ -59,6 +59,16 @@
              blitzboard.setGraph(graph, false);
              blitzboard.setConfig(Function('blitzboard', `"use strict";return (${config})`)(blitzboard), true);
              blitzboard.network.stabilize();
+             blitzboard.network.on('click', (params) => {
+                 console.log('hoge');
+                 blitzboard.network.unselectAll();
+                 pathSourceNode.textContent = '';
+                 pathTargetNode.textContent = '';
+                 pathArrow.textContent = '';
+                 while (pathNodeList.firstChild) {
+                     pathNodeList.removeChild(pathNodeList.firstChild);
+                 }
+             });
          });
         </script>
     </body>
