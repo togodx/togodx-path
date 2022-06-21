@@ -28,6 +28,7 @@
             if (blitzboard.hasEdge(path[i], path[i+1])) {
               edgeIds.push(`${path[i]}-${path[i+1]}`);
               child.textContent += ` -> ${path[i+1]}`;
+              // const display_label = blitzboard.edgeMap[`${path[i]}-${path[i+1]}`].properties.display_label[0];
             } else if (blitzboard.hasEdge(path[i+1], path[i])) {
               edgeIds.push(`${path[i+1]}-${path[i]}`);
               child.textContent += ` <- ${path[i+1]}`;
