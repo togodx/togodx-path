@@ -6,7 +6,8 @@
     size: '@size',
     onClick: (n) => {
       blitzboard.pathSrc = n.id;
-      pathSourceNode.textContent = `${n.id}`;
+      // pathSourceNode.textContent = blitzboard.nodeMap[n.id].properties.display_label[0];
+      pathSourceNode.textContent = n.id;
       pathArrow.textContent = '--->';
       pathTargetNode.textContent = '';
       while (pathNodeList.firstChild) {
@@ -15,7 +16,7 @@
     },
     onHover: (n) => {
       if (blitzboard.pathSrc && pathList[blitzboard.pathSrc] && pathList[blitzboard.pathSrc][n.id]) {
-        pathTargetNode.textContent = '' + n.id;
+        pathTargetNode.textContent = n.id;
         let edgeIds = [];
         while (pathNodeList.firstChild) {
           pathNodeList.removeChild(pathNodeList.firstChild);
@@ -36,7 +37,7 @@
           }
         });
         blitzboard.network.setSelection({
-          nodes: [ blitzboard.pathSrc ],
+          nodes: [ blitzboard.pathSrc, n.id ],
           edges: edgeIds
         });
       }
