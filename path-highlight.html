@@ -21,13 +21,22 @@
                 </div>
             </td></tr>
             <tr><td align="center" style="font-size: 0.8em"><b>Click</b> on <i>source node</i>, and <b>hover</b> on <i>target node</i></td></tr>
-            <table width="800" style="font-size: 0.9em">
-                <tr><td align="right" width="350"><div id='path-source-node'></div></td> <td width="40"></td> <td id="path-arrow" width="60" align="left"></td> <td align="left"><div id='path-target-node'></div></td></tr>
-            </table>
+            <tr><td><table width="800" style="font-size: 0.9em"><tr>
+                <td width="300"></td>
+                <td align="left" width="70"><div id='path-source-node'></div></td>
+                <td width="10"></td>
+                <td id="path-arrow" width="60" align="left"></td>
+                <td align="left"><div id='path-target-node'></div></td>
+            </tr></table></td></tr>
+            <tr><td><table width="800" style="font-size: 0.9em"><tr>
+                <td width="300"></td>
+                <td id="path-node-list" style="font-size: 0.8em"></td>
+            </tr></table></td></tr>
         </table>
         <script>
          const pathSourceNode = document.getElementById('path-source-node');
          const pathTargetNode = document.getElementById('path-target-node');
+         const pathNodeList = document.getElementById('path-node-list');
          const pathArrow = document.getElementById('path-arrow');
          let pathList = null;
          $.getJSON('https://raw.githubusercontent.com/togodx/togodx-path/main/graph/path.json', (data) => {
