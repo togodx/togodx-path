@@ -8,7 +8,6 @@
         <!-- <script src='https://unpkg.com/vis-network/standalone/umd/vis-network.min.js'></script> -->
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/standalone/umd/vis-network.min.js" integrity="sha512-DOpf3tO7m7MJHkMMRRoNxiJL4CR+TFLYy2XnIOeTh26Hz8j8i9RHrVkXzh+AQ7mffzIFk538/zcQ3Yoo+7VISA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         <script src='https://cdn.jsdelivr.net/gh/blitzboard/blitzboard@master/vis-network.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <link href='./css/style.css' rel='stylesheet'>
     </head>
     <body>
@@ -39,8 +38,10 @@
          const pathNodeList = document.getElementById('path-node-list');
          const pathArrow = document.getElementById('path-arrow');
          let pathList = null;
-         $.getJSON('https://raw.githubusercontent.com/togodx/togodx-path/main/graph/path.json', (data) => {
-             pathList = data;
+         fetch('./graph/path.json').then(res => {
+             return res.json();
+         }).then(json => {
+             pathList = json;
          });
          const blitzboard = new Blitzboard(document.getElementById('child-area'));
          let graph, config;
