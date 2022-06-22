@@ -10,6 +10,7 @@
       pathSourceNode.textContent = n.id;
       pathArrow.textContent = '--->';
       pathTargetNode.textContent = '';
+      pathTitle.textContent = '';
       while (pathNodeList.firstChild) {
         pathNodeList.removeChild(pathNodeList.firstChild);
       }
@@ -18,6 +19,7 @@
       if (blitzboard.pathSrc && pathList[blitzboard.pathSrc] && pathList[blitzboard.pathSrc][n.id]) {
         pathTargetNode.textContent = n.id;
         let edgeIds = [];
+        pathTitle.textContent = 'Path:';
         while (pathNodeList.firstChild) {
           pathNodeList.removeChild(pathNodeList.firstChild);
         }

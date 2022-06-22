@@ -10,6 +10,7 @@
       pathSourceNode.textContent = n.id;
       pathArrow.textContent = '--->';
       pathTargetNode.textContent = '';
+      pathTitle.textContent = '';
       while (pathNodeList.firstChild) {
         pathNodeList.removeChild(pathNodeList.firstChild);
       }
@@ -18,6 +19,7 @@
       if (blitzboard.pathSrc && pathList[blitzboard.pathSrc] && pathList[blitzboard.pathSrc][n.id]) {
         pathTargetNode.textContent = n.id;
         let edgeIds = [];
+        pathTitle.textContent = 'Path:';
         while (pathNodeList.firstChild) {
           pathNodeList.removeChild(pathNodeList.firstChild);
         }
@@ -29,6 +31,7 @@
             if (blitzboard.hasEdge(path[i], path[i+1])) {
               edgeIds.push(`${path[i]}-${path[i+1]}`);
               child.textContent += ` -> ${path[i+1]}`;
+              // const display_label = blitzboard.edgeMap[`${path[i]}-${path[i+1]}`].properties.display_label[0];
             } else if (blitzboard.hasEdge(path[i+1], path[i])) {
               edgeIds.push(`${path[i+1]}-${path[i]}`);
               child.textContent += ` <- ${path[i+1]}`;

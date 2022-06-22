@@ -27,9 +27,9 @@
                 <td width="60" id="path-arrow"></td>
                 <td id='path-target-node'></td>
             </tr></table></td></tr>
-            <tr><td><table width="800" style="font-size: 0.8em"><tr>
-                <td width="300"></td>
-                <td id="path-node-list"></td>
+            <tr><td><table width="800"><tr>
+                <td width="300" id="path-title" valign="top" align="right" style="font-size: 0.9em"></td>
+                <td id="path-node-list" style="font-size: 0.8em"></td>
             </tr></table></td></tr>
         </table>
         <script>
@@ -37,6 +37,7 @@
          const pathTargetNode = document.getElementById('path-target-node');
          const pathNodeList = document.getElementById('path-node-list');
          const pathArrow = document.getElementById('path-arrow');
+         const pathTitle = document.getElementById('path-title');
          let pathList = null;
          fetch('./graph/path.json').then(res => {
              return res.json();
@@ -65,6 +66,7 @@
                  pathSourceNode.textContent = '';
                  pathTargetNode.textContent = '';
                  pathArrow.textContent = '';
+                 pathTitle.textContent = '';
                  while (pathNodeList.firstChild) {
                      pathNodeList.removeChild(pathNodeList.firstChild);
                  }
