@@ -46,7 +46,7 @@
          });
          const blitzboard = new Blitzboard(document.getElementById('child-area'));
          let graph, config;
-         const graphPromise = fetch('https://raw.githubusercontent.com/togodx/togodx-path/main/graph/path-selected.pg').then(res => {
+         const graphPromise = fetch('./graph/path-selected.pg').then(res => {
              return res.text();
          }).then(text => {
              graph = text;
@@ -61,7 +61,6 @@
              blitzboard.setConfig(Function('blitzboard', `"use strict";return (${config})`)(blitzboard), true);
              blitzboard.network.stabilize();
              blitzboard.network.on('click', (params) => {
-                 console.log('hoge');
                  blitzboard.network.unselectAll();
                  pathSourceNode.textContent = '';
                  pathTargetNode.textContent = '';
