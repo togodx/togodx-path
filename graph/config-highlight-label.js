@@ -50,6 +50,7 @@
     opacity: 0.6,
   },
   layout: 'default',
+  style: "background: white;",
   extraOptions: {
     physics: {
       stabilization: true
