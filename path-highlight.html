@@ -61,6 +61,7 @@
              blitzboard.setConfig(Function('blitzboard', `"use strict";return (${config})`)(blitzboard), true);
              blitzboard.network.stabilize();
              blitzboard.network.on('click', (params) => {
+                 blitzboard.pathSrc = null;
                  blitzboard.network.unselectAll();
                  pathSourceNode.textContent = '';
                  pathTargetNode.textContent = '';
