@@ -6,41 +6,39 @@
     size: '@size',
     onClick: (n) => {
       blitzboard.pathSrc = n.id;
+      blitzboard.network.setSelection({ nodes: [ n.id ] });
       // pathSourceNode.textContent = blitzboard.nodeMap[n.id].properties.display_label[0];
       pathSourceNode.textContent = n.id;
-      pathArrow.textContent = '--->';
-      pathTargetNode.textContent = '';
-      pathTitle.hidden = true;
-      while (pathNodeList.firstChild) {
-        pathNodeList.removeChild(pathNodeList.firstChild);
-      }
+      pathArrow.textContent = '->';
     },
     onHover: (n) => {
       if (blitzboard.pathSrc && pathList[blitzboard.pathSrc] && pathList[blitzboard.pathSrc][n.id]) {
         pathTargetNode.textContent = n.id;
-        let edgeIds = [];
         pathTitle.hidden = false;
         while (pathNodeList.firstChild) {
           pathNodeList.removeChild(pathNodeList.firstChild);
         }
+        const edgeSet = new Set();
+        const nodeSet = new Set([ blitzboard.pathSrc ]);
         pathList[blitzboard.pathSrc][n.id].forEach((path) => {
           const child = document.createElement('div');
           pathNodeList.appendChild(child);
           child.textContent = `${blitzboard.pathSrc}`;
           for (let i = 0; i < path.length - 1; i++) {
+            nodeSet.add(path[i+1]);
             if (blitzboard.hasEdge(path[i], path[i+1])) {
-              edgeIds.push(`${path[i]}-${path[i+1]}`);
-              child.textContent += ` -> ${path[i+1]}`;
+              edgeSet.add(`${path[i]}-${path[i+1]}`);
               // const display_label = blitzboard.edgeMap[`${path[i]}-${path[i+1]}`].properties.display_label[0];
-            } else if (blitzboard.hasEdge(path[i+1], path[i])) {
-              edgeIds.push(`${path[i+1]}-${path[i]}`);
-              child.textContent += ` <- ${path[i+1]}`;
             }
+            if (blitzboard.hasEdge(path[i+1], path[i])) {
+              edgeSet.add(`${path[i+1]}-${path[i]}`);
+            }
+            child.textContent += ` - ${path[i+1]}`;
           }
         });
         blitzboard.network.setSelection({
-          nodes: [ blitzboard.pathSrc, n.id ],
-          edges: edgeIds
+          nodes: Array.from(nodeSet),
+          edges: Array.from(edgeSet)
         });
       }
     },
