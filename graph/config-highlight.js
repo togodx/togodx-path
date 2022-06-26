@@ -42,12 +42,15 @@
         });
       }
     },
+    borderWidthSelected: 3,
   },
   edge: {
     caption: [],
     width: 2.7,
     color: '@color',
     opacity: 0.6,
+    shadow: true,
+    selectionWidth: 2.5,
   },
   layout: 'default',
   style: "background: white;",
