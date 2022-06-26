@@ -19,13 +19,13 @@
           pathNodeList.removeChild(pathNodeList.firstChild);
         }
         const edgeSet = new Set();
-        const nodeSet = new Set([ blitzboard.pathSrc ]);
+        const nodeSet = new Set([ blitzboard.pathSrc, n.id ]);
         pathList[blitzboard.pathSrc][n.id].forEach((path) => {
           const child = document.createElement('div');
           pathNodeList.appendChild(child);
           child.textContent = `${blitzboard.pathSrc}`;
           for (let i = 0; i < path.length - 1; i++) {
-            nodeSet.add(path[i+1]);
+            // nodeSet.add(path[i+1]);
             if (blitzboard.hasEdge(path[i], path[i+1])) {
               edgeSet.add(`${path[i]}-${path[i+1]}`);
               // const display_label = blitzboard.edgeMap[`${path[i]}-${path[i+1]}`].properties.display_label[0];
@@ -42,12 +42,16 @@
         });
       }
     },
+    borderWidthSelected: 3,
   },
   edge: {
     caption: ['display_label'],
     width: 2.7,
     color: '@color',
     opacity: 0.6,
+    shadow: true,
+    selectionWidth: 2.5,
+    labelHighlightBold: false
   },
   layout: 'default',
   style: "background: white;",
