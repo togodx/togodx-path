@@ -1,13 +1,10 @@
 # TogoDX path
 
-Graph without labels for relations
+ID links between datasets
 * https://togodx.github.io/togodx-path/path-selected.html
 
-Graph with labels for relations
-* https://togodx.github.io/togodx-path/path-selected-label.html
-
-TSV file for the list of relations
-* https://github.com/togodx/togodx-path/blob/main/graph/path-selected.tsv
+Highlighting ID conversion path (*beta*)
+* https://togodx.github.io/togodx-path/path-highlight.html
 
 Reproducing the graph
 ```
