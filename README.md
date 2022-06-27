@@ -3,7 +3,7 @@
 ID links between datasets
 * https://togodx.github.io/togodx-path/path-selected.html
 
-Highlighting ID conversion path (*beta*)
+Highlighting ID conversion path
 * https://togodx.github.io/togodx-path/path-highlight.html
 
 Reproducing the graph
