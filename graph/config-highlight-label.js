@@ -5,10 +5,12 @@
     color: '@color',
     size: '@size',
     onClick: (n) => {
-      blitzboard.pathSrc = n.id;
-      blitzboard.network.setSelection({ nodes: [ n.id ] });
-      // pathSourceNode.textContent = blitzboard.nodeMap[n.id].properties.display_label[0];
-      pathNodeList.textContent = `${n.id} - (mouseover the other one)`;
+      if (pathList[n.id]) {
+        blitzboard.pathSrc = n.id;
+        blitzboard.network.setSelection({ nodes: [ n.id ] });
+        // pathSourceNode.textContent = blitzboard.nodeMap[n.id].properties.display_label[0];
+        pathNodeList.textContent = `${n.id} - (mouseover the other one)`;
+      }
     },
     onHover: (n) => {
       if (blitzboard.pathSrc && pathList[blitzboard.pathSrc] && pathList[blitzboard.pathSrc][n.id]) {
