@@ -8,12 +8,10 @@
       blitzboard.pathSrc = n.id;
       blitzboard.network.setSelection({ nodes: [ n.id ] });
       // pathSourceNode.textContent = blitzboard.nodeMap[n.id].properties.display_label[0];
-      pathTitle.hidden = false;
       pathNodeList.textContent = `${n.id} - (mouseover the other one)`;
     },
     onHover: (n) => {
       if (blitzboard.pathSrc && pathList[blitzboard.pathSrc] && pathList[blitzboard.pathSrc][n.id]) {
-        pathTitle.hidden = false;
         while (pathNodeList.firstChild) {
           pathNodeList.removeChild(pathNodeList.firstChild);
         }
