@@ -52,6 +52,7 @@
     chosen: {
       "": {
         edge: function(values, id, selected, hovering) {
+          values.color = blitzboard.edgeMap[id].properties.color[0];
           values.width = 5.2;
           values.shadowSize = 9;
         }
