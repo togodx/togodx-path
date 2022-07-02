@@ -51,10 +51,14 @@
     selectionWidth: 2.5,
     chosen: {
       "": {
-        edge: function(values, id, selected, hovering) {
-          values.color = blitzboard.edgeMap[id].properties.color[0];
-          values.width = 5.2;
-          values.shadowSize = 9;
+        edge: (values, id, selected, hovering) => {
+          if (selected) {
+            values.color = blitzboard.edgeMap[id].properties.color[0];
+            values.width = 5.2;
+            values.shadowSize = 9;
+          } else if (hovering) {
+            values.width = 3.2;
+          }
         }
       }
     }
