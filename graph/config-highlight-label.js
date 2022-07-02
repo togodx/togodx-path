@@ -48,9 +48,21 @@
     width: 2.7,
     color: '@color',
     opacity: 0.6,
-    shadow: true,
     selectionWidth: 2.5,
-    labelHighlightBold: false
+    labelHighlightBold: false,
+    chosen: {
+      "": {
+        edge: (values, id, selected, hovering) => {
+          if (selected) {
+            values.color = blitzboard.edgeMap[id].properties.color[0];
+            values.width = 5.2;
+            values.shadowSize = 9;
+          } else if (hovering) {
+            values.width = 3.2;
+          }
+        }
+      }
+    }
   },
   layout: 'default',
   style: "background: white;",
