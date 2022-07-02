@@ -48,8 +48,15 @@
     width: 2.7,
     color: '@color',
     opacity: 0.6,
-    shadow: true,
     selectionWidth: 2.5,
+    chosen: {
+      "": {
+        edge: function(values, id, selected, hovering) {
+          values.width = 5.2;
+          values.shadowSize = 9;
+        }
+      }
+    }
   },
   layout: 'default',
   style: "background: white;",
