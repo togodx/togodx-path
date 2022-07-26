@@ -1,0 +1,231 @@
+chebi
+  :Compound
+  display_label: "ChEBI compound"
+  color: "#A63A94"
+  count: 24510
+chembl_compound
+  :Compound
+  display_label: "ChEMBL compound"
+  color: "#A63A94"
+  count: 10369
+chembl_target
+  :Protein
+  display_label: "ChEMBL target"
+  color: "#79A63A"
+  size: 10
+clinvar
+  :Variant
+  display_label: "ClinVar variant"
+  color: "#3AA69D"
+  size: 10
+doid
+  :Disease
+  display_label: "Disease ontology"
+  color: "#3A5EA6"
+  size: 10
+ensembl_gene
+  :Gene
+  display_label: "Ensembl gene"
+  color: "#3AA64C"
+  count: 61526
+glytoucan
+  :Glycan
+  display_label: "GlyTouCan"
+  color: "#673AA6"
+  count: 7332
+hgnc
+  :Gene
+  display_label: "HGNC"
+  color: "#3AA64C"
+  size: 10
+hp
+  :Disease
+  display_label: "Human Phenotype Ontology"
+  color: "#3A5EA6"
+  count: 10318
+medgen
+  :Disease
+  display_label: "MedGen"
+  color: "#3A5EA6"
+  size: 10
+mesh
+  :Disease
+  display_label: "MeSH"
+  color: "#3A5EA6"
+  count: 3208
+mondo
+  :Disease
+  display_label: "MONDO"
+  color: "#3A5EA6"
+  count: 23307
+nando
+  :Disease
+  display_label: "NANDO"
+  color: "#3A5EA6"
+  count: 2081
+ncbigene
+  :Gene
+  display_label: "NCBI gene"
+  color: "#3AA64C"
+  count: 19271
+pdb
+  :Structure
+  display_label: "PDB"
+  color: "#A6823A"
+  count: 190482
+pubchem_compound
+  :Compound
+  display_label: "PubChem compound"
+  color: "#A63A94"
+  count: 3382
+reactome_reaction
+  :Interaction
+  display_label: "Reactome reaction"
+  color: "#A63A43"
+  size: 10
+togovar
+  :Variant
+  display_label: "TogoVar variant"
+  color: "#3AA69D"
+  count: 644990
+uniprot
+  :Protein
+  display_label: "UniProt"
+  color: "#79A63A"
+  count: 79052
+chembl_compound -> chebi
+  link: "chembl_compound-chebi"
+  display_label: "is equivalent to"
+  color: "#A63A94"
+chembl_compound -> chembl_target
+  link: "chembl_compound-chembl_target"
+  display_label: "interacts with"
+  color: "#A63A94"
+chembl_compound -> mesh
+  link: "chembl_compound-mesh"
+  display_label: "has related disease"
+  color: "#A63A94"
+chembl_compound -> pubchem_compound
+  link: "chembl_compound-pubchem_compound"
+  display_label: "is nearly equivalent to"
+  color: "#A63A94"
+chembl_target -> uniprot
+  link: "chembl_target-uniprot"
+  display_label: "is equivalent to"
+  color: "#79A63A"
+clinvar -> medgen
+  link: "clinvar-medgen"
+  display_label: "has related disease"
+  color: "#3AA69D"
+ensembl_gene -> ncbigene
+  link: "ensembl_gene-ncbigene"
+  display_label: "is nearly equivalent to"
+  color: "#3AA64C"
+ensembl_gene -> uniprot
+  link: "ensembl_gene-uniprot"
+  display_label: "has gene product"
+  color: "#3AA64C"
+glytoucan -> doid
+  link: "glytoucan-doid"
+  display_label: "has related disease"
+  color: "#673AA6"
+glytoucan -> uniprot
+  link: "glytoucan-uniprot"
+  display_label: "is attached to"
+  color: "#673AA6"
+hgnc -> uniprot
+  link: "hgnc-uniprot"
+  display_label: "has gene product"
+  color: "#3AA64C"
+medgen -> hp
+  link: "medgen-hp"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+medgen -> mesh
+  link: "medgen-mesh"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+medgen -> mondo
+  link: "medgen-mondo"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+medgen -> ncbigene
+  link: "medgen-ncbigene"
+  display_label: "is related with"
+  color: "#3A5EA6"
+mondo -> doid
+  link: "mondo-doid"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+mondo -> mesh
+  link: "mondo-mesh"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+nando -> mondo
+  link: "nando-mondo"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+ncbigene -> ensembl_gene
+  link: "ncbigene-ensembl_gene"
+  display_label: "is nearly equivalent to"
+  color: "#3AA64C"
+pdb -> uniprot
+  link: "pdb-uniprot"
+  display_label: "is 3D structure of"
+  color: "#A6823A"
+pubchem_compound -> chebi
+  link: "pubchem_compound-chebi"
+  display_label: "is nearly equivalent to"
+  color: "#A63A94"
+pubchem_compound -> chembl_compound
+  link: "pubchem_compound-chembl_compound"
+  display_label: "is nearly equivalent to"
+  color: "#A63A94"
+pubchem_compound -> glytoucan
+  link: "pubchem_compound-glytoucan"
+  display_label: "is nearly equivalent to"
+  color: "#A63A94"
+reactome_reaction -> chebi
+  link: "reactome_reaction-chebi"
+  display_label: "has participant molecule"
+  color: "#A63A43"
+reactome_reaction -> uniprot
+  link: "reactome_reaction-uniprot"
+  display_label: "has participant molecule"
+  color: "#A63A43"
+togovar -> clinvar
+  link: "togovar-clinvar"
+  display_label: "has clinical significance"
+  color: "#3AA69D"
+togovar -> ensembl_gene
+  link: "togovar-ensembl_gene"
+  display_label: "is located in"
+  color: "#3AA69D"
+togovar -> hgnc
+  link: "togovar-hgnc"
+  display_label: "is located in"
+  color: "#3AA69D"
+togovar -> ncbigene
+  link: "togovar-ncbigene"
+  display_label: "is located in"
+  color: "#3AA69D"
+uniprot -> chembl_target
+  link: "uniprot-chembl_target"
+  display_label: "is equivalent to"
+  color: "#79A63A"
+uniprot -> ensembl_gene
+  link: "uniprot-ensembl_gene"
+  display_label: "is product of gene"
+  color: "#79A63A"
+uniprot -> hgnc
+  link: "uniprot-hgnc"
+  display_label: "is product of gene"
+  color: "#79A63A"
+uniprot -> ncbigene
+  link: "uniprot-ncbigene"
+  display_label: "is product of gene"
+  color: "#79A63A"
+uniprot -> pdb
+  link: "uniprot-pdb"
+  display_label: "has 3D structure"
+  color: "#79A63A"
