@@ -1,0 +1,652 @@
+{
+  "ncbigene": {
+    "chebi": {
+      "start": "20732",
+      "end": "9279"
+    },
+    "chembl_compound": {
+      "start": "802143",
+      "end": "6548"
+    },
+    "ensembl_gene": {
+      "start": "39370",
+      "end": "36661"
+    },
+    "glytoucan": {
+      "start": "1803",
+      "end": "3087"
+    },
+    "hp": {
+      "start": "177",
+      "end": "332"
+    },
+    "mesh": {
+      "start": "2594",
+      "end": "2268"
+    },
+    "mondo": {
+      "start": "5809",
+      "end": "4450"
+    },
+    "nando": {
+      "start": "861",
+      "end": "670"
+    },
+    "pdb": {
+      "start": "7561",
+      "end": "53581"
+    },
+    "pubchem_compound": {
+      "start": "8840",
+      "end": "812203"
+    },
+    "togovar": {
+      "start": "18296",
+      "end": "601021"
+    },
+    "uniprot": {
+      "start": "19152",
+      "end": "32978"
+    }
+  },
+  "ensembl_gene": {
+    "chebi": {
+      "start": "20600",
+      "end": "10356"
+    },
+    "chembl_compound": {
+      "start": "791608",
+      "end": "7263"
+    },
+    "glytoucan": {
+      "start": "3393",
+      "end": "1885"
+    },
+    "hp": {
+      "start": "352",
+      "end": "176"
+    },
+    "mesh": {
+      "start": "2462",
+      "end": "2591"
+    },
+    "mondo": {
+      "start": "5000",
+      "end": "5872"
+    },
+    "nando": {
+      "start": "767",
+      "end": "860"
+    },
+    "ncbigene": {
+      "start": "39370",
+      "end": "36661"
+    },
+    "pdb": {
+      "start": "8477",
+      "end": "53765"
+    },
+    "pubchem_compound": {
+      "start": "9729",
+      "end": "801650"
+    },
+    "togovar": {
+      "start": "22774",
+      "end": "613846"
+    },
+    "uniprot": {
+      "start": "23155",
+      "end": "83610"
+    }
+  },
+  "uniprot": {
+    "chebi": {
+      "start": "20735",
+      "end": "9326"
+    },
+    "chembl_compound": {
+      "start": "802137",
+      "end": "6588"
+    },
+    "ensembl_gene": {
+      "start": "23155",
+      "end": "83610"
+    },
+    "glytoucan": {
+      "start": "1913",
+      "end": "3084"
+    },
+    "hp": {
+      "start": "175",
+      "end": "409"
+    },
+    "mesh": {
+      "start": "2574",
+      "end": "2854"
+    },
+    "mondo": {
+      "start": "5765",
+      "end": "5658"
+    },
+    "nando": {
+      "start": "858",
+      "end": "832"
+    },
+    "ncbigene": {
+      "start": "19152",
+      "end": "32978"
+    },
+    "pdb": {
+      "start": "54072",
+      "end": "7704"
+    },
+    "pubchem_compound": {
+      "start": "812197",
+      "end": "8888"
+    },
+    "togovar": {
+      "start": "599940",
+      "end": "68109"
+    }
+  },
+  "pdb": {
+    "chebi": {
+      "start": "20931",
+      "end": "49299"
+    },
+    "chembl_compound": {
+      "start": "768336",
+      "end": "45738"
+    },
+    "ensembl_gene": {
+      "start": "8477",
+      "end": "53765"
+    },
+    "glytoucan": {
+      "start": "1941",
+      "end": "19931"
+    },
+    "hp": {
+      "start": "122",
+      "end": "4784"
+    },
+    "mesh": {
+      "start": "1649",
+      "end": "17509"
+    },
+    "mondo": {
+      "start": "3481",
+      "end": "26230"
+    },
+    "nando": {
+      "start": "678",
+      "end": "7283"
+    },
+    "ncbigene": {
+      "start": "7561",
+      "end": "53581"
+    },
+    "pubchem_compound": {
+      "start": "48740",
+      "end": "778355"
+    },
+    "togovar": {
+      "start": "51985",
+      "end": "391839"
+    },
+    "uniprot": {
+      "start": "54072",
+      "end": "7704"
+    }
+  },
+  "chebi": {
+    "chembl_compound": {
+      "start": "12445",
+      "end": "12314"
+    },
+    "ensembl_gene": {
+      "start": "20600",
+      "end": "10356"
+    },
+    "glytoucan": {
+      "start": "2036",
+      "end": "2032"
+    },
+    "hp": {
+      "start": "2257",
+      "end": "461"
+    },
+    "mesh": {
+      "start": "3336",
+      "end": "1702"
+    },
+    "mondo": {
+      "start": "3090",
+      "end": "1270"
+    },
+    "nando": {
+      "start": "0",
+      "end": "0"
+    },
+    "ncbigene": {
+      "start": "20732",
+      "end": "9279"
+    },
+    "pdb": {
+      "start": "20931",
+      "end": "49299"
+    },
+    "pubchem_compound": {
+      "start": "23004",
+      "end": "22799"
+    },
+    "togovar": {
+      "start": "20681",
+      "end": "450390"
+    },
+    "uniprot": {
+      "start": "20735",
+      "end": "9326"
+    }
+  },
+  "chembl_compound": {
+    "chebi": {
+      "start": "12445",
+      "end": "12314"
+    },
+    "ensembl_gene": {
+      "start": "791608",
+      "end": "7263"
+    },
+    "glytoucan": {
+      "start": "24",
+      "end": "24"
+    },
+    "hp": {
+      "start": "5292",
+      "end": "499"
+    },
+    "mesh": {
+      "start": "8057",
+      "end": "1885"
+    },
+    "mondo": {
+      "start": "7350",
+      "end": "1409"
+    },
+    "nando": {
+      "start": "0",
+      "end": "0"
+    },
+    "ncbigene": {
+      "start": "802143",
+      "end": "6548"
+    },
+    "pdb": {
+      "start": "768336",
+      "end": "45738"
+    },
+    "pubchem_compound": {
+      "start": "7671",
+      "end": "8902"
+    },
+    "togovar": {
+      "start": "795446",
+      "end": "320672"
+    },
+    "uniprot": {
+      "start": "802137",
+      "end": "6588"
+    }
+  },
+  "pubchem_compound": {
+    "chebi": {
+      "start": "23004",
+      "end": "22799"
+    },
+    "chembl_compound": {
+      "start": "7671",
+      "end": "8902"
+    },
+    "ensembl_gene": {
+      "start": "9729",
+      "end": "801650"
+    },
+    "glytoucan": {
+      "start": "2265",
+      "end": "2265"
+    },
+    "hp": {
+      "start": "479",
+      "end": "4413"
+    },
+    "mesh": {
+      "start": "1784",
+      "end": "6675"
+    },
+    "mondo": {
+      "start": "1334",
+      "end": "6174"
+    },
+    "nando": {
+      "start": "0",
+      "end": "0"
+    },
+    "ncbigene": {
+      "start": "8840",
+      "end": "812203"
+    },
+    "pdb": {
+      "start": "48740",
+      "end": "778355"
+    },
+    "togovar": {
+      "start": "805472",
+      "end": "437667"
+    },
+    "uniprot": {
+      "start": "812197",
+      "end": "8888"
+    }
+  },
+  "glytoucan": {
+    "chebi": {
+      "start": "2036",
+      "end": "2032"
+    },
+    "chembl_compound": {
+      "start": "24",
+      "end": "24"
+    },
+    "ensembl_gene": {
+      "start": "3393",
+      "end": "1885"
+    },
+    "hp": {
+      "start": "16",
+      "end": "15"
+    },
+    "mesh": {
+      "start": "28",
+      "end": "33"
+    },
+    "mondo": {
+      "start": "36",
+      "end": "60"
+    },
+    "nando": {
+      "start": "5",
+      "end": "9"
+    },
+    "ncbigene": {
+      "start": "1803",
+      "end": "3087"
+    },
+    "pdb": {
+      "start": "1941",
+      "end": "19931"
+    },
+    "pubchem_compound": {
+      "start": "2265",
+      "end": "2265"
+    },
+    "togovar": {
+      "start": "1891",
+      "end": "202174"
+    },
+    "uniprot": {
+      "start": "1913",
+      "end": "3084"
+    }
+  },
+  "mondo": {
+    "chebi": {
+      "start": "3090",
+      "end": "1270"
+    },
+    "chembl_compound": {
+      "start": "7350",
+      "end": "1409"
+    },
+    "ensembl_gene": {
+      "start": "5000",
+      "end": "5872"
+    },
+    "glytoucan": {
+      "start": "36",
+      "end": "60"
+    },
+    "hp": {
+      "start": "1812",
+      "end": "1811"
+    },
+    "mesh": {
+      "start": "7795",
+      "end": "7741"
+    },
+    "nando": {
+      "start": "1530",
+      "end": "2209"
+    },
+    "ncbigene": {
+      "start": "5809",
+      "end": "4450"
+    },
+    "pdb": {
+      "start": "3481",
+      "end": "26230"
+    },
+    "pubchem_compound": {
+      "start": "1334",
+      "end": "6174"
+    },
+    "togovar": {
+      "start": "6497",
+      "end": "342091"
+    },
+    "uniprot": {
+      "start": "5765",
+      "end": "5658"
+    }
+  },
+  "mesh": {
+    "chebi": {
+      "start": "3336",
+      "end": "1702"
+    },
+    "chembl_compound": {
+      "start": "8057",
+      "end": "1885"
+    },
+    "ensembl_gene": {
+      "start": "2462",
+      "end": "2591"
+    },
+    "glytoucan": {
+      "start": "28",
+      "end": "33"
+    },
+    "hp": {
+      "start": "1008",
+      "end": "1013"
+    },
+    "mondo": {
+      "start": "7795",
+      "end": "7741"
+    },
+    "nando": {
+      "start": "12",
+      "end": "13"
+    },
+    "ncbigene": {
+      "start": "2594",
+      "end": "2268"
+    },
+    "pdb": {
+      "start": "1649",
+      "end": "17509"
+    },
+    "pubchem_compound": {
+      "start": "1784",
+      "end": "6675"
+    },
+    "togovar": {
+      "start": "3584",
+      "end": "279352"
+    },
+    "uniprot": {
+      "start": "2574",
+      "end": "2854"
+    }
+  },
+  "nando": {
+    "chebi": {
+      "start": "0",
+      "end": "0"
+    },
+    "chembl_compound": {
+      "start": "0",
+      "end": "0"
+    },
+    "ensembl_gene": {
+      "start": "767",
+      "end": "860"
+    },
+    "glytoucan": {
+      "start": "5",
+      "end": "9"
+    },
+    "hp": {
+      "start": "273",
+      "end": "449"
+    },
+    "mesh": {
+      "start": "12",
+      "end": "13"
+    },
+    "mondo": {
+      "start": "1530",
+      "end": "2209"
+    },
+    "ncbigene": {
+      "start": "861",
+      "end": "670"
+    },
+    "pdb": {
+      "start": "678",
+      "end": "7283"
+    },
+    "pubchem_compound": {
+      "start": "0",
+      "end": "0"
+    },
+    "togovar": {
+      "start": "1408",
+      "end": "113283"
+    },
+    "uniprot": {
+      "start": "858",
+      "end": "832"
+    }
+  },
+  "hp": {
+    "chebi": {
+      "start": "2257",
+      "end": "461"
+    },
+    "chembl_compound": {
+      "start": "5292",
+      "end": "499"
+    },
+    "ensembl_gene": {
+      "start": "352",
+      "end": "176"
+    },
+    "glytoucan": {
+      "start": "16",
+      "end": "15"
+    },
+    "mesh": {
+      "start": "1008",
+      "end": "1013"
+    },
+    "mondo": {
+      "start": "1812",
+      "end": "1811"
+    },
+    "nando": {
+      "start": "273",
+      "end": "449"
+    },
+    "ncbigene": {
+      "start": "177",
+      "end": "332"
+    },
+    "pdb": {
+      "start": "122",
+      "end": "4784"
+    },
+    "pubchem_compound": {
+      "start": "479",
+      "end": "4413"
+    },
+    "togovar": {
+      "start": "1795",
+      "end": "46003"
+    },
+    "uniprot": {
+      "start": "175",
+      "end": "409"
+    }
+  },
+  "togovar": {
+    "chebi": {
+      "start": "20681",
+      "end": "450390"
+    },
+    "chembl_compound": {
+      "start": "795446",
+      "end": "320672"
+    },
+    "ensembl_gene": {
+      "start": "22774",
+      "end": "613846"
+    },
+    "glytoucan": {
+      "start": "1891",
+      "end": "202174"
+    },
+    "hp": {
+      "start": "1795",
+      "end": "46003"
+    },
+    "mesh": {
+      "start": "3584",
+      "end": "279352"
+    },
+    "mondo": {
+      "start": "6497",
+      "end": "342091"
+    },
+    "nando": {
+      "start": "1408",
+      "end": "113283"
+    },
+    "ncbigene": {
+      "start": "18296",
+      "end": "601021"
+    },
+    "pdb": {
+      "start": "51985",
+      "end": "391839"
+    },
+    "pubchem_compound": {
+      "start": "805472",
+      "end": "437667"
+    },
+    "uniprot": {
+      "start": "599940",
+      "end": "68109"
+    }
+  }
+}
