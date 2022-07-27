@@ -39,6 +39,7 @@
             // }
           }
           child.textContent += ` (${pathCountStartEnd[blitzboard.pathSrc][n.id].end} / ${datasetCount[n.id]})`;
+          child.textContent += ` : ${pathCount[blitzboard.pathSrc][n.id]} paths`;
         });
         blitzboard.network.setSelection({
           nodes: Array.from(nodeSet),
