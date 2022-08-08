@@ -9,17 +9,20 @@ let opts = program.opts();
 
 const targetDatasets = ['ncbigene', 'ensembl_gene', 'uniprot', 'pdb', 'chebi', 'chembl_compound', 'pubchem_compound', 'glytoucan', 'mondo', 'mesh', 'nando', 'hp', 'togovar'];
 
+let tmp = {};
 let out = {};
 targetDatasets.forEach((source) => {
+  tmp[source] = {};
   out[source] = {};
 });
+
 let promises = [];
 targetDatasets.forEach((source) => {
   targetDatasets.forEach((target) => {
     if (source !== target) {
       let api = `https://integbio.jp/togosite_dev/sparqlist/api/togoid_route?source=${source}&target=${target}`;
       const promise = axios.get(api).then(res => {
-        out[source][target] = res.data;
+        tmp[source][target] = res.data;
       }).catch(err => {
         console.error(err);
         process.exit(1);
@@ -30,6 +33,13 @@ targetDatasets.forEach((source) => {
 });
 
 Promise.all(promises).then(() => {
+  targetDatasets.forEach((source) => {
+    targetDatasets.forEach((target) => {
+      if (source !== target) {
+        out[source][target] = tmp[source][target];
+      }
+    });
+  });
   console.log(JSON.stringify(out, null, '  '));
 }).catch(err => {
   console.error(err);
