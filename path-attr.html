@@ -30,24 +30,6 @@
          }).then(json => {
              pathList = json;
          });
-         let pathCount = null;
-         fetch('./graph/path-count.json').then(res => {
-             return res.json();
-         }).then(json => {
-             pathCount = json;
-         });
-         let pathCountStartEnd = null;
-         fetch('./graph/path-count-uniq-start-end.json').then(res => {
-             return res.json();
-         }).then(json => {
-             pathCountStartEnd = json;
-         });
-         let datasetCount = null;
-         fetch('./graph/dataset-count.json').then(res => {
-             return res.json();
-         }).then(json => {
-             datasetCount = json;
-         });
          const blitzboard = new Blitzboard(document.getElementById('child-area'));
          let graph, config;
          const graphPromise = fetch('./graph/path-attr.pg').then(res => {
