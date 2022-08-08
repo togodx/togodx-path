@@ -1,12 +1,5 @@
 {
   "ncbigene": {
-    "glytoucan": [
-      [
-        "ncbigene",
-        "uniprot",
-        "glytoucan"
-      ]
-    ],
     "ensembl_gene": [
       [
         "ncbigene",
@@ -19,19 +12,11 @@
         "uniprot"
       ]
     ],
-    "chembl_compound": [
+    "pdb": [
       [
         "ncbigene",
         "uniprot",
-        "reactome_reaction",
-        "chebi",
-        "chembl_compound"
-      ],
-      [
-        "ncbigene",
-        "uniprot",
-        "chembl_target",
-        "chembl_compound"
+        "pdb"
       ]
     ],
     "chebi": [
@@ -49,11 +34,19 @@
         "chebi"
       ]
     ],
-    "pdb": [
+    "chembl_compound": [
       [
         "ncbigene",
         "uniprot",
-        "pdb"
+        "reactome_reaction",
+        "chebi",
+        "chembl_compound"
+      ],
+      [
+        "ncbigene",
+        "uniprot",
+        "chembl_target",
+        "chembl_compound"
       ]
     ],
     "pubchem_compound": [
@@ -72,11 +65,25 @@
         "pubchem_compound"
       ]
     ],
+    "glytoucan": [
+      [
+        "ncbigene",
+        "uniprot",
+        "glytoucan"
+      ]
+    ],
     "mondo": [
       [
         "ncbigene",
         "medgen",
         "mondo"
+      ]
+    ],
+    "mesh": [
+      [
+        "ncbigene",
+        "medgen",
+        "mesh"
       ]
     ],
     "nando": [
@@ -92,13 +99,6 @@
         "ncbigene",
         "medgen",
         "hp"
-      ]
-    ],
-    "mesh": [
-      [
-        "ncbigene",
-        "medgen",
-        "mesh"
       ]
     ],
     "togovar": [
@@ -109,47 +109,16 @@
     ]
   },
   "ensembl_gene": {
-    "uniprot": [
-      [
-        "ensembl_gene",
-        "uniprot"
-      ]
-    ],
-    "chembl_compound": [
-      [
-        "ensembl_gene",
-        "uniprot",
-        "reactome_reaction",
-        "chebi",
-        "chembl_compound"
-      ],
-      [
-        "ensembl_gene",
-        "uniprot",
-        "chembl_target",
-        "chembl_compound"
-      ]
-    ],
     "ncbigene": [
       [
         "ensembl_gene",
         "ncbigene"
       ]
     ],
-    "pubchem_compound": [
+    "uniprot": [
       [
         "ensembl_gene",
-        "uniprot",
-        "reactome_reaction",
-        "chebi",
-        "pubchem_compound"
-      ],
-      [
-        "ensembl_gene",
-        "uniprot",
-        "chembl_target",
-        "chembl_compound",
-        "pubchem_compound"
+        "uniprot"
       ]
     ],
     "pdb": [
@@ -174,12 +143,35 @@
         "chebi"
       ]
     ],
-    "mondo": [
+    "chembl_compound": [
       [
         "ensembl_gene",
-        "ncbigene",
-        "medgen",
-        "mondo"
+        "uniprot",
+        "reactome_reaction",
+        "chebi",
+        "chembl_compound"
+      ],
+      [
+        "ensembl_gene",
+        "uniprot",
+        "chembl_target",
+        "chembl_compound"
+      ]
+    ],
+    "pubchem_compound": [
+      [
+        "ensembl_gene",
+        "uniprot",
+        "reactome_reaction",
+        "chebi",
+        "pubchem_compound"
+      ],
+      [
+        "ensembl_gene",
+        "uniprot",
+        "chembl_target",
+        "chembl_compound",
+        "pubchem_compound"
       ]
     ],
     "glytoucan": [
@@ -189,10 +181,20 @@
         "glytoucan"
       ]
     ],
-    "togovar": [
+    "mondo": [
       [
         "ensembl_gene",
-        "togovar"
+        "ncbigene",
+        "medgen",
+        "mondo"
+      ]
+    ],
+    "mesh": [
+      [
+        "ensembl_gene",
+        "ncbigene",
+        "medgen",
+        "mesh"
       ]
     ],
     "nando": [
@@ -212,12 +214,10 @@
         "hp"
       ]
     ],
-    "mesh": [
+    "togovar": [
       [
         "ensembl_gene",
-        "ncbigene",
-        "medgen",
-        "mesh"
+        "togovar"
       ]
     ]
   },
@@ -234,6 +234,12 @@
         "ensembl_gene"
       ]
     ],
+    "pdb": [
+      [
+        "uniprot",
+        "pdb"
+      ]
+    ],
     "chebi": [
       [
         "uniprot",
@@ -247,10 +253,31 @@
         "chebi"
       ]
     ],
-    "pdb": [
+    "chembl_compound": [
       [
         "uniprot",
-        "pdb"
+        "reactome_reaction",
+        "chebi",
+        "chembl_compound"
+      ],
+      [
+        "uniprot",
+        "chembl_target",
+        "chembl_compound"
+      ]
+    ],
+    "pubchem_compound": [
+      [
+        "uniprot",
+        "reactome_reaction",
+        "chebi",
+        "pubchem_compound"
+      ],
+      [
+        "uniprot",
+        "chembl_target",
+        "chembl_compound",
+        "pubchem_compound"
       ]
     ],
     "glytoucan": [
@@ -275,20 +302,6 @@
         "mesh"
       ]
     ],
-    "pubchem_compound": [
-      [
-        "uniprot",
-        "reactome_reaction",
-        "chebi",
-        "pubchem_compound"
-      ],
-      [
-        "uniprot",
-        "chembl_target",
-        "chembl_compound",
-        "pubchem_compound"
-      ]
-    ],
     "nando": [
       [
         "uniprot",
@@ -311,28 +324,28 @@
         "uniprot",
         "hgnc",
         "togovar"
-      ]
-    ],
-    "chembl_compound": [
-      [
-        "uniprot",
-        "reactome_reaction",
-        "chebi",
-        "chembl_compound"
-      ],
-      [
-        "uniprot",
-        "chembl_target",
-        "chembl_compound"
       ]
     ]
   },
   "pdb": {
+    "ncbigene": [
+      [
+        "pdb",
+        "uniprot",
+        "ncbigene"
+      ]
+    ],
     "ensembl_gene": [
       [
         "pdb",
         "uniprot",
         "ensembl_gene"
+      ]
+    ],
+    "uniprot": [
+      [
+        "pdb",
+        "uniprot"
       ]
     ],
     "chebi": [
@@ -350,26 +363,19 @@
         "chebi"
       ]
     ],
-    "ncbigene": [
+    "chembl_compound": [
       [
         "pdb",
         "uniprot",
-        "ncbigene"
-      ]
-    ],
-    "uniprot": [
-      [
-        "pdb",
-        "uniprot"
-      ]
-    ],
-    "mondo": [
+        "reactome_reaction",
+        "chebi",
+        "chembl_compound"
+      ],
       [
         "pdb",
         "uniprot",
-        "ncbigene",
-        "medgen",
-        "mondo"
+        "chembl_target",
+        "chembl_compound"
       ]
     ],
     "pubchem_compound": [
@@ -388,19 +394,20 @@
         "pubchem_compound"
       ]
     ],
-    "chembl_compound": [
+    "glytoucan": [
       [
         "pdb",
         "uniprot",
-        "reactome_reaction",
-        "chebi",
-        "chembl_compound"
-      ],
+        "glytoucan"
+      ]
+    ],
+    "mondo": [
       [
         "pdb",
         "uniprot",
-        "chembl_target",
-        "chembl_compound"
+        "ncbigene",
+        "medgen",
+        "mondo"
       ]
     ],
     "mesh": [
@@ -412,19 +419,14 @@
         "mesh"
       ]
     ],
-    "glytoucan": [
+    "nando": [
       [
         "pdb",
         "uniprot",
-        "glytoucan"
-      ]
-    ],
-    "togovar": [
-      [
-        "pdb",
-        "uniprot",
-        "hgnc",
-        "togovar"
+        "ncbigene",
+        "medgen",
+        "mondo",
+        "nando"
       ]
     ],
     "hp": [
@@ -436,33 +438,16 @@
         "hp"
       ]
     ],
-    "nando": [
+    "togovar": [
       [
         "pdb",
         "uniprot",
-        "ncbigene",
-        "medgen",
-        "mondo",
-        "nando"
+        "hgnc",
+        "togovar"
       ]
     ]
   },
   "chebi": {
-    "ensembl_gene": [
-      [
-        "chebi",
-        "reactome_reaction",
-        "uniprot",
-        "ensembl_gene"
-      ],
-      [
-        "chebi",
-        "chembl_compound",
-        "chembl_target",
-        "uniprot",
-        "ensembl_gene"
-      ]
-    ],
     "ncbigene": [
       [
         "chebi",
@@ -478,6 +463,21 @@
         "ncbigene"
       ]
     ],
+    "ensembl_gene": [
+      [
+        "chebi",
+        "reactome_reaction",
+        "uniprot",
+        "ensembl_gene"
+      ],
+      [
+        "chebi",
+        "chembl_compound",
+        "chembl_target",
+        "uniprot",
+        "ensembl_gene"
+      ]
+    ],
     "uniprot": [
       [
         "chebi",
@@ -489,12 +489,6 @@
         "chembl_compound",
         "chembl_target",
         "uniprot"
-      ]
-    ],
-    "pubchem_compound": [
-      [
-        "chebi",
-        "pubchem_compound"
       ]
     ],
     "pdb": [
@@ -518,28 +512,17 @@
         "chembl_compound"
       ]
     ],
-    "togovar": [
+    "pubchem_compound": [
       [
         "chebi",
-        "reactome_reaction",
-        "uniprot",
-        "hgnc",
-        "togovar"
-      ],
-      [
-        "chebi",
-        "chembl_compound",
-        "chembl_target",
-        "uniprot",
-        "hgnc",
-        "togovar"
+        "pubchem_compound"
       ]
     ],
-    "mesh": [
+    "glytoucan": [
       [
         "chebi",
-        "chembl_compound",
-        "mesh"
+        "pubchem_compound",
+        "glytoucan"
       ]
     ],
     "mondo": [
@@ -550,11 +533,11 @@
         "mondo"
       ]
     ],
-    "glytoucan": [
+    "mesh": [
       [
         "chebi",
-        "pubchem_compound",
-        "glytoucan"
+        "chembl_compound",
+        "mesh"
       ]
     ],
     "nando": [
@@ -575,24 +558,26 @@
         "medgen",
         "hp"
       ]
-    ]
-  },
-  "chembl_compound": {
-    "ensembl_gene": [
+    ],
+    "togovar": [
       [
-        "chembl_compound",
         "chebi",
         "reactome_reaction",
         "uniprot",
-        "ensembl_gene"
+        "hgnc",
+        "togovar"
       ],
       [
+        "chebi",
         "chembl_compound",
         "chembl_target",
         "uniprot",
-        "ensembl_gene"
+        "hgnc",
+        "togovar"
       ]
-    ],
+    ]
+  },
+  "chembl_compound": {
     "ncbigene": [
       [
         "chembl_compound",
@@ -608,6 +593,21 @@
         "ncbigene"
       ]
     ],
+    "ensembl_gene": [
+      [
+        "chembl_compound",
+        "chebi",
+        "reactome_reaction",
+        "uniprot",
+        "ensembl_gene"
+      ],
+      [
+        "chembl_compound",
+        "chembl_target",
+        "uniprot",
+        "ensembl_gene"
+      ]
+    ],
     "uniprot": [
       [
         "chembl_compound",
@@ -619,25 +619,6 @@
         "chembl_compound",
         "chembl_target",
         "uniprot"
-      ]
-    ],
-    "glytoucan": [
-      [
-        "chembl_compound",
-        "pubchem_compound",
-        "glytoucan"
-      ]
-    ],
-    "chebi": [
-      [
-        "chembl_compound",
-        "chebi"
-      ]
-    ],
-    "pubchem_compound": [
-      [
-        "chembl_compound",
-        "pubchem_compound"
       ]
     ],
     "pdb": [
@@ -655,10 +636,23 @@
         "pdb"
       ]
     ],
-    "mesh": [
+    "chebi": [
       [
         "chembl_compound",
-        "mesh"
+        "chebi"
+      ]
+    ],
+    "pubchem_compound": [
+      [
+        "chembl_compound",
+        "pubchem_compound"
+      ]
+    ],
+    "glytoucan": [
+      [
+        "chembl_compound",
+        "pubchem_compound",
+        "glytoucan"
       ]
     ],
     "mondo": [
@@ -666,6 +660,12 @@
         "chembl_compound",
         "mesh",
         "mondo"
+      ]
+    ],
+    "mesh": [
+      [
+        "chembl_compound",
+        "mesh"
       ]
     ],
     "nando": [
@@ -736,6 +736,20 @@
         "ensembl_gene"
       ]
     ],
+    "uniprot": [
+      [
+        "pubchem_compound",
+        "chebi",
+        "reactome_reaction",
+        "uniprot"
+      ],
+      [
+        "pubchem_compound",
+        "chembl_compound",
+        "chembl_target",
+        "uniprot"
+      ]
+    ],
     "pdb": [
       [
         "pubchem_compound",
@@ -758,24 +772,16 @@
         "chebi"
       ]
     ],
-    "uniprot": [
-      [
-        "pubchem_compound",
-        "chebi",
-        "reactome_reaction",
-        "uniprot"
-      ],
-      [
-        "pubchem_compound",
-        "chembl_compound",
-        "chembl_target",
-        "uniprot"
-      ]
-    ],
     "chembl_compound": [
       [
         "pubchem_compound",
         "chembl_compound"
+      ]
+    ],
+    "glytoucan": [
+      [
+        "pubchem_compound",
+        "glytoucan"
       ]
     ],
     "mondo": [
@@ -786,10 +792,11 @@
         "mondo"
       ]
     ],
-    "glytoucan": [
+    "mesh": [
       [
         "pubchem_compound",
-        "glytoucan"
+        "chembl_compound",
+        "mesh"
       ]
     ],
     "nando": [
@@ -801,11 +808,14 @@
         "nando"
       ]
     ],
-    "mesh": [
+    "hp": [
       [
         "pubchem_compound",
         "chembl_compound",
-        "mesh"
+        "mesh",
+        "mondo",
+        "medgen",
+        "hp"
       ]
     ],
     "togovar": [
@@ -824,16 +834,6 @@
         "uniprot",
         "hgnc",
         "togovar"
-      ]
-    ],
-    "hp": [
-      [
-        "pubchem_compound",
-        "chembl_compound",
-        "mesh",
-        "mondo",
-        "medgen",
-        "hp"
       ]
     ]
   },
@@ -879,14 +879,6 @@
         "chembl_compound"
       ]
     ],
-    "nando": [
-      [
-        "glytoucan",
-        "doid",
-        "mondo",
-        "nando"
-      ]
-    ],
     "pubchem_compound": [
       [
         "glytoucan",
@@ -906,6 +898,14 @@
         "doid",
         "mondo",
         "mesh"
+      ]
+    ],
+    "nando": [
+      [
+        "glytoucan",
+        "doid",
+        "mondo",
+        "nando"
       ]
     ],
     "hp": [
@@ -934,20 +934,20 @@
         "ncbigene"
       ]
     ],
-    "uniprot": [
-      [
-        "mondo",
-        "medgen",
-        "ncbigene",
-        "uniprot"
-      ]
-    ],
     "ensembl_gene": [
       [
         "mondo",
         "medgen",
         "ncbigene",
         "ensembl_gene"
+      ]
+    ],
+    "uniprot": [
+      [
+        "mondo",
+        "medgen",
+        "ncbigene",
+        "uniprot"
       ]
     ],
     "pdb": [
@@ -957,6 +957,14 @@
         "ncbigene",
         "uniprot",
         "pdb"
+      ]
+    ],
+    "chebi": [
+      [
+        "mondo",
+        "mesh",
+        "chembl_compound",
+        "chebi"
       ]
     ],
     "chembl_compound": [
@@ -981,19 +989,10 @@
         "glytoucan"
       ]
     ],
-    "chebi": [
+    "mesh": [
       [
         "mondo",
-        "mesh",
-        "chembl_compound",
-        "chebi"
-      ]
-    ],
-    "hp": [
-      [
-        "mondo",
-        "medgen",
-        "hp"
+        "mesh"
       ]
     ],
     "nando": [
@@ -1002,10 +1001,11 @@
         "nando"
       ]
     ],
-    "mesh": [
+    "hp": [
       [
         "mondo",
-        "mesh"
+        "medgen",
+        "hp"
       ]
     ],
     "togovar": [
@@ -1018,12 +1018,11 @@
     ]
   },
   "mesh": {
-    "uniprot": [
+    "ncbigene": [
       [
         "mesh",
         "medgen",
-        "ncbigene",
-        "uniprot"
+        "ncbigene"
       ]
     ],
     "ensembl_gene": [
@@ -1034,11 +1033,12 @@
         "ensembl_gene"
       ]
     ],
-    "ncbigene": [
+    "uniprot": [
       [
         "mesh",
         "medgen",
-        "ncbigene"
+        "ncbigene",
+        "uniprot"
       ]
     ],
     "pdb": [
@@ -1063,12 +1063,6 @@
         "chembl_compound"
       ]
     ],
-    "mondo": [
-      [
-        "mesh",
-        "mondo"
-      ]
-    ],
     "pubchem_compound": [
       [
         "mesh",
@@ -1082,6 +1076,12 @@
         "mondo",
         "doid",
         "glytoucan"
+      ]
+    ],
+    "mondo": [
+      [
+        "mesh",
+        "mondo"
       ]
     ],
     "nando": [
@@ -1109,6 +1109,14 @@
     ]
   },
   "nando": {
+    "ncbigene": [
+      [
+        "nando",
+        "mondo",
+        "medgen",
+        "ncbigene"
+      ]
+    ],
     "ensembl_gene": [
       [
         "nando",
@@ -1118,12 +1126,13 @@
         "ensembl_gene"
       ]
     ],
-    "ncbigene": [
+    "uniprot": [
       [
         "nando",
         "mondo",
         "medgen",
-        "ncbigene"
+        "ncbigene",
+        "uniprot"
       ]
     ],
     "pdb": [
@@ -1136,21 +1145,21 @@
         "pdb"
       ]
     ],
-    "uniprot": [
+    "chebi": [
       [
         "nando",
         "mondo",
-        "medgen",
-        "ncbigene",
-        "uniprot"
+        "mesh",
+        "chembl_compound",
+        "chebi"
       ]
     ],
-    "glytoucan": [
+    "chembl_compound": [
       [
         "nando",
         "mondo",
-        "doid",
-        "glytoucan"
+        "mesh",
+        "chembl_compound"
       ]
     ],
     "pubchem_compound": [
@@ -1162,21 +1171,18 @@
         "pubchem_compound"
       ]
     ],
-    "chembl_compound": [
+    "glytoucan": [
       [
         "nando",
         "mondo",
-        "mesh",
-        "chembl_compound"
+        "doid",
+        "glytoucan"
       ]
     ],
-    "chebi": [
+    "mondo": [
       [
         "nando",
-        "mondo",
-        "mesh",
-        "chembl_compound",
-        "chebi"
+        "mondo"
       ]
     ],
     "mesh": [
@@ -1186,10 +1192,12 @@
         "mesh"
       ]
     ],
-    "mondo": [
+    "hp": [
       [
         "nando",
-        "mondo"
+        "mondo",
+        "medgen",
+        "hp"
       ]
     ],
     "togovar": [
@@ -1199,14 +1207,6 @@
         "medgen",
         "clinvar",
         "togovar"
-      ]
-    ],
-    "hp": [
-      [
-        "nando",
-        "mondo",
-        "medgen",
-        "hp"
       ]
     ]
   },
@@ -1218,14 +1218,20 @@
         "ncbigene"
       ]
     ],
-    "chebi": [
+    "ensembl_gene": [
       [
         "hp",
         "medgen",
-        "mondo",
-        "mesh",
-        "chembl_compound",
-        "chebi"
+        "ncbigene",
+        "ensembl_gene"
+      ]
+    ],
+    "uniprot": [
+      [
+        "hp",
+        "medgen",
+        "ncbigene",
+        "uniprot"
       ]
     ],
     "pdb": [
@@ -1237,13 +1243,14 @@
         "pdb"
       ]
     ],
-    "glytoucan": [
+    "chebi": [
       [
         "hp",
         "medgen",
         "mondo",
-        "doid",
-        "glytoucan"
+        "mesh",
+        "chembl_compound",
+        "chebi"
       ]
     ],
     "chembl_compound": [
@@ -1253,30 +1260,6 @@
         "mondo",
         "mesh",
         "chembl_compound"
-      ]
-    ],
-    "uniprot": [
-      [
-        "hp",
-        "medgen",
-        "ncbigene",
-        "uniprot"
-      ]
-    ],
-    "ensembl_gene": [
-      [
-        "hp",
-        "medgen",
-        "ncbigene",
-        "ensembl_gene"
-      ]
-    ],
-    "mesh": [
-      [
-        "hp",
-        "medgen",
-        "mondo",
-        "mesh"
       ]
     ],
     "pubchem_compound": [
@@ -1289,11 +1272,28 @@
         "pubchem_compound"
       ]
     ],
+    "glytoucan": [
+      [
+        "hp",
+        "medgen",
+        "mondo",
+        "doid",
+        "glytoucan"
+      ]
+    ],
     "mondo": [
       [
         "hp",
         "medgen",
         "mondo"
+      ]
+    ],
+    "mesh": [
+      [
+        "hp",
+        "medgen",
+        "mondo",
+        "mesh"
       ]
     ],
     "nando": [
@@ -1314,11 +1314,10 @@
     ]
   },
   "togovar": {
-    "uniprot": [
+    "ncbigene": [
       [
         "togovar",
-        "hgnc",
-        "uniprot"
+        "ncbigene"
       ]
     ],
     "ensembl_gene": [
@@ -1327,10 +1326,11 @@
         "ensembl_gene"
       ]
     ],
-    "ncbigene": [
+    "uniprot": [
       [
         "togovar",
-        "ncbigene"
+        "hgnc",
+        "uniprot"
       ]
     ],
     "pdb": [
@@ -1393,14 +1393,6 @@
         "pubchem_compound"
       ]
     ],
-    "mesh": [
-      [
-        "togovar",
-        "clinvar",
-        "medgen",
-        "mesh"
-      ]
-    ],
     "glytoucan": [
       [
         "togovar",
@@ -1415,6 +1407,14 @@
         "clinvar",
         "medgen",
         "mondo"
+      ]
+    ],
+    "mesh": [
+      [
+        "togovar",
+        "clinvar",
+        "medgen",
+        "mesh"
       ]
     ],
     "nando": [
