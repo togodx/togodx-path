@@ -5,7 +5,7 @@
     color: '@color',
     size: '@size',
     shape: {
-      Attribute: 'star'
+      attribute: 'star'
     },
     onClick: (n) => {
       if (pathList[n.id]) {
