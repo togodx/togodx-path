@@ -32,12 +32,12 @@
          });
          const blitzboard = new Blitzboard(document.getElementById('child-area'));
          let graph, config;
-         const graphPromise = fetch('./graph/path-attr.pg').then(res => {
+         const graphPromise = fetch('./graph/path-selected-count-attr-label.pg').then(res => {
              return res.text();
          }).then(text => {
              graph = text;
          });
-         const configPromise = fetch('./graph/config-attr.js').then(res => {
+         const configPromise = fetch('./graph/config-highlight-attr-label.js').then(res => {
              return res.text();
          }).then(text => {
              config = text;
