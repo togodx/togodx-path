@@ -2,7 +2,6 @@
 const program = require('commander');
 const fs = require('fs');
 const axios = require('axios');
-// const syncRequest = require('sync-request');
 
 program
   .option('-d, --dataset', 'count IDs for each dataset')
@@ -84,20 +83,6 @@ function printAttributes(obj) {
   });
   return out.join('\n');
 }
-
-// if (opts.json) {
-//   let out = {};
-//   for (let i=0; i<datasets.length; i++) {
-//     out[datasets[i]] = String(datasetIdMaps[i].size);
-//   }
-//   console.log(JSON.stringify(out, null, '  '));
-// } else {
-//   for (let i=0; i<datasets.length; i++) {
-//     for (let key of datasetIdMaps[i].keys()) {
-//       console.log(`${datasets[i]}\t${key}`);
-//     }
-//   }
-// }
 
 function parseJson(attrName, attrObj) {
   let uniqIds = new Map();
