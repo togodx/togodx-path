@@ -5,6 +5,7 @@ const axios = require('axios');
 // const syncRequest = require('sync-request');
 
 program
+  .option('-d, --dataset', 'count IDs for each dataset')
   .option('-j, --json', 'output JSON to stdout')
   .option('-q, --quit', 'show config and quit')
   .option('-b, --branch <branch>', 'branch', 'develop')
@@ -44,6 +45,12 @@ axios.get(uri).then(res => {
         out[datasets[i]] = String(datasetIdMaps[i].size);
       }
       console.log(JSON.stringify(out, null, '  '));
+    } else if (opts.dataset) {
+      const header = ['dataset', 'count_ids'];
+      console.log(header.join('\t'));
+      for (let i=0; i<datasets.length; i++) {
+        console.log(datasets[i] + '\t' + datasetIdMaps[i].size);
+      }
     } else {
       console.log(attributesCount);
     }
