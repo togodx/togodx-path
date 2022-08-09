@@ -20,3 +20,9 @@ Reproducing the path used in TogoDX/Human
 ```
 $ ./bin/js/togodx-path.js > json/path.json
 ```
+
+Count IDs
+```
+$ ./bin/js/togodx-attributes-count.js json/ > tsv/attribute-count.tsv
+$ ./bin/js/togodx-attributes-count.js json/ -d -j > json/dataset-count.json
+```
