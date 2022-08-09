@@ -8,6 +8,7 @@ program
   .option('-j, --json', 'output JSON to stdout')
   .option('-l, --list', 'list all IDs')
   .option('-q, --quit', 'show config and quit')
+  .option('-v, --verbose', 'verbose')
   .option('-b, --branch <branch>', 'branch', 'develop')
   .option('--js', 'use jsdelivr instead of raw.githubusercontent')
   .arguments('[DIR]')
@@ -68,10 +69,16 @@ axios.get(uri).then(res => {
 
 function printAttributes(obj) {
   let out = [];
-  const header = ['attribute', 'dataset', 'datamodel', 'count_ids'];
-  out.push(header.join('\t'));
+  if (!opts.verbose) {
+    const header = ['attribute', 'dataset', 'datamodel', 'count_ids'];
+    out.push(header.join('\t'));
+  }
   const attrs = obj.attributes;
   obj.categories.forEach((category) => {
+    if (opts.verbose) {
+      out.push('')
+      out.push(`== ${category.label} ==`);
+    }
     category.attributes.forEach((attrName) => {
       try {
         out.push(parseJson(attrName, attrs[attrName]));
@@ -122,13 +129,18 @@ function parseJson(attrName, attrObj) {
     }
   });
 
-  return `${attrName}\t${attrObj.dataset}\t${attrObj.datamodel}\t${uniqIds.size}`;
-  // if (uniqIds.size !== totalCount) {
-  //   console.error(`${totalCount} ids`);
-  // }
-  // if (isDAG) {
-  //   console.error(`DAG ${countDAG} ex. ${dagExample}`);
-  // }
+  let out = `${attrName}\t${attrObj.dataset}\t${attrObj.datamodel}\t${uniqIds.size}`
+  if (opts.verbose) {
+    out = '\n';
+    out += `# ${uniqIds.size}\t${attrObj.dataset}\t${attrName}\t${attrObj.datamodel}`;
+    if (uniqIds.size !== totalCount) {
+      out += `\n${totalCount} ids`;
+    }
+    if (isDAG) {
+      out += `\nDAG ${countDAG} ex. ${dagExample}`;
+    }
+  }
+  return out;
 
   function checkRoot (elem) {
     if (elem.root === true) {
