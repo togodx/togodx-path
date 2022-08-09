@@ -14,12 +14,12 @@ Display attributes
 
 Reproducing the graph of ID links
 ```
-$ ./bin/make_graph.pl > graph/path-selected.pg
+$ ./bin/make_graph.pl > graph/path.pg
 
 $ rm -rf ./tmp/       # Remove temporary (cached) files after creating graph
 ```
 ```
-$ ./bin/make_tsv.pl graph/path-selected.pg > tsv/path.tsv
+$ ./bin/make_tsv.pl graph/path.pg > tsv/path.tsv
 ```
 
 Reproducing the path used in TogoDX/Human
@@ -41,5 +41,5 @@ $ ./bin/js/path-count-start-end-tsv2json.js tsv/path-count-uniq-start-end.tsv > 
 
 Add attributes
 ```
-$ ./bin/js/togodx-attributes-pg.js >> graph/path-selected-count-attr.pg
+$ ./bin/js/togodx-attributes-pg.js >> graph/path-count-attr.pg
 ```
