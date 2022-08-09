@@ -29,7 +29,7 @@ $ ./bin/js/togodx-path.js > json/paths.json
 
 Count IDs
 ```
-$ ./bin/js/togodx-attributes-count.js data/json/ > tsv/attribute-count.tsv
+$ ./bin/js/togodx-attributes-count.js data/json/ > tsv/attribute-count-ids.tsv
 $ ./bin/js/togodx-attributes-count.js data/json/ -d > tsv/dataset-count.tsv
 $ ./bin/js/togodx-attributes-count.js data/json/ -d -j > json/dataset-count.json
 $ ./bin/js/togodx-attributes-count.js data/json/ -l > tsv/ids.tsv
