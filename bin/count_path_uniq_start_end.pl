@@ -4,11 +4,19 @@ use File::Basename;
 use Getopt::Std;
 my $PROGRAM = basename $0;
 my $USAGE=
-"Usage: $PROGRAM
+"Usage: $PROGRAM DIR
 ";
 
 my %OPT;
 getopts('', \%OPT);
+
+if (!@ARGV) {
+    print STDERR $USAGE;
+    exit 1;
+}
+my ($DIR) = @ARGV;
+
+chdir($DIR) || die "$DIR: $!";
 
 my @CSV = `ls *.csv`;
 chomp(@CSV);
