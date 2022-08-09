@@ -7,6 +7,7 @@ const axios = require('axios');
 program
   .option('-d, --dataset', 'count IDs for each dataset')
   .option('-j, --json', 'output JSON to stdout')
+  .option('-l, --list', 'list all IDs')
   .option('-q, --quit', 'show config and quit')
   .option('-b, --branch <branch>', 'branch', 'develop')
   .option('--js', 'use jsdelivr instead of raw.githubusercontent')
@@ -50,6 +51,12 @@ axios.get(uri).then(res => {
       console.log(header.join('\t'));
       for (let i=0; i<datasets.length; i++) {
         console.log(datasets[i] + '\t' + datasetIdMaps[i].size);
+      }
+    } else if (opts.list) {
+      for (let i=0; i<datasets.length; i++) {
+        for (let key of datasetIdMaps[i].keys()) {
+          console.log(`${datasets[i]}\t${key}`);
+        }
       }
     } else {
       console.log(attributesCount);
