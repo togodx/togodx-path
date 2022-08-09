@@ -25,7 +25,7 @@
         <script>
          const pathNodeList = document.getElementById('path-node-list');
          let pathList = null;
-         fetch('./json/path.json').then(res => {
+         fetch('./json/paths.json').then(res => {
              return res.json();
          }).then(json => {
              pathList = json;

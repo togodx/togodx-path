@@ -24,7 +24,7 @@ $ ./bin/make_tsv.pl graph/path.pg > tsv/dataset-links.tsv
 
 Reproducing the path used in TogoDX/Human
 ```
-$ ./bin/js/togodx-path.js > json/path.json
+$ ./bin/js/togodx-path.js > json/paths.json
 ```
 
 Count IDs
