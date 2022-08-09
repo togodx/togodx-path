@@ -37,7 +37,7 @@ axios.get(uri).then(res => {
     console.log(JSON.stringify(res.data, null, '  '));
     process.exit();
   } else {
-    printAttributes(res.data);
+    console.log(printAttributes(res.data));
   }
 }).catch(err => {
   console.error(err);
@@ -45,19 +45,21 @@ axios.get(uri).then(res => {
 });
 
 function printAttributes(obj) {
+  let out = [];
   const header = ['attribute', 'dataset', 'datamodel', 'count_ids'];
-  console.log(header.join('\t'));
+  out.push(header.join('\t'));
   const attrs = obj.attributes;
   obj.categories.forEach((category) => {
     category.attributes.forEach((attrName) => {
       try {
-        parseJson(attrName, attrs[attrName]);
+        out.push(parseJson(attrName, attrs[attrName]));
       } catch (err) {
         console.error(`cannot parse ${attrName}`);
         process.exit(1);
       }
     });
   });
+  return out.join('\n');
 }
 
 // if (opts.json) {
@@ -112,7 +114,7 @@ function parseJson(attrName, attrObj) {
     }
   });
 
-  console.log(`${attrName}\t${attrObj.dataset}\t${attrObj.datamodel}\t${uniqIds.size}`);
+  return `${attrName}\t${attrObj.dataset}\t${attrObj.datamodel}\t${uniqIds.size}`;
   // if (uniqIds.size !== totalCount) {
   //   console.error(`${totalCount} ids`);
   // }
