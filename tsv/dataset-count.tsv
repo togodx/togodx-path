@@ -1,0 +1,14 @@
+dataset	count_ids
+chebi	24510
+chembl_compound	10369
+ensembl_gene	61526
+glytoucan	7332
+hp	10318
+mesh	3208
+mondo	23307
+nando	2081
+ncbigene	19271
+pdb	190482
+pubchem_compound	3382
+togovar	644990
+uniprot	79052
