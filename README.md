@@ -13,7 +13,7 @@ $ ./bin/make_graph.pl > graph/path-selected.pg
 $ rm -rf ./tmp/       # Remove temporary (cached) files after creating graph
 ```
 ```
-$ ./bin/make_tsv.pl graph/path-selected.pg > graph/path-selected.tsv
+$ ./bin/make_tsv.pl graph/path-selected.pg > tsv/path-selected.tsv
 ```
 
 Reproducing the path used in TogoDX/Human
