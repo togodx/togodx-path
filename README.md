@@ -6,6 +6,12 @@ ID links between datasets
 Highlighting ID conversion path
 * https://togodx.github.io/togodx-path/path-highlight.html
 
+Checking ID counts
+* https://togodx.github.io/togodx-path/path-count.html
+
+Display attributes
+* https://togodx.github.io/togodx-path/path-attr.html
+
 Reproducing the graph of ID links
 ```
 $ ./bin/make_graph.pl > graph/path-selected.pg
