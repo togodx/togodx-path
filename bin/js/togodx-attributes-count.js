@@ -69,16 +69,14 @@ axios.get(uri).then(res => {
 
 function printAttributes(obj) {
   let out = [];
-  if (!opts.verbose) {
-    const header = ['attribute', 'dataset', 'datamodel', 'count_ids'];
-    out.push(header.join('\t'));
+  let header = ['attribute', 'dataset', 'datamodel', 'count_ids'];
+  if (opts.verbose) {
+    header.pop();
+    header.push('unique_count', 'redundant_count', 'DAG_check');
   }
+  out.push(header.join('\t'));
   const attrs = obj.attributes;
   obj.categories.forEach((category) => {
-    if (opts.verbose) {
-      out.push('')
-      out.push(`== ${category.label} ==`);
-    }
     category.attributes.forEach((attrName) => {
       try {
         out.push(parseJson(attrName, attrs[attrName]));
@@ -131,13 +129,13 @@ function parseJson(attrName, attrObj) {
 
   let out = `${attrName}\t${attrObj.dataset}\t${attrObj.datamodel}\t${uniqIds.size}`
   if (opts.verbose) {
-    out = '\n';
-    out += `# ${uniqIds.size}\t${attrObj.dataset}\t${attrName}\t${attrObj.datamodel}`;
+    out += '\t';
     if (uniqIds.size !== totalCount) {
-      out += `\n${totalCount} ids`;
+      out += totalCount;
     }
+    out += '\t';
     if (isDAG) {
-      out += `\nDAG ${countDAG} ex. ${dagExample}`;
+      out += `${countDAG} knots (ex) ${dagExample}`;
     }
   }
   return out;
