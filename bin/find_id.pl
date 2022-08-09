@@ -4,17 +4,17 @@ use File::Basename;
 use Getopt::Std;
 my $PROGRAM = basename $0;
 my $USAGE=
-"Usage: $PROGRAM
+"Usage: $PROGRAM DIR ID_TSV
 ";
 
 my %OPT;
 getopts('', \%OPT);
 
-if (!@ARGV) {
+if (@ARGV != 2) {
     print STDERR $USAGE;
     exit 1;
 }
-my ($ID_LIST) = @ARGV;
+my ($DIR, $ID_LIST) = @ARGV;
 
 my %ID_LIST = ();
 open(ID_LIST, "$ID_LIST") || die;
@@ -28,6 +28,8 @@ while (<ID_LIST>) {
     $ID_LIST{$dataset}{$id} = 1;
 }
 close(ID_LIST);
+
+chdir($DIR) || die "$DIR: $!";
 
 # my @CSV = ("chebi-mesh.csv");
 my @CSV = `ls *.csv`;
