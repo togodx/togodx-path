@@ -42,6 +42,7 @@ if (opts.debug) {
 function printAttributes(obj) {
   const attrs = obj.attributes;
   const attrMap = new Map();
+  console.log();
   obj.categories.forEach((category) => {
     category.attributes.forEach((attrId) => {
       console.log(`${attrId} -- ${attrs[attrId].dataset}`);
@@ -51,9 +52,10 @@ function printAttributes(obj) {
   console.log();
   attrMap.forEach((category, attrId) => {
     console.log(`${attrId}`);
-    console.log(`  :Attribute`);
+    console.log(`  :attribute`);
     console.log(`  category: "${category}"`);
     console.log(`  dataset: "${attrs[attrId].dataset}"`);
+    console.log(`  display_label: "Attribute"`);
     console.log(`  size: 15`);
     console.log(`  color: "${color[category]}"`);
   });
