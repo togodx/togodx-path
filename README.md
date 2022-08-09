@@ -32,6 +32,7 @@ Count IDs
 $ ./bin/js/togodx-attributes-count.js data/json/ > tsv/attribute-count.tsv
 $ ./bin/js/togodx-attributes-count.js data/json/ -d > tsv/dataset-count.tsv
 $ ./bin/js/togodx-attributes-count.js data/json/ -d -j > json/dataset-count.json
+$ ./bin/js/togodx-attributes-count.js data/json/ -l > tsv/ids.tsv
 $ (cd data/relation/output; wc -l *.csv) | grep -v total | perl -pe 's/^\s*(\d+)\s(\S+)\.csv$/$2\t$1/' > tsv/path-count.tsv
 $ ./bin/js/path-count-tsv2json.js tsv/path-count.tsv > json/path-count.json
 $ ./bin/count_path_uniq_start_end.pl data/relation/output/ > tsv/path-count-uniq-start-end.tsv
