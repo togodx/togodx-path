@@ -30,8 +30,8 @@ $ ./bin/js/togodx-path.js > json/paths.json
 Count IDs
 ```
 $ ./bin/js/togodx-count-ids.js data/json/ > tsv/attribute-count-ids.tsv
-$ ./bin/js/togodx-count-ids.js data/json/ -d > tsv/dataset-count.tsv
-$ ./bin/js/togodx-count-ids.js data/json/ -d -j > json/dataset-count.json
+$ ./bin/js/togodx-count-ids.js data/json/ -d > tsv/dataset-count-ids.tsv
+$ ./bin/js/togodx-count-ids.js data/json/ -d -j > json/dataset-count-ids.json
 $ ./bin/js/togodx-count-ids.js data/json/ -l > tsv/ids.tsv
 $ (cd data/relation/output; wc -l *.csv) | grep -v total | perl -pe 's/^\s*(\d+)\s(\S+)\.csv$/$2\t$1/' > tsv/paths-count.tsv
 $ ./bin/js/paths-count-tsv2json.js tsv/paths-count.tsv > json/paths-count.json
