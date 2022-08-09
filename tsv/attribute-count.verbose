@@ -1,165 +1,51 @@
-
-== Gene ==
-
-# 61498	ensembl_gene	gene_biotype_ensembl	classification
-
-# 61498	ensembl_gene	gene_chromosome_ensembl	classification
-
-# 19129	ncbigene	gene_number_of_paralogs_homologene	classification
-
-# 19129	ncbigene	gene_evolutionary_conservation_homologene	classification
-
-# 12365	ncbigene	gene_high_level_expression_refex	classification
-21244 ids
-
-# 12365	ncbigene	gene_low_level_expression_refex	classification
-12686 ids
-
-# 44049	ensembl_gene	gene_high_level_expression_gtex6	classification
-97148 ids
-
-# 48652	ensembl_gene	gene_not_expressed_in_tissues_gtex	classification
-155346 ids
-
-# 19597	ensembl_gene	gene_specific_expression_in_tissues_hpa	classification
-26678 ids
-
-# 19597	ensembl_gene	gene_specific_expression_in_cells_hpa	classification
-38808 ids
-
-== Protein ==
-
-# 79052	uniprot	protein_domains_uniprot	classification
-94260 ids
-
-# 79052	uniprot	protein_cellular_component_uniprot	classification
-158113 ids
-DAG 372 ex. GO_0033093 (Weibel-Palade body) -> GO_0030141, GO_0030136
-
-# 79052	uniprot	protein_biological_process_uniprot	classification
-199294 ids
-DAG 12003 ex. GO_0070245 (positive regulation of thymocyte apoptotic process) -> GO_0070234, GO_0070243
-
-# 79052	uniprot	protein_molecular_function_uniprot	classification
-133766 ids
-DAG 1397 ex. GO_0016316 (phosphatidylinositol-3,4-bisphosphate 4-phosphatase activity) -> GO_0034596, GO_0106017
-
-# 79052	uniprot	protein_ligands_uniprot	classification
-84220 ids
-DAG 16 ex. 740 (Sodium/potassium transport) -> 915, 739
-
-# 79052	uniprot	protein_molecular_mass_uniprot	distribution
-79156 ids
-
-# 79052	uniprot	protein_ptms_uniprot	classification
-94178 ids
-DAG 1 ex. 336 (GPI-anchor) -> 325, 449
-
-# 79052	uniprot	protein_number_of_transmembrane_domains_uniprot	distribution
-
-# 79052	uniprot	protein_number_of_phosphorylation_sites_uniprot	distribution
-
-# 79052	uniprot	protein_number_of_glycosylation_sites_uniprot	distribution
-
-# 79052	uniprot	protein_disease_related_proteins_uniprot	classification
-82836 ids
-
-# 79052	uniprot	protein_isolation_source_uniprot	classification
-129151 ids
-
-# 20333	uniprot	protein_evidence_of_existence_nextprot	classification
-
-== Structure ==
-
-# 79052	uniprot	structure_data_existence_uniprot	classification
-
-# 6449	uniprot	structure_helical_regions_uniprot	distribution
-
-# 6001	uniprot	structure_beta_strand_regions_uniprot	distribution
-
-# 186469	pdb	structure_number_of_peptides_pdb	distribution
-
-# 190482	pdb	structure_analysis_methods_pdb	classification
-190689 ids
-
-== Interaction ==
-
-# 79052	uniprot	interaction_proteins_in_pathway_reactome	classification
-106276 ids
-DAG 49 ex. R_HSA_2466712 (Biosynthesis of A2E, implicated in retinal degradation) -> R_HSA_2453864, R_HSA_2453902
-
-# 1816	chebi	interaction_compounds_in_pathway_reactome	classification
-9581 ids
-DAG 49 ex. R_HSA_2466712 (Biosynthesis of A2E, implicated in retinal degradation) -> R_HSA_2453864, R_HSA_2453902
-
-# 78931	uniprot	interaction_number_of_interacting_proteins_uniprot	distribution
-
-# 79052	uniprot	interaction_chembl_assay_existence_uniprot	classification
-80849 ids
-
-== Compound ==
-
-# 1393	chebi	compound_chemical_role_chebi	classification
-1496 ids
-DAG 8 ex. 48359 (protophilic solvent) -> 48354, 39142
-
-# 7771	chebi	compound_application_type_chebi	classification
-12471 ids
-DAG 46 ex. 67105 (insect sterilant) -> 24852, 23092
-
-# 4893	chembl_compound	compound_action_type_chembl	classification
-5085 ids
-
-# 21765	chebi	compound_biological_role_chebi	classification
-31816 ids
-DAG 123 ex. 48353 (serine proteinase inhibitor) -> 37670, 5924
-
-# 7825	chembl_compound	compound_drug_indication_mesh_chembl	classification
-43079 ids
-DAG 2768 ex. D016183 (Murine Acquired Immunodeficiency Syndrome) -> D012192, D012376
-
-# 9574	chembl_compound	compound_drug_development_phase_chembl	classification
-
-# 3382	pubchem_compound	compound_atc_classification_pubchem	classification
-4297 ids
-
-# 3400	chembl_compound	compound_atc_classification_chembl	classification
-4470 ids
-
-== Glycan ==
-
-# 7332	glytoucan	glycan_mass_glycosmos	distribution
-7690 ids
-
-# 5200	glytoucan	glycan_tissue_glycosmos	classification
-5496 ids
-
-# 7042	glytoucan	glycan_subsumption_glycosmos	classification
-
-== Disease ==
-
-# 15825	mondo	disease_diseases_mondo	classification
-25356 ids
-DAG 5117 ex. 0004627 (duodenitis) -> 0043579, 0002866
-
-# 3208	mesh	disease_diseases_mesh	classification
-5139 ids
-DAG 723 ex. D005130 (Eye Hemorrhage) -> D005128, D006470
-
-# 2081	nando	disease_diseases_nando	classification
-
-# 23167	mondo	disease_related_dbs_mondo	classification
-85542 ids
-
-# 10318	hp	disease_phenotypic_abnormality_hpo	classification
-12790 ids
-DAG 1731 ex. 0000561 (Absent eyelashes) -> 0200102, 0002550
-
-== Variant ==
-
-# 174576	togovar	variant_gwas_togovar	classification
-268736 ids
-DAG 1611 ex. EFO_0006462 (ovarian mucinous adenocarcinoma) -> EFO_0006460, EFO_0000197
-
-# 473565	togovar	variant_clinical_significance_togovar	classification
-587018 ids
+attribute	dataset	datamodel	unique_count	redundant_count	DAG_check
+gene_biotype_ensembl	ensembl_gene	classification	61498		
+gene_chromosome_ensembl	ensembl_gene	classification	61498		
+gene_number_of_paralogs_homologene	ncbigene	classification	19129		
+gene_evolutionary_conservation_homologene	ncbigene	classification	19129		
+gene_high_level_expression_refex	ncbigene	classification	12365	21244	
+gene_low_level_expression_refex	ncbigene	classification	12365	12686	
+gene_high_level_expression_gtex6	ensembl_gene	classification	44049	97148	
+gene_not_expressed_in_tissues_gtex	ensembl_gene	classification	48652	155346	
+gene_specific_expression_in_tissues_hpa	ensembl_gene	classification	19597	26678	
+gene_specific_expression_in_cells_hpa	ensembl_gene	classification	19597	38808	
+protein_domains_uniprot	uniprot	classification	79052	94260	
+protein_cellular_component_uniprot	uniprot	classification	79052	158113	372 knots (ex) GO_0033093 (Weibel-Palade body) -> GO_0030141, GO_0030136
+protein_biological_process_uniprot	uniprot	classification	79052	199294	12003 knots (ex) GO_0070245 (positive regulation of thymocyte apoptotic process) -> GO_0070234, GO_0070243
+protein_molecular_function_uniprot	uniprot	classification	79052	133766	1397 knots (ex) GO_0016316 (phosphatidylinositol-3,4-bisphosphate 4-phosphatase activity) -> GO_0034596, GO_0106017
+protein_ligands_uniprot	uniprot	classification	79052	84220	16 knots (ex) 740 (Sodium/potassium transport) -> 915, 739
+protein_molecular_mass_uniprot	uniprot	distribution	79052	79156	
+protein_ptms_uniprot	uniprot	classification	79052	94178	1 knots (ex) 336 (GPI-anchor) -> 325, 449
+protein_number_of_transmembrane_domains_uniprot	uniprot	distribution	79052		
+protein_number_of_phosphorylation_sites_uniprot	uniprot	distribution	79052		
+protein_number_of_glycosylation_sites_uniprot	uniprot	distribution	79052		
+protein_disease_related_proteins_uniprot	uniprot	classification	79052	82836	
+protein_isolation_source_uniprot	uniprot	classification	79052	129151	
+protein_evidence_of_existence_nextprot	uniprot	classification	20333		
+structure_data_existence_uniprot	uniprot	classification	79052		
+structure_helical_regions_uniprot	uniprot	distribution	6449		
+structure_beta_strand_regions_uniprot	uniprot	distribution	6001		
+structure_number_of_peptides_pdb	pdb	distribution	186469		
+structure_analysis_methods_pdb	pdb	classification	190482	190689	
+interaction_proteins_in_pathway_reactome	uniprot	classification	79052	106276	49 knots (ex) R_HSA_2466712 (Biosynthesis of A2E, implicated in retinal degradation) -> R_HSA_2453864, R_HSA_2453902
+interaction_compounds_in_pathway_reactome	chebi	classification	1816	9581	49 knots (ex) R_HSA_2466712 (Biosynthesis of A2E, implicated in retinal degradation) -> R_HSA_2453864, R_HSA_2453902
+interaction_number_of_interacting_proteins_uniprot	uniprot	distribution	78931		
+interaction_chembl_assay_existence_uniprot	uniprot	classification	79052	80849	
+compound_chemical_role_chebi	chebi	classification	1393	1496	8 knots (ex) 48359 (protophilic solvent) -> 48354, 39142
+compound_application_type_chebi	chebi	classification	7771	12471	46 knots (ex) 67105 (insect sterilant) -> 24852, 23092
+compound_action_type_chembl	chembl_compound	classification	4893	5085	
+compound_biological_role_chebi	chebi	classification	21765	31816	123 knots (ex) 48353 (serine proteinase inhibitor) -> 37670, 5924
+compound_drug_indication_mesh_chembl	chembl_compound	classification	7825	43079	2768 knots (ex) D016183 (Murine Acquired Immunodeficiency Syndrome) -> D012192, D012376
+compound_drug_development_phase_chembl	chembl_compound	classification	9574		
+compound_atc_classification_pubchem	pubchem_compound	classification	3382	4297	
+compound_atc_classification_chembl	chembl_compound	classification	3400	4470	
+glycan_mass_glycosmos	glytoucan	distribution	7332	7690	
+glycan_tissue_glycosmos	glytoucan	classification	5200	5496	
+glycan_subsumption_glycosmos	glytoucan	classification	7042		
+disease_diseases_mondo	mondo	classification	15825	25356	5117 knots (ex) 0004627 (duodenitis) -> 0043579, 0002866
+disease_diseases_mesh	mesh	classification	3208	5139	723 knots (ex) D005130 (Eye Hemorrhage) -> D005128, D006470
+disease_diseases_nando	nando	classification	2081		
+disease_related_dbs_mondo	mondo	classification	23167	85542	
+disease_phenotypic_abnormality_hpo	hp	classification	10318	12790	1731 knots (ex) 0000561 (Absent eyelashes) -> 0200102, 0002550
+variant_gwas_togovar	togovar	classification	174576	268736	1611 knots (ex) EFO_0006462 (ovarian mucinous adenocarcinoma) -> EFO_0006460, EFO_0000197
+variant_clinical_significance_togovar	togovar	classification	473565	587018	
