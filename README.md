@@ -41,5 +41,5 @@ $ ./bin/js/path-count-start-end-tsv2json.js tsv/path-count-uniq-start-end.tsv > 
 
 Add attributes
 ```
-$ ./bin/js/togodx-attributes-pg.js >> graph/path-attr.pg
+$ cat graph/path-count.pg =(./bin/js/togodx-attributes-pg.js) > graph/path-attr.pg
 ```
