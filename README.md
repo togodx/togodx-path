@@ -37,3 +37,8 @@ $ ./bin/js/path-count-tsv2json.js tsv/path-count.tsv > json/path-count.json
 $ ./bin/count_path_uniq_start_end.pl data/relation/output/ > tsv/path-count-uniq-start-end.tsv
 $ ./bin/js/path-count-start-end-tsv2json.js tsv/path-count-uniq-start-end.tsv > json/path-count-uniq-start-end.json
 ```
+
+Add attributes
+```
+$ ./bin/js/togodx-attributes-pg.js >> graph/path-selected-count-attr.pg
+```
