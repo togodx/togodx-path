@@ -35,8 +35,8 @@ $ ./bin/js/togodx-attributes-count.js data/json/ -d -j > json/dataset-count.json
 $ ./bin/js/togodx-attributes-count.js data/json/ -l > tsv/ids.tsv
 $ (cd data/relation/output; wc -l *.csv) | grep -v total | perl -pe 's/^\s*(\d+)\s(\S+)\.csv$/$2\t$1/' > tsv/path-count.tsv
 $ ./bin/js/path-count-tsv2json.js tsv/path-count.tsv > json/path-count.json
-$ ./bin/count-path-start-end.pl data/relation/output/ > tsv/path-count-uniq-start-end.tsv
-$ ./bin/js/path-count-start-end-tsv2json.js tsv/path-count-uniq-start-end.tsv > json/path-count-uniq-start-end.json
+$ ./bin/count-path-start-end.pl data/relation/output/ > tsv/count-path-start-end.tsv
+$ ./bin/js/count-path-start-end-tsv2json.js tsv/count-path-start-end.tsv > json/count-path-start-end.json
 ```
 
 Add attributes
