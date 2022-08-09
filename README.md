@@ -33,8 +33,8 @@ $ ./bin/js/togodx-attributes-count.js data/json/ > tsv/attribute-count.tsv
 $ ./bin/js/togodx-attributes-count.js data/json/ -d > tsv/dataset-count.tsv
 $ ./bin/js/togodx-attributes-count.js data/json/ -d -j > json/dataset-count.json
 $ ./bin/js/togodx-attributes-count.js data/json/ -l > tsv/ids.tsv
-$ (cd data/relation/output; wc -l *.csv) | grep -v total | perl -pe 's/^\s*(\d+)\s(\S+)\.csv$/$2\t$1/' > tsv/path-count.tsv
-$ ./bin/js/path-count-tsv2json.js tsv/path-count.tsv > json/path-count.json
+$ (cd data/relation/output; wc -l *.csv) | grep -v total | perl -pe 's/^\s*(\d+)\s(\S+)\.csv$/$2\t$1/' > tsv/paths-count.tsv
+$ ./bin/js/paths-count-tsv2json.js tsv/paths-count.tsv > json/paths-count.json
 $ ./bin/count-path-start-end.pl data/relation/output/ > tsv/count-path-start-end.tsv
 $ ./bin/js/count-path-start-end-tsv2json.js tsv/count-path-start-end.tsv > json/count-path-start-end.json
 ```
