@@ -28,7 +28,7 @@ if (opts.js) {
 }
 uri += 'attributes.dx-server.json';
 
-const datasets = ['chebi', 'chembl_compound', 'ensembl_gene', 'glytoucan', 'hp', 'mesh', 'mondo', 'nando', 'ncbigene', 'pdb', 'pubchem_compound', 'togovar', 'uniprot'];
+const datasets = ['ncbigene', 'ensembl_gene', 'uniprot', 'pdb', 'chebi', 'chembl_compound', 'pubchem_compound', 'glytoucan', 'mondo', 'mesh', 'nando', 'hp', 'togovar'];
 let datasetIdMaps = [];
 for (let i=0; i<datasets.length; i++) {
   datasetIdMaps[i] = new Map();
