@@ -25,25 +25,25 @@
         <script>
          const pathNodeList = document.getElementById('path-node-list');
          let pathList = null;
-         fetch('./graph/path.json').then(res => {
+         fetch('./json/path.json').then(res => {
              return res.json();
          }).then(json => {
              pathList = json;
          });
          let pathCount = null;
-         fetch('./graph/path-count.json').then(res => {
+         fetch('./json/path-count.json').then(res => {
              return res.json();
          }).then(json => {
              pathCount = json;
          });
          let pathCountStartEnd = null;
-         fetch('./graph/path-count-uniq-start-end.json').then(res => {
+         fetch('./json/path-count-uniq-start-end.json').then(res => {
              return res.json();
          }).then(json => {
              pathCountStartEnd = json;
          });
          let datasetCount = null;
-         fetch('./graph/dataset-count.json').then(res => {
+         fetch('./json/dataset-count.json').then(res => {
              return res.json();
          }).then(json => {
              datasetCount = json;

@@ -18,5 +18,5 @@ $ ./bin/make_tsv.pl graph/path-selected.pg > graph/path-selected.tsv
 
 Reproducing the path used in TogoDX/Human
 ```
-$ ./bin/js/togodx-path.js > graph/path.json
+$ ./bin/js/togodx-path.js > json/path.json
 ```
