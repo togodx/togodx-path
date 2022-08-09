@@ -9,15 +9,19 @@
         <link href='./css/style.css' rel='stylesheet'>
     </head>
     <body>
-        <table width="800">
-            <tr><td>ID links between datasets from 8 categories shown in different colors. Larger circles represent the target datasets of TogoDX/Human. See <a href="https://github.com/togodx/togodx-path/blob/main/graph/path-selected.tsv">here</a> for the list of links.</td></tr>
+        <table width="1000">
+            <tr><td>Relations between IDs and attributes, from 8 categories shown in different colors.
+                Larger circles represent the target datasets, and the stars represent attributes in TogoDX/Human.
+                See <a href="https://github.com/togodx/togodx-path/blob/main/graph/path-selected.tsv">here</a> for the ID relations,
+                and also <a href="https://github.com/togodx/togodx-path/blob/main/count_attribute_ids.tsv">here</a> for the attributes.
+            </td></tr>
             <tr><td align="right"><button type="button" class="rounded-button" onclick="location.href='path-attr.html'">Hide Labels</button></td></tr>
         </table>
-        <div id='graph-area' style='width: 800px; height: 600px; border: solid 1px silver;'>
-            <div id='child-area' style='width: 800px; height: 600px;'></div>
+        <div id='graph-area' style='width: 1000px; height: 850px; border: solid 1px silver;'>
+            <div id='child-area' style='width: 1000px; height: 850px;'></div>
         </div>
-        <table width="800">
-            <tr><td><table width="800"><tr>
+        <table width="1000">
+            <tr><td><table width="1000"><tr>
                 <td width="50" align="center" valign="top" style="font-size: 0.9em"><b>Path:</b></td>
                 <td id="path-node-list" style="font-size: 0.9em">(click on a target dataset)</td>
             </tr></table></td></tr>
