@@ -22,7 +22,7 @@ if (program.args.length) {
 
 let uri = `https://raw.githubusercontent.com/togodx/togodx-config-human/${opts.branch}/config/`;
 if (opts.js) {
-  uri = `https://cdn.jsdelivr.net/gh/dbcls/togosite@${opts.branch}/config/togosite-human/`;
+  uri = `https://cdn.jsdelivr.net/gh/togodx/togodx-config-human@${opts.branch}/config/`;
 }
 uri += 'attributes.dx-server.json';
 
