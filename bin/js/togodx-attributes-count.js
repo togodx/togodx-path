@@ -37,7 +37,16 @@ axios.get(uri).then(res => {
     console.log(JSON.stringify(res.data, null, '  '));
     process.exit();
   } else {
-    console.log(printAttributes(res.data));
+    const attributesCount = printAttributes(res.data);
+    if (opts.json) {
+      let out = {};
+      for (let i=0; i<datasets.length; i++) {
+        out[datasets[i]] = String(datasetIdMaps[i].size);
+      }
+      console.log(JSON.stringify(out, null, '  '));
+    } else {
+      console.log(attributesCount);
+    }
   }
 }).catch(err => {
   console.error(err);
