@@ -39,6 +39,11 @@ $ ./bin/count-path-start-end.pl data/relation/output/ > json/count-path-start-en
 $ ./bin/js/count-path-start-end-tsv2json.js json/count-path-start-end.tsv > json/count-path-start-end.json
 ```
 
+Add ID counts
+```
+$ cat graph/path.pg | ./bin/add_dataset_count.pl json/dataset-count-ids.json > graph/path-count.pg
+```
+
 Add attributes
 ```
 $ cat graph/path-count.pg =(./bin/js/togodx-attributes-pg.js) > graph/path-attr.pg
