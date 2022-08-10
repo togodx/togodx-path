@@ -55,7 +55,6 @@ function printAttributes(obj) {
     console.log(`  :attribute`);
     console.log(`  category: "${category}"`);
     console.log(`  dataset: "${attrs[attrId].dataset}"`);
-    console.log(`  display_label: "Attribute"`);
     console.log(`  size: 15`);
     console.log(`  color: "${color[category]}"`);
   });

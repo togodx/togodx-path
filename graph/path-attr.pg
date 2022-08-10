@@ -285,349 +285,299 @@ gene_biotype_ensembl
   :attribute
   category: "Gene"
   dataset: "ensembl_gene"
-  display_label: "Attribute"
   size: 15
   color: "#3AA64C"
 gene_chromosome_ensembl
   :attribute
   category: "Gene"
   dataset: "ensembl_gene"
-  display_label: "Attribute"
   size: 15
   color: "#3AA64C"
 gene_number_of_paralogs_homologene
   :attribute
   category: "Gene"
   dataset: "ncbigene"
-  display_label: "Attribute"
   size: 15
   color: "#3AA64C"
 gene_evolutionary_conservation_homologene
   :attribute
   category: "Gene"
   dataset: "ncbigene"
-  display_label: "Attribute"
   size: 15
   color: "#3AA64C"
 gene_high_level_expression_refex
   :attribute
   category: "Gene"
   dataset: "ncbigene"
-  display_label: "Attribute"
   size: 15
   color: "#3AA64C"
 gene_low_level_expression_refex
   :attribute
   category: "Gene"
   dataset: "ncbigene"
-  display_label: "Attribute"
   size: 15
   color: "#3AA64C"
 gene_high_level_expression_gtex6
   :attribute
   category: "Gene"
   dataset: "ensembl_gene"
-  display_label: "Attribute"
   size: 15
   color: "#3AA64C"
 gene_not_expressed_in_tissues_gtex
   :attribute
   category: "Gene"
   dataset: "ensembl_gene"
-  display_label: "Attribute"
   size: 15
   color: "#3AA64C"
 gene_specific_expression_in_tissues_hpa
   :attribute
   category: "Gene"
   dataset: "ensembl_gene"
-  display_label: "Attribute"
   size: 15
   color: "#3AA64C"
 gene_specific_expression_in_cells_hpa
   :attribute
   category: "Gene"
   dataset: "ensembl_gene"
-  display_label: "Attribute"
   size: 15
   color: "#3AA64C"
 protein_domains_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_cellular_component_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_biological_process_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_molecular_function_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_ligands_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_molecular_mass_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_ptms_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_number_of_transmembrane_domains_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_number_of_phosphorylation_sites_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_number_of_glycosylation_sites_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_disease_related_proteins_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_isolation_source_uniprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 protein_evidence_of_existence_nextprot
   :attribute
   category: "Protein"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#79A63A"
 structure_data_existence_uniprot
   :attribute
   category: "Structure"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#A6823A"
 structure_helical_regions_uniprot
   :attribute
   category: "Structure"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#A6823A"
 structure_beta_strand_regions_uniprot
   :attribute
   category: "Structure"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#A6823A"
 structure_number_of_peptides_pdb
   :attribute
   category: "Structure"
   dataset: "pdb"
-  display_label: "Attribute"
   size: 15
   color: "#A6823A"
 structure_analysis_methods_pdb
   :attribute
   category: "Structure"
   dataset: "pdb"
-  display_label: "Attribute"
   size: 15
   color: "#A6823A"
 interaction_proteins_in_pathway_reactome
   :attribute
   category: "Interaction"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#A63A43"
 interaction_compounds_in_pathway_reactome
   :attribute
   category: "Interaction"
   dataset: "chebi"
-  display_label: "Attribute"
   size: 15
   color: "#A63A43"
 interaction_number_of_interacting_proteins_uniprot
   :attribute
   category: "Interaction"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#A63A43"
 interaction_chembl_assay_existence_uniprot
   :attribute
   category: "Interaction"
   dataset: "uniprot"
-  display_label: "Attribute"
   size: 15
   color: "#A63A43"
 compound_chemical_role_chebi
   :attribute
   category: "Compound"
   dataset: "chebi"
-  display_label: "Attribute"
   size: 15
   color: "#A63A94"
 compound_application_type_chebi
   :attribute
   category: "Compound"
   dataset: "chebi"
-  display_label: "Attribute"
   size: 15
   color: "#A63A94"
 compound_action_type_chembl
   :attribute
   category: "Compound"
   dataset: "chembl_compound"
-  display_label: "Attribute"
   size: 15
   color: "#A63A94"
 compound_biological_role_chebi
   :attribute
   category: "Compound"
   dataset: "chebi"
-  display_label: "Attribute"
   size: 15
   color: "#A63A94"
 compound_drug_indication_mesh_chembl
   :attribute
   category: "Compound"
   dataset: "chembl_compound"
-  display_label: "Attribute"
   size: 15
   color: "#A63A94"
 compound_drug_development_phase_chembl
   :attribute
   category: "Compound"
   dataset: "chembl_compound"
-  display_label: "Attribute"
   size: 15
   color: "#A63A94"
 compound_atc_classification_pubchem
   :attribute
   category: "Compound"
   dataset: "pubchem_compound"
-  display_label: "Attribute"
   size: 15
   color: "#A63A94"
 compound_atc_classification_chembl
   :attribute
   category: "Compound"
   dataset: "chembl_compound"
-  display_label: "Attribute"
   size: 15
   color: "#A63A94"
 glycan_mass_glycosmos
   :attribute
   category: "Glycan"
   dataset: "glytoucan"
-  display_label: "Attribute"
   size: 15
   color: "#673AA6"
 glycan_tissue_glycosmos
   :attribute
   category: "Glycan"
   dataset: "glytoucan"
-  display_label: "Attribute"
   size: 15
   color: "#673AA6"
 glycan_subsumption_glycosmos
   :attribute
   category: "Glycan"
   dataset: "glytoucan"
-  display_label: "Attribute"
   size: 15
   color: "#673AA6"
 disease_diseases_mondo
   :attribute
   category: "Disease"
   dataset: "mondo"
-  display_label: "Attribute"
   size: 15
   color: "#3A5EA6"
 disease_diseases_mesh
   :attribute
   category: "Disease"
   dataset: "mesh"
-  display_label: "Attribute"
   size: 15
   color: "#3A5EA6"
 disease_diseases_nando
   :attribute
   category: "Disease"
   dataset: "nando"
-  display_label: "Attribute"
   size: 15
   color: "#3A5EA6"
 disease_related_dbs_mondo
   :attribute
   category: "Disease"
   dataset: "mondo"
-  display_label: "Attribute"
   size: 15
   color: "#3A5EA6"
 disease_phenotypic_abnormality_hpo
   :attribute
   category: "Disease"
   dataset: "hp"
-  display_label: "Attribute"
   size: 15
   color: "#3A5EA6"
 variant_gwas_togovar
   :attribute
   category: "Variant"
   dataset: "togovar"
-  display_label: "Attribute"
   size: 15
   color: "#3AA69D"
 variant_clinical_significance_togovar
   :attribute
   category: "Variant"
   dataset: "togovar"
-  display_label: "Attribute"
   size: 15
   color: "#3AA69D"
