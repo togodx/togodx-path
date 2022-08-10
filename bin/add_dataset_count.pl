@@ -4,7 +4,7 @@ use File::Basename;
 use Getopt::Std;
 my $PROGRAM = basename $0;
 my $USAGE=
-"Usage: $PROGRAM DATASET_COUNT_JSON
+"Usage: cat GRAPH.pg | $PROGRAM dataset_count_ids.json
 ";
 
 my %OPT;
