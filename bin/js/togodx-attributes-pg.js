@@ -46,6 +46,9 @@ function printAttributes(obj) {
   obj.categories.forEach((category) => {
     category.attributes.forEach((attrId) => {
       console.log(`${attrId} -- ${attrs[attrId].dataset}`);
+      console.log(`  attribute: "${attrId}"`);
+      console.log(`  category: "${category.id}"`);
+      console.log(`  dataset: "${attrs[attrId].dataset}"`);
       attrMap.set(attrId, category.label);
     });
   });
