@@ -1,7 +1,18 @@
 #!/usr/bin/perl -w
 use strict;
 use File::Basename;
+use Getopt::Std;
 use Cwd 'realpath';
+my $PROGRAM = basename $0;
+my $USAGE=
+"Usage: $PROGRAM
+-l: print dataset-links.tsv
+";
+
+my %OPT;
+getopts('l', \%OPT);
+
+STDOUT->autoflush;
 
 my @TARGET_DATASET = ("ncbigene", "ensembl_gene", "uniprot", "pdb", "chebi", "chembl_compound", "pubchem_compound", "glytoucan", "mondo", "mesh", "nando", "hp", "togovar");
 
@@ -58,17 +69,42 @@ get_edge_label($EDGE_LABEL_SHEET);
 my %DATASET_CATEGORY = ();
 get_dataset_category($CATEGORY_SHEET);
 
-print_pg();
+if ($OPT{l}) {
+    print_dataset_links();
+} else {
+    print_pg();
+}
 
 ################################################################################
 ### Function ###################################################################
 ################################################################################
+sub print_dataset_links {
+
+    print "source\tsource category\ttarget\ttarget category\tdisplay_label (biological meaning)\n";
+    for my $edge (@ALL_EDGE) {
+        my @f = split("-", $edge);
+        if (@f != 2) {
+            die;
+        }
+        my ($source, $target) = @f;
+        if ($TOGODX_ROUTE{$source}{$target}) {
+            print join("\t",
+                       $source,
+                       $DATASET_CATEGORY{$source},
+                       $target,
+                       $DATASET_CATEGORY{$target},
+                       $EDGE_LABEL{$source}{$target}
+                ), "\n";
+        }
+    }
+}
+
 sub print_pg {
 
     ### Print nodes ###
-    my %TARGET_DATASET = ();
+    my %target_dataset = ();
     for my $dataset (@TARGET_DATASET) {
-        $TARGET_DATASET{$dataset} = 1;
+        $target_dataset{$dataset} = 1;
     }
 
     for my $node (sort keys %TOGODX_NODE) {
@@ -79,7 +115,7 @@ sub print_pg {
         print "  :$category\n";
         print "  display_label: \"$node_label\"\n";
         print "  color: \"$color\"\n";
-        if (!$TARGET_DATASET{$node}) {
+        if (!$target_dataset{$node}) {
             print "  size: 10\n";
         }
     }
