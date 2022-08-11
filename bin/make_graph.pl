@@ -58,46 +58,51 @@ get_edge_label($EDGE_LABEL_SHEET);
 my %DATASET_CATEGORY = ();
 get_dataset_category($CATEGORY_SHEET);
 
-### Print nodes ###
-my %TARGET_DATASET = ();
-for my $dataset (@TARGET_DATASET) {
-    $TARGET_DATASET{$dataset} = 1;
-}
-
-for my $node (sort keys %TOGODX_NODE) {
-    my $node_label = $NODE_LABEL{$node} || die;
-    my $category = $DATASET_CATEGORY{$node} || die;
-    my $color = $CATEGORY_COLOR{$category} || die;
-    print "$node\n";
-    print "  :$category\n";
-    print "  display_label: \"$node_label\"\n";
-    print "  color: \"$color\"\n";
-    if (!$TARGET_DATASET{$node}) {
-        print "  size: 10\n";
-    }
-}
-
-### Print edges ###
-for my $edge (@ALL_EDGE) {
-    my @f = split("-", $edge);
-    if (@f != 2) {
-        die;
-    }
-    my ($source, $target) = @f;
-    if ($TOGODX_ROUTE{$source}{$target}) {
-        my $edge_label = $EDGE_LABEL{$source}{$target} || die;
-        my $category = $DATASET_CATEGORY{$source} || die;
-        my $color = $CATEGORY_COLOR{$category} || die;
-        print "$source -> $target\n";
-        print "  link: \"$source-$target\"\n";
-        print "  display_label: \"$edge_label\"\n";
-        print "  color: \"$color\"\n";
-    }
-}
+print_pg();
 
 ################################################################################
 ### Function ###################################################################
 ################################################################################
+sub print_pg {
+
+    ### Print nodes ###
+    my %TARGET_DATASET = ();
+    for my $dataset (@TARGET_DATASET) {
+        $TARGET_DATASET{$dataset} = 1;
+    }
+
+    for my $node (sort keys %TOGODX_NODE) {
+        my $node_label = $NODE_LABEL{$node} || die;
+        my $category = $DATASET_CATEGORY{$node} || die;
+        my $color = $CATEGORY_COLOR{$category} || die;
+        print "$node\n";
+        print "  :$category\n";
+        print "  display_label: \"$node_label\"\n";
+        print "  color: \"$color\"\n";
+        if (!$TARGET_DATASET{$node}) {
+            print "  size: 10\n";
+        }
+    }
+
+    ### Print edges ###
+    for my $edge (@ALL_EDGE) {
+        my @f = split("-", $edge);
+        if (@f != 2) {
+            die;
+        }
+        my ($source, $target) = @f;
+        if ($TOGODX_ROUTE{$source}{$target}) {
+            my $edge_label = $EDGE_LABEL{$source}{$target} || die;
+            my $category = $DATASET_CATEGORY{$source} || die;
+            my $color = $CATEGORY_COLOR{$category} || die;
+            print "$source -> $target\n";
+            print "  link: \"$source-$target\"\n";
+            print "  display_label: \"$edge_label\"\n";
+            print "  color: \"$color\"\n";
+        }
+    }
+}
+
 sub get_all_togoid_edges {
     my ($togoid_edges_js, $togoid_edges_tmp) = @_;
 
