@@ -14,12 +14,12 @@ Display attributes
 
 Reproducing the graph of ID links
 ```
-$ ./bin/make_graph.pl > graph/path.pg
+$ ./bin/make_graph.pl > graph/dataset.pg
 
 $ rm -rf ./tmp/       # Remove temporary (cached) files after creating graph
 ```
 ```
-$ ./bin/make_tsv.pl graph/path.pg > tsv/dataset-links.tsv
+$ ./bin/make_tsv.pl graph/dataset.pg > tsv/dataset-links.tsv
 ```
 
 Reproducing the path used in TogoDX/Human
@@ -41,10 +41,10 @@ $ ./bin/js/count-path-start-end-tsv2json.js json/count-path-start-end.tsv > json
 
 Add ID counts
 ```
-$ cat graph/path.pg | ./bin/add_dataset_count.pl json/dataset-count-ids.json > graph/path-count.pg
+$ cat graph/dataset.pg | ./bin/add_dataset_count.pl json/dataset-count-ids.json > graph/dataset-count.pg
 ```
 
 Add attributes
 ```
-$ cat graph/path-count.pg =(./bin/js/togodx-attributes-pg.js) > graph/path-attr.pg
+$ cat graph/dataset-count.pg =(./bin/js/togodx-attributes-pg.js) > graph/dataset-attr.pg
 ```

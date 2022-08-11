@@ -50,7 +50,7 @@
          });
          const blitzboard = new Blitzboard(document.getElementById('child-area'));
          let graph, config;
-         const graphPromise = fetch('./graph/path-count.pg').then(res => {
+         const graphPromise = fetch('./graph/dataset-count.pg').then(res => {
              return res.text();
          }).then(text => {
              graph = text;
