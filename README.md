@@ -15,11 +15,8 @@ Display attributes
 Reproducing the graph of ID links
 ```
 $ ./bin/make_graph.pl > graph/dataset.pg
-
+$ ./bin/make_graph.pl -l > tsv/dataset-links.tsv
 $ rm -rf ./tmp/       # Remove temporary (cached) files after creating graph
-```
-```
-$ ./bin/make_tsv.pl graph/dataset.pg > tsv/dataset-links.tsv
 ```
 
 Reproducing the path used in TogoDX/Human
