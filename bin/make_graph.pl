@@ -7,10 +7,11 @@ my $PROGRAM = basename $0;
 my $USAGE=
 "Usage: $PROGRAM
 -l: print dataset-links.tsv
+-c DATASET_COUNT_FILE
 ";
 
 my %OPT;
-getopts('l', \%OPT);
+getopts('lc:', \%OPT);
 
 STDOUT->autoflush;
 
@@ -69,9 +70,23 @@ get_edge_label($EDGE_LABEL_SHEET);
 my %DATASET_CATEGORY = ();
 get_dataset_category($CATEGORY_SHEET);
 
+my %DATASET_COUNT = ();
+
 if ($OPT{l}) {
     print_dataset_links();
 } else {
+    if ($OPT{c}) {
+        open(DATASET_COUNT, $OPT{c}) || die;
+        while (<DATASET_COUNT>) {
+            chomp;
+            my ($dataset, $count);
+            if (/^(\w+)\t(\d+)/) {
+                ($dataset, $count) = ($1, $2);
+                $DATASET_COUNT{$dataset} = $count;
+            }
+        }
+        close(DATASET_COUNT) || die;
+    }
     print_pg();
 }
 
@@ -115,6 +130,11 @@ sub print_pg {
         print "  :$category\n";
         print "  display_label: \"$node_label\"\n";
         print "  color: \"$color\"\n";
+        if ($DATASET_COUNT{$node}) {
+            my $count = $DATASET_COUNT{$node};
+            # my $log_size = sprintf("%.2f", log($count)*3);
+            print "  count: $count\n";
+        }
         if (!$target_dataset{$node}) {
             print "  size: 10\n";
         }

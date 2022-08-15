@@ -38,7 +38,7 @@ $ ./bin/js/count-path-start-end-tsv2json.js json/count-path-start-end.tsv > json
 
 Add ID counts
 ```
-$ cat graph/dataset.pg | ./bin/add_dataset_count.pl json/dataset-count-ids.json > graph/dataset-count.pg
+$ ./bin/make_graph.pl -c tsv/dataset-count-ids.tsv > graph/dataset-count.pg
 ```
 
 Add attributes
