@@ -73,7 +73,23 @@ get_dataset_category($CATEGORY_SHEET);
 my %DATASET_COUNT = ();
 
 if ($OPT{l}) {
-    print_dataset_links();
+    print "source\tsource category\ttarget\ttarget category\tdisplay_label (biological meaning)\n";
+    for my $edge (@ALL_EDGE) {
+        my @f = split("-", $edge);
+        if (@f != 2) {
+            die;
+        }
+        my ($source, $target) = @f;
+        if ($EDGE{$source}{$target}) {
+            print join("\t",
+                       $source,
+                       $DATASET_CATEGORY{$source},
+                       $target,
+                       $DATASET_CATEGORY{$target},
+                       $EDGE_LABEL{$source}{$target}
+                ), "\n";
+        }
+    }
 } else {
     if ($OPT{c}) {
         open(DATASET_COUNT, $OPT{c}) || die;
@@ -93,26 +109,6 @@ if ($OPT{l}) {
 ################################################################################
 ### Function ###################################################################
 ################################################################################
-sub print_dataset_links {
-
-    print "source\tsource category\ttarget\ttarget category\tdisplay_label (biological meaning)\n";
-    for my $edge (@ALL_EDGE) {
-        my @f = split("-", $edge);
-        if (@f != 2) {
-            die;
-        }
-        my ($source, $target) = @f;
-        if ($EDGE{$source}{$target}) {
-            print join("\t",
-                       $source,
-                       $DATASET_CATEGORY{$source},
-                       $target,
-                       $DATASET_CATEGORY{$target},
-                       $EDGE_LABEL{$source}{$target}
-                ), "\n";
-        }
-    }
-}
 
 sub print_pg {
 
