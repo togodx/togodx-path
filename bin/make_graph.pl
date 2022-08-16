@@ -33,7 +33,7 @@ my $TOGOID_ONTOLOGY = "https://raw.githubusercontent.com/togoid/togoid-config/ma
 my $EDGE_LABEL_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=1295950655";
 my $CATEGORY_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=927983300";
 
-my $TOGOID_EDGES_JS = "./bin/js/togoid-edges.js";
+my $TOGOID_EDGES_JS = "./bin/js/dataset-links-all.js";
 my $TOGODX_ROUTE_JS = "./bin/js/togodx-route.js";
 
 my $DIR = dirname(realpath($0));
