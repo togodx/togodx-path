@@ -57,9 +57,9 @@ if (!-d "tmp") {
 
 my @ALL_EDGE = dataset_links_all();
 
-my %TOGODX_NODE = ();
-my %TOGODX_ROUTE = ();
-get_togodx_route_and_node($PATHS_JS, $PATHS_TMP);
+my %NODE = ();
+my %EDGE = ();
+get_nodes_end_edges($PATHS_JS, $PATHS_TMP);
 
 my %NODE_LABEL = ();
 get_node_label($TOGOID_ONTOLOGY, $TOGOID_ONTOLOGY_TMP);
@@ -102,7 +102,7 @@ sub print_dataset_links {
             die;
         }
         my ($source, $target) = @f;
-        if ($TOGODX_ROUTE{$source}{$target}) {
+        if ($EDGE{$source}{$target}) {
             print join("\t",
                        $source,
                        $DATASET_CATEGORY{$source},
@@ -122,7 +122,7 @@ sub print_pg {
         $target_dataset{$dataset} = 1;
     }
 
-    for my $node (sort keys %TOGODX_NODE) {
+    for my $node (sort keys %NODE) {
         my $node_label = $NODE_LABEL{$node} || die;
         my $category = $DATASET_CATEGORY{$node} || die;
         my $color = $CATEGORY_COLOR{$category} || die;
@@ -147,7 +147,7 @@ sub print_pg {
             die;
         }
         my ($source, $target) = @f;
-        if ($TOGODX_ROUTE{$source}{$target}) {
+        if ($EDGE{$source}{$target}) {
             my $edge_label = $EDGE_LABEL{$source}{$target} || die;
             my $category = $DATASET_CATEGORY{$source} || die;
             my $color = $CATEGORY_COLOR{$category} || die;
@@ -232,7 +232,7 @@ sub get_node_label {
     close(ONTOLOGY);
 }
 
-sub get_togodx_route_and_node {
+sub get_nodes_end_edges {
     my ($paths_js, $paths_tmp) = @_;
 
     if (!-f $paths_tmp) {
@@ -242,19 +242,19 @@ sub get_togodx_route_and_node {
             die;
         }
     }
-    open(ROUTE, "$paths_tmp") || die "$!";
-    my @route = <ROUTE>;
-    chomp(@route);
-    close(ROUTE);
+    open(PATHS, "$paths_tmp") || die "$!";
+    my @link = <PATHS>;
+    chomp(@link);
+    close(PATHS);
 
-    for my $route (@route) {
-        my @f = split("\t", $route);
+    for my $link (@link) {
+        my @f = split("\t", $link);
         if (@f != 2) {
             die;
         }
         my ($source, $target) = @f;
-        $TOGODX_NODE{$source} = 1;
-        $TOGODX_NODE{$target} = 1;
-        $TOGODX_ROUTE{$source}{$target} = 1;
+        $NODE{$source} = 1;
+        $NODE{$target} = 1;
+        $EDGE{$source}{$target} = 1;
     }
 }
