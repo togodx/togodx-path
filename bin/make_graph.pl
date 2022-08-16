@@ -34,22 +34,22 @@ my $EDGE_LABEL_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNm
 my $CATEGORY_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=927983300";
 
 my $DATASET_LINKS_ALL_JS = "./bin/js/dataset-links-all.js";
-my $TOGODX_ROUTE_JS = "./bin/js/paths.js";
+my $PATHS_JS = "./bin/js/paths.js";
 
 my $DIR = dirname(realpath($0));
 chdir "$DIR/.." or die "Cannot chdir to $DIR/..: $!";
-if (-f $DATASET_LINKS_ALL_JS && -f $TOGODX_ROUTE_JS) {
+if (-f $DATASET_LINKS_ALL_JS && -f $PATHS_JS) {
     if (!-d "bin/js/node_modules") {
         system "cd bin/js; npm install";
     }
 } else {
-    die "Not found: $DATASET_LINKS_ALL_JS $TOGODX_ROUTE_JS\n";
+    die "Not found: $DATASET_LINKS_ALL_JS $PATHS_JS\n";
 }
 
 ### Temporary files
 my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
 my $DATASET_LINKS_ALL_TMP = "tmp/dataset-links-all";
-my $TOGODX_ROUTE_TMP = "tmp/togodx-route";
+my $PATHS_TMP = "tmp/paths.tsv";
 if (!-d "tmp") {
     mkdir("tmp") or die "$!";
 }
@@ -59,7 +59,7 @@ my @ALL_EDGE = dataset_links_all();
 
 my %TOGODX_NODE = ();
 my %TOGODX_ROUTE = ();
-get_togodx_route_and_node($TOGODX_ROUTE_JS, $TOGODX_ROUTE_TMP);
+get_togodx_route_and_node($PATHS_JS, $PATHS_TMP);
 
 my %NODE_LABEL = ();
 get_node_label($TOGOID_ONTOLOGY, $TOGOID_ONTOLOGY_TMP);
