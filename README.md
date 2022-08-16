@@ -43,5 +43,5 @@ $ ./bin/make_graph.pl -c tsv/dataset-count-ids.tsv > graph/dataset-count.pg
 
 Add attributes
 ```
-$ cat graph/dataset-count.pg =(./bin/js/togodx-attributes-pg.js) > graph/dataset-attr.pg
+$ cat graph/dataset-count.pg =(./bin/js/attributes-pg.js) > graph/dataset-attr.pg
 ```
