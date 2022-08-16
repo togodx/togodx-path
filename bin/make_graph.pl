@@ -55,8 +55,6 @@ if (!-d "tmp") {
 }
 ####################
 
-my @ALL_EDGE = dataset_links_all();
-
 my %NODE = ();
 my %EDGE = ();
 get_nodes_end_edges($PATHS_JS, $PATHS_TMP);
@@ -74,7 +72,7 @@ my %DATASET_COUNT = ();
 
 if ($OPT{l}) {
     print "source\tsource category\ttarget\ttarget category\tdisplay_label (biological meaning)\n";
-    for my $edge (@ALL_EDGE) {
+    for my $edge (dataset_links_all()) {
         my @f = split("-", $edge);
         if (@f != 2) {
             die;
@@ -129,7 +127,7 @@ if ($OPT{l}) {
     }
 
     ### Print edges ###
-    for my $edge (@ALL_EDGE) {
+    for my $edge (dataset_links_all()) {
         my @f = split("-", $edge);
         if (@f != 2) {
             die;
