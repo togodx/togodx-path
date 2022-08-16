@@ -33,29 +33,29 @@ my $TOGOID_ONTOLOGY = "https://raw.githubusercontent.com/togoid/togoid-config/ma
 my $EDGE_LABEL_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=1295950655";
 my $CATEGORY_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=927983300";
 
-my $TOGOID_EDGES_JS = "./bin/js/dataset-links-all.js";
+my $DATASET_LINKS_ALL_JS = "./bin/js/dataset-links-all.js";
 my $TOGODX_ROUTE_JS = "./bin/js/togodx-route.js";
 
 my $DIR = dirname(realpath($0));
 chdir "$DIR/.." or die "Cannot chdir to $DIR/..: $!";
-if (-f $TOGOID_EDGES_JS && -f $TOGODX_ROUTE_JS) {
+if (-f $DATASET_LINKS_ALL_JS && -f $TOGODX_ROUTE_JS) {
     if (!-d "bin/js/node_modules") {
         system "cd bin/js; npm install";
     }
 } else {
-    die "Not found: $TOGOID_EDGES_JS $TOGODX_ROUTE_JS\n";
+    die "Not found: $DATASET_LINKS_ALL_JS $TOGODX_ROUTE_JS\n";
 }
 
 ### Temporary files
 my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
-my $TOGOID_EDGES_TMP = "tmp/togoid-edges";
+my $DATASET_LINKS_ALL_TMP = "tmp/dataset-links-all";
 my $TOGODX_ROUTE_TMP = "tmp/togodx-route";
 if (!-d "tmp") {
     mkdir("tmp") or die "$!";
 }
 ####################
 
-my @ALL_EDGE = get_all_togoid_edges($TOGOID_EDGES_JS, $TOGOID_EDGES_TMP);
+my @ALL_EDGE = dataset_links_all();
 
 my %TOGODX_NODE = ();
 my %TOGODX_ROUTE = ();
@@ -159,22 +159,21 @@ sub print_pg {
     }
 }
 
-sub get_all_togoid_edges {
-    my ($togoid_edges_js, $togoid_edges_tmp) = @_;
+sub dataset_links_all {
 
-    if (!-f $togoid_edges_tmp) {
-        if (-f $togoid_edges_js) {
-            system "$togoid_edges_js > $togoid_edges_tmp";
+    if (!-f $DATASET_LINKS_ALL_TMP) {
+        if (-f $DATASET_LINKS_ALL_JS) {
+            system "$DATASET_LINKS_ALL_JS > $DATASET_LINKS_ALL_TMP";
         } else {
             die;
         }
     }
-    open(LIST, $togoid_edges_tmp) || die "$!";
-    my @edge = <LIST>;
-    chomp(@edge);
+    open(LIST, $DATASET_LINKS_ALL_TMP) || die "$!";
+    my @list = <LIST>;
+    chomp(@list);
     close(LIST);
 
-    return @edge
+    return @list;
 }
 
 sub get_edge_label {
