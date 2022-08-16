@@ -21,7 +21,7 @@ $ rm -rf ./tmp/       # Remove temporary (cached) files after creating graph
 
 Reproducing the path used in TogoDX/Human
 ```
-$ ./bin/js/togodx-path.js > json/paths.json
+$ ./bin/js/paths.js > json/paths.json
 ```
 
 Count IDs
