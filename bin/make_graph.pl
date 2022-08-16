@@ -233,16 +233,16 @@ sub get_node_label {
 }
 
 sub get_togodx_route_and_node {
-    my ($togodx_route_js, $togodx_route_tmp) = @_;
+    my ($paths_js, $paths_tmp) = @_;
 
-    if (!-f $togodx_route_tmp) {
-        if (-f $togodx_route_js) {
-            system "$togodx_route_js --tsv | sort -u > $togodx_route_tmp";
+    if (!-f $paths_tmp) {
+        if (-f $paths_js) {
+            system "$paths_js --tsv | sort -u > $paths_tmp";
         } else {
             die;
         }
     }
-    open(ROUTE, "$togodx_route_tmp") || die "$!";
+    open(ROUTE, "$paths_tmp") || die "$!";
     my @route = <ROUTE>;
     chomp(@route);
     close(ROUTE);
