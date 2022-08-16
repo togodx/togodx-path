@@ -34,7 +34,7 @@ my $EDGE_LABEL_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNm
 my $CATEGORY_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=927983300";
 
 my $DATASET_LINKS_ALL_JS = "./bin/js/dataset-links-all.js";
-my $TOGODX_ROUTE_JS = "./bin/js/togodx-route.js";
+my $TOGODX_ROUTE_JS = "./bin/js/paths.js";
 
 my $DIR = dirname(realpath($0));
 chdir "$DIR/.." or die "Cannot chdir to $DIR/..: $!";
@@ -237,7 +237,7 @@ sub get_togodx_route_and_node {
 
     if (!-f $togodx_route_tmp) {
         if (-f $togodx_route_js) {
-            system "$togodx_route_js | sort -u > $togodx_route_tmp";
+            system "$togodx_route_js --tsv | sort -u > $togodx_route_tmp";
         } else {
             die;
         }
