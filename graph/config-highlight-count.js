@@ -34,12 +34,9 @@
               edgeSet.add(`${path[i+1]}-${path[i]}`);
             }
             child.textContent += ` - ${path[i+1]}`;
-            // if (pathCount[blitzboard.pathSrc][path[i+1]]) {
-            //   child.textContent += ` (${pathCount[blitzboard.pathSrc][path[i+1]]})`;
-            // }
           }
           child.textContent += ` (${pathCountStartEnd[blitzboard.pathSrc][n.id].end} / ${datasetCount[n.id]})`;
-          child.textContent += ` : ${pathCount[blitzboard.pathSrc][n.id]} paths`;
+          child.textContent += ` : ${pathCountStartEnd[blitzboard.pathSrc][n.id].combinations} pairs`;
         });
         blitzboard.network.setSelection({
           nodes: Array.from(nodeSet),

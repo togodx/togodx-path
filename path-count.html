@@ -30,12 +30,6 @@
          }).then(json => {
              pathList = json;
          });
-         let pathCount = null;
-         fetch('./json/paths-count.json').then(res => {
-             return res.json();
-         }).then(json => {
-             pathCount = json;
-         });
          let pathCountStartEnd = null;
          fetch('./json/count-path-start-end.json').then(res => {
              return res.json();
