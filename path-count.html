@@ -30,11 +30,11 @@
          }).then(json => {
              pathList = json;
          });
-         let pathCountStartEnd = null;
+         let pairsCount = null;
          fetch('./json/id-pairs-count.json').then(res => {
              return res.json();
          }).then(json => {
-             pathCountStartEnd = json;
+             pairsCount = json;
          });
          let datasetCount = null;
          fetch('./json/dataset-count-ids.json').then(res => {

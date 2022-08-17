@@ -23,7 +23,7 @@
           const child = document.createElement('div');
           pathNodeList.appendChild(child);
           child.textContent = `${blitzboard.pathSrc}`;
-          child.textContent += ` (${pathCountStartEnd[blitzboard.pathSrc][n.id].start} / ${datasetCount[blitzboard.pathSrc]})`
+          child.textContent += ` (${pairsCount[blitzboard.pathSrc][n.id].start} / ${datasetCount[blitzboard.pathSrc]})`
           for (let i = 0; i < path.length - 1; i++) {
             // nodeSet.add(path[i+1]);
             if (blitzboard.hasEdge(path[i], path[i+1])) {
@@ -35,8 +35,8 @@
             }
             child.textContent += ` - ${path[i+1]}`;
           }
-          child.textContent += ` (${pathCountStartEnd[blitzboard.pathSrc][n.id].end} / ${datasetCount[n.id]})`;
-          child.textContent += ` : ${pathCountStartEnd[blitzboard.pathSrc][n.id].combinations} pairs`;
+          child.textContent += ` (${pairsCount[blitzboard.pathSrc][n.id].end} / ${datasetCount[n.id]})`;
+          child.textContent += ` : ${pairsCount[blitzboard.pathSrc][n.id].combinations} pairs of IDs`;
         });
         blitzboard.network.setSelection({
           nodes: Array.from(nodeSet),
