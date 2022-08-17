@@ -2,651 +2,807 @@
   "ncbigene": {
     "chebi": {
       "start": "8882",
-      "end": "6567"
+      "end": "6567",
+      "combinations": "169058"
     },
     "chembl_compound": {
       "start": "5056",
-      "end": "4062"
+      "end": "4062",
+      "combinations": "126812"
     },
     "ensembl_gene": {
       "start": "19037",
-      "end": "19087"
+      "end": "19087",
+      "combinations": "19131"
     },
     "glytoucan": {
       "start": "836",
-      "end": "183"
+      "end": "183",
+      "combinations": "2234"
     },
     "hp": {
       "start": "234",
-      "end": "144"
+      "end": "144",
+      "combinations": "270"
     },
     "mesh": {
       "start": "489",
-      "end": "365"
+      "end": "365",
+      "combinations": "571"
     },
     "mondo": {
       "start": "4393",
-      "end": "5768"
+      "end": "5768",
+      "combinations": "6491"
     },
     "nando": {
       "start": "625",
-      "end": "754"
+      "end": "754",
+      "combinations": "1042"
     },
     "pdb": {
       "start": "7534",
-      "end": "53551"
+      "end": "53551",
+      "combinations": "83831"
     },
     "pubchem_compound": {
       "start": "2810",
-      "end": "1800"
+      "end": "1800",
+      "combinations": "41324"
     },
     "togovar": {
       "start": "15299",
-      "end": "556962"
+      "end": "556962",
+      "combinations": "568352"
     },
     "uniprot": {
       "start": "18804",
-      "end": "22676"
+      "end": "22676",
+      "combinations": "22970"
     }
   },
   "ensembl_gene": {
     "chebi": {
       "start": "8981",
-      "end": "6501"
+      "end": "6501",
+      "combinations": "169036"
     },
     "chembl_compound": {
       "start": "5103",
-      "end": "3975"
+      "end": "3975",
+      "combinations": "124813"
     },
     "glytoucan": {
       "start": "842",
-      "end": "188"
+      "end": "188",
+      "combinations": "2541"
     },
     "hp": {
       "start": "236",
-      "end": "144"
+      "end": "144",
+      "combinations": "271"
     },
     "mesh": {
       "start": "507",
-      "end": "367"
+      "end": "367",
+      "combinations": "593"
     },
     "mondo": {
       "start": "4495",
-      "end": "5865"
+      "end": "5865",
+      "combinations": "6641"
     },
     "nando": {
       "start": "643",
-      "end": "756"
+      "end": "756",
+      "combinations": "1081"
     },
     "ncbigene": {
       "start": "19087",
-      "end": "19037"
+      "end": "19037",
+      "combinations": "19131"
     },
     "pdb": {
       "start": "7577",
-      "end": "53735"
+      "end": "53735",
+      "combinations": "83654"
     },
     "pubchem_compound": {
       "start": "2775",
-      "end": "1788"
+      "end": "1788",
+      "combinations": "40879"
     },
     "togovar": {
       "start": "22013",
-      "end": "576032"
+      "end": "576032",
+      "combinations": "657280"
     },
     "uniprot": {
       "start": "20280",
-      "end": "76325"
+      "end": "76325",
+      "combinations": "76588"
     }
   },
   "uniprot": {
     "chebi": {
       "start": "9004",
-      "end": "6570"
+      "end": "6570",
+      "combinations": "169634"
     },
     "chembl_compound": {
       "start": "5130",
-      "end": "4063"
+      "end": "4063",
+      "combinations": "126673"
     },
     "ensembl_gene": {
       "start": "76325",
-      "end": "20280"
+      "end": "20280",
+      "combinations": "76588"
     },
     "glytoucan": {
       "start": "846",
-      "end": "189"
+      "end": "189",
+      "combinations": "2541"
     },
     "hp": {
       "start": "280",
-      "end": "143"
+      "end": "143",
+      "combinations": "324"
     },
     "mesh": {
       "start": "652",
-      "end": "365"
+      "end": "365",
+      "combinations": "777"
     },
     "mondo": {
       "start": "5653",
-      "end": "5758"
+      "end": "5758",
+      "combinations": "8607"
     },
     "nando": {
       "start": "803",
-      "end": "754"
+      "end": "754",
+      "combinations": "1351"
     },
     "ncbigene": {
       "start": "22676",
-      "end": "18804"
+      "end": "18804",
+      "combinations": "22970"
     },
     "pdb": {
       "start": "7704",
-      "end": "54072"
+      "end": "54072",
+      "combinations": "77591"
     },
     "pubchem_compound": {
       "start": "2782",
-      "end": "1800"
+      "end": "1800",
+      "combinations": "41034"
     },
     "togovar": {
       "start": "68049",
-      "end": "565227"
+      "end": "565227",
+      "combinations": "4239522"
     }
   },
   "pdb": {
     "chebi": {
       "start": "48463",
-      "end": "6585"
+      "end": "6585",
+      "combinations": "3532955"
     },
     "chembl_compound": {
       "start": "41100",
-      "end": "4524"
+      "end": "4524",
+      "combinations": "3176962"
     },
     "ensembl_gene": {
       "start": "53735",
-      "end": "7577"
+      "end": "7577",
+      "combinations": "83654"
     },
     "glytoucan": {
       "start": "7178",
-      "end": "190"
+      "end": "190",
+      "combinations": "49723"
     },
     "hp": {
       "start": "2706",
-      "end": "97"
+      "end": "97",
+      "combinations": "5052"
     },
     "mesh": {
       "start": "5281",
-      "end": "299"
+      "end": "299",
+      "combinations": "8453"
     },
     "mondo": {
       "start": "26228",
-      "end": "3476"
+      "end": "3476",
+      "combinations": "64622"
     },
     "nando": {
       "start": "6868",
-      "end": "595"
+      "end": "595",
+      "combinations": "11588"
     },
     "ncbigene": {
       "start": "53551",
-      "end": "7534"
+      "end": "7534",
+      "combinations": "83831"
     },
     "pubchem_compound": {
       "start": "32696",
-      "end": "1944"
+      "end": "1944",
+      "combinations": "1364051"
     },
     "togovar": {
       "start": "51971",
-      "end": "363110"
+      "end": "363110",
+      "combinations": "5213703"
     },
     "uniprot": {
       "start": "54072",
-      "end": "7704"
+      "end": "7704",
+      "combinations": "77591"
     }
   },
   "chebi": {
     "chembl_compound": {
       "start": "2423",
-      "end": "2400"
+      "end": "2400",
+      "combinations": "2423"
     },
     "ensembl_gene": {
       "start": "6501",
-      "end": "8981"
+      "end": "8981",
+      "combinations": "169036"
     },
     "glytoucan": {
       "start": "107",
-      "end": "107"
+      "end": "107",
+      "combinations": "107"
     },
     "hp": {
       "start": "1012",
-      "end": "207"
+      "end": "207",
+      "combinations": "3013"
     },
     "mesh": {
       "start": "1396",
-      "end": "867"
+      "end": "867",
+      "combinations": "8326"
     },
     "mondo": {
       "start": "1952",
-      "end": "1212"
+      "end": "1212",
+      "combinations": "16632"
     },
     "nando": {
       "start": "0",
-      "end": "0"
+      "end": "0",
+      "combinations": "0"
     },
     "ncbigene": {
       "start": "6567",
-      "end": "8882"
+      "end": "8882",
+      "combinations": "169058"
     },
     "pdb": {
       "start": "6585",
-      "end": "48463"
+      "end": "48463",
+      "combinations": "3532955"
     },
     "pubchem_compound": {
       "start": "1440",
-      "end": "1435"
+      "end": "1435",
+      "combinations": "1440"
     },
     "togovar": {
       "start": "6539",
-      "end": "414227"
+      "end": "414227",
+      "combinations": "9915357"
     },
     "uniprot": {
       "start": "6570",
-      "end": "9004"
+      "end": "9004",
+      "combinations": "169634"
     }
   },
   "chembl_compound": {
     "chebi": {
       "start": "2400",
-      "end": "2423"
+      "end": "2423",
+      "combinations": "2423"
     },
     "ensembl_gene": {
       "start": "3975",
-      "end": "5103"
+      "end": "5103",
+      "combinations": "124813"
     },
     "glytoucan": {
       "start": "2",
-      "end": "2"
+      "end": "2",
+      "combinations": "2"
     },
     "hp": {
       "start": "2943",
-      "end": "235"
+      "end": "235",
+      "combinations": "6322"
     },
     "mesh": {
       "start": "4793",
-      "end": "1037"
+      "end": "1037",
+      "combinations": "17068"
     },
     "mondo": {
       "start": "7345",
-      "end": "1399"
+      "end": "1399",
+      "combinations": "34758"
     },
     "nando": {
       "start": "0",
-      "end": "0"
+      "end": "0",
+      "combinations": "0"
     },
     "ncbigene": {
       "start": "4062",
-      "end": "5056"
+      "end": "5056",
+      "combinations": "126812"
     },
     "pdb": {
       "start": "4524",
-      "end": "41100"
+      "end": "41100",
+      "combinations": "3176962"
     },
     "pubchem_compound": {
       "start": "2339",
-      "end": "2361"
+      "end": "2361",
+      "combinations": "2361"
     },
     "togovar": {
       "start": "4054",
-      "end": "246015"
+      "end": "246015",
+      "combinations": "8373180"
     },
     "uniprot": {
       "start": "4063",
-      "end": "5130"
+      "end": "5130",
+      "combinations": "126673"
     }
   },
   "pubchem_compound": {
     "chebi": {
       "start": "1435",
-      "end": "1440"
+      "end": "1440",
+      "combinations": "1440"
     },
     "chembl_compound": {
       "start": "2361",
-      "end": "2339"
+      "end": "2339",
+      "combinations": "2361"
     },
     "ensembl_gene": {
       "start": "1788",
-      "end": "2775"
+      "end": "2775",
+      "combinations": "40879"
     },
     "glytoucan": {
       "start": "1",
-      "end": "1"
+      "end": "1",
+      "combinations": "1"
     },
     "hp": {
       "start": "817",
-      "end": "202"
+      "end": "202",
+      "combinations": "2519"
     },
     "mesh": {
       "start": "1124",
-      "end": "830"
+      "end": "830",
+      "combinations": "6904"
     },
     "mondo": {
       "start": "1818",
-      "end": "1184"
+      "end": "1184",
+      "combinations": "14239"
     },
     "nando": {
       "start": "0",
-      "end": "0"
+      "end": "0",
+      "combinations": "0"
     },
     "ncbigene": {
       "start": "1800",
-      "end": "2810"
+      "end": "2810",
+      "combinations": "41324"
     },
     "pdb": {
       "start": "1944",
-      "end": "32696"
+      "end": "32696",
+      "combinations": "1364051"
     },
     "togovar": {
       "start": "1797",
-      "end": "152209"
+      "end": "152209",
+      "combinations": "2983344"
     },
     "uniprot": {
       "start": "1800",
-      "end": "2782"
+      "end": "2782",
+      "combinations": "41034"
     }
   },
   "glytoucan": {
     "chebi": {
       "start": "107",
-      "end": "107"
+      "end": "107",
+      "combinations": "107"
     },
     "chembl_compound": {
       "start": "2",
-      "end": "2"
+      "end": "2",
+      "combinations": "2"
     },
     "ensembl_gene": {
       "start": "188",
-      "end": "842"
+      "end": "842",
+      "combinations": "2541"
     },
     "hp": {
       "start": "10",
-      "end": "6"
+      "end": "6",
+      "combinations": "16"
     },
     "mesh": {
       "start": "7",
-      "end": "10"
+      "end": "10",
+      "combinations": "17"
     },
     "mondo": {
       "start": "34",
-      "end": "58"
+      "end": "58",
+      "combinations": "126"
     },
     "nando": {
       "start": "1",
-      "end": "2"
+      "end": "2",
+      "combinations": "2"
     },
     "ncbigene": {
       "start": "183",
-      "end": "836"
+      "end": "836",
+      "combinations": "2234"
     },
     "pdb": {
       "start": "190",
-      "end": "7178"
+      "end": "7178",
+      "combinations": "49723"
     },
     "pubchem_compound": {
       "start": "1",
-      "end": "1"
+      "end": "1",
+      "combinations": "1"
     },
     "togovar": {
       "start": "186",
-      "end": "52829"
+      "end": "52829",
+      "combinations": "168572"
     },
     "uniprot": {
       "start": "189",
-      "end": "846"
+      "end": "846",
+      "combinations": "2541"
     }
   },
   "mondo": {
     "chebi": {
       "start": "1212",
-      "end": "1952"
+      "end": "1952",
+      "combinations": "16632"
     },
     "chembl_compound": {
       "start": "1399",
-      "end": "7345"
+      "end": "7345",
+      "combinations": "34758"
     },
     "ensembl_gene": {
       "start": "5865",
-      "end": "4495"
+      "end": "4495",
+      "combinations": "6641"
     },
     "glytoucan": {
       "start": "58",
-      "end": "34"
+      "end": "34",
+      "combinations": "126"
     },
     "hp": {
       "start": "1122",
-      "end": "1123"
+      "end": "1123",
+      "combinations": "1123"
     },
     "mesh": {
       "start": "1959",
-      "end": "1959"
+      "end": "1959",
+      "combinations": "1960"
     },
     "nando": {
       "start": "1341",
-      "end": "1701"
+      "end": "1701",
+      "combinations": "1827"
     },
     "ncbigene": {
       "start": "5768",
-      "end": "4393"
+      "end": "4393",
+      "combinations": "6491"
     },
     "pdb": {
       "start": "3476",
-      "end": "26228"
+      "end": "26228",
+      "combinations": "64622"
     },
     "pubchem_compound": {
       "start": "1184",
-      "end": "1818"
+      "end": "1818",
+      "combinations": "14239"
     },
     "togovar": {
       "start": "6382",
-      "end": "314542"
+      "end": "314542",
+      "combinations": "488407"
     },
     "uniprot": {
       "start": "5758",
-      "end": "5653"
+      "end": "5653",
+      "combinations": "8607"
     }
   },
   "mesh": {
     "chebi": {
       "start": "867",
-      "end": "1396"
+      "end": "1396",
+      "combinations": "8326"
     },
     "chembl_compound": {
       "start": "1037",
-      "end": "4793"
+      "end": "4793",
+      "combinations": "17068"
     },
     "ensembl_gene": {
       "start": "367",
-      "end": "507"
+      "end": "507",
+      "combinations": "593"
     },
     "glytoucan": {
       "start": "10",
-      "end": "7"
+      "end": "7",
+      "combinations": "17"
     },
     "hp": {
       "start": "312",
-      "end": "312"
+      "end": "312",
+      "combinations": "312"
     },
     "mondo": {
       "start": "1959",
-      "end": "1959"
+      "end": "1959",
+      "combinations": "1960"
     },
     "nando": {
       "start": "4",
-      "end": "4"
+      "end": "4",
+      "combinations": "4"
     },
     "ncbigene": {
       "start": "365",
-      "end": "489"
+      "end": "489",
+      "combinations": "571"
     },
     "pdb": {
       "start": "299",
-      "end": "5281"
+      "end": "5281",
+      "combinations": "8453"
     },
     "pubchem_compound": {
       "start": "830",
-      "end": "1124"
+      "end": "1124",
+      "combinations": "6904"
     },
     "togovar": {
       "start": "742",
-      "end": "95818"
+      "end": "95818",
+      "combinations": "103113"
     },
     "uniprot": {
       "start": "365",
-      "end": "652"
+      "end": "652",
+      "combinations": "777"
     }
   },
   "nando": {
     "chebi": {
       "start": "0",
-      "end": "0"
+      "end": "0",
+      "combinations": "0"
     },
     "chembl_compound": {
       "start": "0",
-      "end": "0"
+      "end": "0",
+      "combinations": "0"
     },
     "ensembl_gene": {
       "start": "756",
-      "end": "643"
+      "end": "643",
+      "combinations": "1081"
     },
     "glytoucan": {
       "start": "2",
-      "end": "1"
+      "end": "1",
+      "combinations": "2"
     },
     "hp": {
       "start": "201",
-      "end": "158"
+      "end": "158",
+      "combinations": "204"
     },
     "mesh": {
       "start": "4",
-      "end": "4"
+      "end": "4",
+      "combinations": "4"
     },
     "mondo": {
       "start": "1701",
-      "end": "1341"
+      "end": "1341",
+      "combinations": "1827"
     },
     "ncbigene": {
       "start": "754",
-      "end": "625"
+      "end": "625",
+      "combinations": "1042"
     },
     "pdb": {
       "start": "595",
-      "end": "6868"
+      "end": "6868",
+      "combinations": "11588"
     },
     "pubchem_compound": {
       "start": "0",
-      "end": "0"
+      "end": "0",
+      "combinations": "0"
     },
     "togovar": {
       "start": "1120",
-      "end": "99923"
+      "end": "99923",
+      "combinations": "172597"
     },
     "uniprot": {
       "start": "754",
-      "end": "803"
+      "end": "803",
+      "combinations": "1351"
     }
   },
   "hp": {
     "chebi": {
       "start": "207",
-      "end": "1012"
+      "end": "1012",
+      "combinations": "3013"
     },
     "chembl_compound": {
       "start": "235",
-      "end": "2943"
+      "end": "2943",
+      "combinations": "6322"
     },
     "ensembl_gene": {
       "start": "144",
-      "end": "236"
+      "end": "236",
+      "combinations": "271"
     },
     "glytoucan": {
       "start": "6",
-      "end": "10"
+      "end": "10",
+      "combinations": "16"
     },
     "mesh": {
       "start": "312",
-      "end": "312"
+      "end": "312",
+      "combinations": "312"
     },
     "mondo": {
       "start": "1123",
-      "end": "1122"
+      "end": "1122",
+      "combinations": "1123"
     },
     "nando": {
       "start": "158",
-      "end": "201"
+      "end": "201",
+      "combinations": "204"
     },
     "ncbigene": {
       "start": "144",
-      "end": "234"
+      "end": "234",
+      "combinations": "270"
     },
     "pdb": {
       "start": "97",
-      "end": "2706"
+      "end": "2706",
+      "combinations": "5052"
     },
     "pubchem_compound": {
       "start": "202",
-      "end": "817"
+      "end": "817",
+      "combinations": "2519"
     },
     "togovar": {
       "start": "884",
-      "end": "23178"
+      "end": "23178",
+      "combinations": "26546"
     },
     "uniprot": {
       "start": "143",
-      "end": "280"
+      "end": "280",
+      "combinations": "324"
     }
   },
   "togovar": {
     "chebi": {
       "start": "414227",
-      "end": "6539"
+      "end": "6539",
+      "combinations": "9915357"
     },
     "chembl_compound": {
       "start": "246015",
-      "end": "4054"
+      "end": "4054",
+      "combinations": "8373180"
     },
     "ensembl_gene": {
       "start": "576032",
-      "end": "22013"
+      "end": "22013",
+      "combinations": "657280"
     },
     "glytoucan": {
       "start": "52829",
-      "end": "186"
+      "end": "186",
+      "combinations": "168572"
     },
     "hp": {
       "start": "23178",
-      "end": "884"
+      "end": "884",
+      "combinations": "26546"
     },
     "mesh": {
       "start": "95818",
-      "end": "742"
+      "end": "742",
+      "combinations": "103113"
     },
     "mondo": {
       "start": "314542",
-      "end": "6382"
+      "end": "6382",
+      "combinations": "488407"
     },
     "nando": {
       "start": "99923",
-      "end": "1120"
+      "end": "1120",
+      "combinations": "172597"
     },
     "ncbigene": {
       "start": "556962",
-      "end": "15299"
+      "end": "15299",
+      "combinations": "568352"
     },
     "pdb": {
       "start": "363110",
-      "end": "51971"
+      "end": "51971",
+      "combinations": "5213703"
     },
     "pubchem_compound": {
       "start": "152209",
-      "end": "1797"
+      "end": "1797",
+      "combinations": "2983344"
     },
     "uniprot": {
       "start": "565227",
-      "end": "68049"
+      "end": "68049",
+      "combinations": "4239522"
     }
   }
 }

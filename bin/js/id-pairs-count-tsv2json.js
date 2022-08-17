@@ -54,11 +54,13 @@ lines.forEach((line) => {
     }
     out[source][target].start = count1;
     out[source][target].end = count2;
+    out[source][target].combinations = combinations;
     if (!out[target][source]) {
       out[target][source] = {};
     }
     out[target][source].start = count2;
     out[target][source].end = count1;
+    out[target][source].combinations = combinations;
   }
 });
 console.log(JSON.stringify(out, null, '  '));
