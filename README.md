@@ -31,8 +31,8 @@ $ ./bin/js/dataset-count-ids.js data/json/ -d > tsv/dataset-count-ids.tsv
 $ ./bin/js/dataset-count-ids.js data/json/ -d -j > json/dataset-count-ids.json
 $ ./bin/js/dataset-count-ids.js data/json/ -l > tsv/ids.tsv
 $ ./bin/id-pairs-count.pl data/relation/output/ > tsv/id-pairs-count.tsv
-$ ./bin/js/count-path-start-end-tsv2json.js json/id-pairs-count.tsv > json/count-path-start-end.json
-$ ./bin/js/count-path-start-end-tsv2json.js tsv/id-pairs-count.tsv -c > json/paths-count.json
+$ ./bin/js/id-pairs-count-tsv2json.js tsv/id-pairs-count.tsv > json/count-path-start-end.json
+$ ./bin/js/id-pairs-count-tsv2json.js tsv/id-pairs-count.tsv -c > json/paths-count.json
 ```
 
 Add ID counts
