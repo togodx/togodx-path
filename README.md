@@ -30,10 +30,9 @@ $ ./bin/js/dataset-count-ids.js data/json/ > tsv/attribute-count-ids.tsv
 $ ./bin/js/dataset-count-ids.js data/json/ -d > tsv/dataset-count-ids.tsv
 $ ./bin/js/dataset-count-ids.js data/json/ -d -j > json/dataset-count-ids.json
 $ ./bin/js/dataset-count-ids.js data/json/ -l > tsv/ids.tsv
-$ (cd data/relation/output; wc -l *.csv) | grep -v total | perl -pe 's/^\s*(\d+)\s(\S+)\.csv$/$2\t$1/' > json/paths-count.tsv
-$ ./bin/js/paths-count-tsv2json.js json/paths-count.tsv > json/paths-count.json
-$ ./bin/count-path-start-end.pl data/relation/output/ > json/count-path-start-end.tsv
-$ ./bin/js/count-path-start-end-tsv2json.js json/count-path-start-end.tsv > json/count-path-start-end.json
+$ ./bin/check_ids_in_paths.pl data/relation/output/ > tsv/id-pairs-count.tsv
+$ ./bin/js/count-path-start-end-tsv2json.js json/id-pairs-count.tsv > json/count-path-start-end.json
+$ ./bin/js/count-path-start-end-tsv2json.js tsv/id-pairs-count.tsv -c > json/paths-count.json
 ```
 
 Add ID counts
