@@ -67,15 +67,15 @@ function printAttributes(obj) {
     'datamodel',
   ];
   console.log(header.join('\t'));
-  const attrs = obj.attributes;
   obj.categories.forEach((category) => {
     category.attributes.forEach((attrName) => {
       try {
+        const attr = obj.attributes[attrName];
         const fields = [category.label,
-                        attrs[attrName].label,
-                        attrs[attrName].description,
-                        attrs[attrName].dataset,
-                        attrs[attrName].datamodel];
+                        attr.label,
+                        attr.description,
+                        attr.dataset,
+                        attr.datamodel];
         console.log(fields.join('\t'));
       } catch (err) {
         console.error(`cannot parse ${attrName}`);
