@@ -1,0 +1,51 @@
+category	label	description	dataset	datamodel
+Gene	Gene biotype	Gene classification annotated in Ensembl	ensembl_gene	classification
+Gene	Chromosome	Chromosome where a gene is located	ensembl_gene	classification
+Gene	# of paralogs	Number of duplicated genes (paralogs) in each human gene calculated based on HomoloGene	ncbigene	classification
+Gene	Evolutionary divergence	Most distant organisms from human that have orthologous genes in HomoloGene	ncbigene	classification
+Gene	Tissue-specific high expression (RefEx GeneChip)	Tissues in which a gene was tissue-specific highly expressed in 34 tissues of RefEx(GeneChip microarray)	ncbigene	classification
+Gene	Tissue-specific low expression (RefEx GeneChip)	Tissues in which a gene was tissue-specific lowly expressed in 34 tissues of RefEx(GeneChip microarray)	ncbigene	classification
+Gene	Tissue-specific high expression (GTEx)	Tissues in which a gene is tissue-specific highly expressed in 49 tissues of GTEx V6	ensembl_gene	classification
+Gene	No expression in tissues (GTEx)	Tissues in which expression of a gene is not detected in 53 tissues of GTEx V8	ensembl_gene	classification
+Gene	Tissue-specific high expression (HPA)	Tissues in which expression specificity of a gene is evaluated as "Tissue enriched", "Tissue enhanced", or"Group enriched" by Human Protein Atlas	ensembl_gene	classification
+Gene	Cell type-specific high expression (HPA)	Cell types in which expression specificity of a gene is evaluated as "Cell type enriched", "Cell type enhanced", or"Group enriched" by Human Protein Atlas	ensembl_gene	classification
+Protein	Protein domains	Protein domains from UniProt	uniprot	classification
+Protein	Cellular component	Functional annotations (GO terms) derived from the Cellular component category of GeneOntology, which Uniprot has assigned to each human protein with evidence information	uniprot	classification
+Protein	Biological process	Functional annotations (GO terms) derived from the Biological process category of GeneOntology, which Uniprot has assigned to each human protein with evidence information	uniprot	classification
+Protein	Molecular function	Functional annotations (GO terms) derived from the Molecular function category of GeneOntology, which Uniprot has assigned to each human protein with evidence information	uniprot	classification
+Protein	Ligands	Classification by non-protein molecules which bind/react with proteins in Function section from UniProt	uniprot	classification
+Protein	Molecular mass	Molecular weight of the protein including information from multiple isoforms in Sequences section from UniProt	uniprot	distribution
+Protein	PTMs	Classification by types of post-translational modifications, including S-S bonds (disulfide bonds) in Amino acid modifications section from UniProt	uniprot	classification
+Protein	# of transmembrane domains	Number of transmembrane domains. A group of molecules forming a family, such as channels, may have the same number of domains in Topology section from UniProt	uniprot	distribution
+Protein	# of phosphorylation sites	Number of phosphorylation at Ser/Thr/Tyr, which may create an activation state for the protein and acts like a switch in Amino acid modifications section from UniProt	uniprot	distribution
+Protein	# of glycosylation sites	Number of glycosylation sites, including N-linked,O-linked and others in Amino acid modifications section from UniProt	uniprot	distribution
+Protein	Disease-related proteins	Disease-related proteins in Pathology & Biotech section from UniProt	uniprot	classification
+Protein	Tissues w/expression reported	Classification based on the name of the tissue from which the clone was isolated in the reference describing the protein sequence in Tissue section from UniProt	uniprot	classification
+Protein	Evidence of existence	Classification by the basis of protein expression, such as whether it has been identified as a protein or transcript in Expression section from neXtProt	uniprot	classification
+Structure	Structure data existence	Uniprot entries having 3D structure data in PDB in Structure section from Uniprot	uniprot	classification
+Structure	Rate of helical regions	Rate of helical regions in each entry of UniProt	uniprot	distribution
+Structure	Rate of beta strand regions	Rate of beta strand regions in each entry of UniProt	uniprot	distribution
+Structure	# of peptides in a PDB entry	The number of peptides in a PDB entry	pdb	distribution
+Structure	Analysis methods	Classification by the method used to determine the three-dimensional structure in Experimental method section from PDB	pdb	classification
+Interaction	Proteins in pathway	Proteins participating as components classified by pathway (reaction) from Reactome	uniprot	classification
+Interaction	Compounds in pathway	Compounds participating as components classified by pathway (reaction) from Reactome	chebi	classification
+Interaction	# of interacting proteins	Classification of uniprot proteins by the number of target proteins they interact with in Interaction section from UniProt	uniprot	distribution
+Interaction	ChEMBL assay existence	Uniprot entries classified according to the presence or absence of a method to detect direct protein-compound interactions (ChEMBL assay)	uniprot	classification
+Compound	Chemical role	Classification based on the chemical roles, such as antioxidant or environmental contaminant from ChEBI	chebi	classification
+Compound	Application type	Classification based on the application types, such as pharmaceutical or pesticide from ChEBI	chebi	classification
+Compound	Action type	Classification based on the mechanism of action, such as an inhibitor or an antagonist from ChEMBL	chembl_compound	classification
+Compound	Biological role	Classification based on the biological roles, such as inhibitor or antimicrobial agent from ChEBI	chebi	classification
+Compound	Drug indication	Classification of diseases for which drugs are indicated, based on hierarchical data using MeSH, a life science thesaurus from ChEMBL	chembl_compound	classification
+Compound	Drug development phase	Classification based on the drug's development phase (research stage, phase I-III, and post-launch) from ChEMBL	chembl_compound	classification
+Compound	PubChem ATC classification	Classification of a medicine (in PubChem) according to its medicinal properties (WHO ATC Code)	pubchem_compound	classification
+Compound	ChEMBL ATC classification	Classification of a medicine (in ChEMBL) according to its medicinal properties (WHO ATC Code)	chembl_compound	classification
+Glycan	Molecular mass of glycans	Molecular weight of glycans from GlyCosmos	glytoucan	distribution
+Glycan	Tissues	Tissues where glycans are expressed	glytoucan	classification
+Glycan	Subsumption 	The relationship between four levels of glycan types registered in GlyCosmos. For details, see <a href="https://glycosmos.org/faq" target="_blank">the Help page of GlyCosmos</a>.	glytoucan	classification
+Disease	Diseases in Mondo	Subcategories in the Disease or disorder category in the Mondo Disease Ontology (Mondo)	mondo	classification
+Disease	Diseases in MeSH	Subcategories in the Disease category in Medical Subject Headings (MeSH)	mesh	classification
+Disease	Diseases in NANDO	Japanese rare and intractable disease categories in the Nanbyo Disease Ontology (NANDO)	nando	classification
+Disease	Cross referenced disease DBs in Mondo	Number of entries linked to Mondo in each of approx. 70 disease related databases from database cross reference in Mondo	mondo	classification
+Disease	Phenotypic abnormality	Classification the subcategories of the Phenotypic abnormality categories of the Human Phenotype Ontology (HPO)	hp	classification
+Variant	GWAS	Classification of statistically significant variants in genome-wide association studies (GWAS) based on associated traits. Obtained from GWAS catalog via TogoVar	togovar	classification
+Variant	Clinical significance	Classification of variants according to their clinical significance, such as whether they are the cause of the disease or not. Obtained from ClinVar via TogoVar	togovar	classification
