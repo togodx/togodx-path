@@ -17,40 +17,19 @@ if (opts.js) {
 }
 uri += 'attributes.dx-server.json';
 
-const datasets = ['ncbigene', 'ensembl_gene', 'uniprot', 'pdb', 'chebi', 'chembl_compound', 'pubchem_compound', 'glytoucan', 'mondo', 'mesh', 'nando', 'hp', 'togovar'];
-let datasetIdMaps = [];
-for (let i=0; i<datasets.length; i++) {
-  datasetIdMaps[i] = new Map();
-}
-
 axios.get(uri).then(res => {
   if (opts.quit) {
     console.log(JSON.stringify(res.data, null, '  '));
     process.exit();
   } else {
     const obj = res.data;
-    let header = [
-      'category',
-      'label',
-      'description',
-      'dataset',
-      'datamodel',
-    ];
+    let header = ['category', 'label', 'description', 'dataset', 'datamodel'];
     console.log(header.join('\t'));
     obj.categories.forEach((category) => {
       category.attributes.forEach((attrName) => {
-        try {
-          const attr = obj.attributes[attrName];
-          const fields = [category.label,
-                          attr.label,
-                          attr.description,
-                          attr.dataset,
-                          attr.datamodel];
-          console.log(fields.join('\t'));
-        } catch (err) {
-          console.error(`cannot parse ${attrName}`);
-          process.exit(1);
-        }
+        const attr = obj.attributes[attrName];
+        const fields = [category.label, attr.label, attr.description, attr.dataset, attr.datamodel];
+        console.log(fields.join('\t'));
       });
     });
   }
