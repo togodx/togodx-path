@@ -22,12 +22,11 @@ axios.get(uri).then(res => {
     console.log(JSON.stringify(res.data, null, '  '));
     process.exit();
   } else {
-    const obj = res.data;
     let header = ['category', 'label', 'description', 'dataset', 'datamodel'];
     console.log(header.join('\t'));
-    obj.categories.forEach((category) => {
+    res.data.categories.forEach((category) => {
       category.attributes.forEach((attrName) => {
-        const attr = obj.attributes[attrName];
+        const attr = res.data.attributes[attrName];
         const fields = [category.label, attr.label, attr.description, attr.dataset, attr.datamodel];
         console.log(fields.join('\t'));
       });
