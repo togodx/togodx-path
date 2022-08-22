@@ -84,85 +84,16 @@ function printAttributes(obj) {
   obj.categories.forEach((category) => {
     category.attributes.forEach((attrName) => {
       try {
-        console.log(parseJson(attrName, attrs[attrName], category));
+        const fields = [category.label,
+                        attrs[attrName].label,
+                        attrs[attrName].description,
+                        attrs[attrName].dataset,
+                        attrs[attrName].datamodel];
+        console.log(fields.join('\t'));
       } catch (err) {
         console.error(`cannot parse ${attrName}`);
         process.exit(1);
       }
     });
   });
-}
-
-function parseJson(attrName, attrObj, category) {
-  let uniqIds = new Map();
-  let totalCount = 0;
-  let isDAG = false;
-  let countDAG = 0;
-  let dagExample = '';
-  let rootId;
-  let mapParent = new Map();
-
-  // let input = fs.readFileSync(attrName, "utf8");
-  // JSON.parse(input.toString()).forEach((elem) => {
-  //   if (!elem.id) {
-  //     console.error(elem);
-  //   }
-
-  //   if (attrObj.datamodel === 'distribution') {
-  //     totalCount++;
-  //     uniqIds.set(elem.id, true);
-  //     saveDatasetId(attrObj.dataset, elem.id);
-  //   } else {
-  //     if (elem.root) {
-  //       checkRoot(elem);
-  //     } else if (elem.leaf === true) {
-  //       totalCount++;
-  //       uniqIds.set(elem.id, true);
-  //       saveDatasetId(attrObj.dataset, elem.id);
-  //     } else if (elem.parent) {
-  //       if (mapParent.has(elem.id)) {
-  //         isDAG = true;
-  //         countDAG++;
-  //         dagExample = `${elem.id} (${elem.label})` + ' -> ' + mapParent.get(elem.id) + ', ' + elem.parent;
-  //       } else {
-  //         mapParent.set(elem.id, elem.parent)
-  //       }
-  //     }
-  //   }
-  // });
-
-  // let out = `${attrName}\t${attrObj.dataset}\t${attrObj.datamodel}\t${uniqIds.size}`
-  const fields = [category.label,
-                  // attrName,
-                  attrObj.label,
-                  attrObj.description,
-                  attrObj.dataset, attrObj.datamodel];
-  let out = fields.join('\t');
-  if (opts.verbose) {
-    out += '\t';
-    if (uniqIds.size !== totalCount) {
-      out += totalCount;
-    }
-    out += '\t';
-    if (isDAG) {
-      out += `${countDAG} knots (ex) ${dagExample}`;
-    }
-  }
-  return out;
-
-  function checkRoot (elem) {
-    if (elem.root === true) {
-      if (rootId) {
-        console.error('error: rootId=', rootId);
-      }
-      rootId = elem.id;
-    } else {
-      console.error('error: root is', elem);
-    }
-  }
-}
-
-function saveDatasetId(dataset, id) {
-  const i = datasets.indexOf(dataset);
-  datasetIdMaps[i].set(id, true);
 }
