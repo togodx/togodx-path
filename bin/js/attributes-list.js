@@ -11,16 +11,9 @@ program
   .option('-v, --verbose', 'verbose')
   .option('-b, --branch <branch>', 'branch', 'develop')
   .option('--js', 'use jsdelivr instead of raw.githubusercontent')
-  .arguments('[DIR]')
   .parse(process.argv);
 
 const opts = program.opts();
-
-// if (program.args.length) {
-//   process.chdir(program.args[0]);
-// } else {
-//   program.help();
-// }
 
 let uri = `https://raw.githubusercontent.com/togodx/togodx-config-human/${opts.branch}/config/`;
 if (opts.js) {
