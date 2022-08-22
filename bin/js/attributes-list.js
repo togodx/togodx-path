@@ -28,36 +28,33 @@ axios.get(uri).then(res => {
     console.log(JSON.stringify(res.data, null, '  '));
     process.exit();
   } else {
-    printAttributes(res.data);
+    const obj = res.data;
+    let header = [
+      'category',
+      'label',
+      'description',
+      'dataset',
+      'datamodel',
+    ];
+    console.log(header.join('\t'));
+    obj.categories.forEach((category) => {
+      category.attributes.forEach((attrName) => {
+        try {
+          const attr = obj.attributes[attrName];
+          const fields = [category.label,
+                          attr.label,
+                          attr.description,
+                          attr.dataset,
+                          attr.datamodel];
+          console.log(fields.join('\t'));
+        } catch (err) {
+          console.error(`cannot parse ${attrName}`);
+          process.exit(1);
+        }
+      });
+    });
   }
 }).catch(err => {
   console.error(err);
   process.exit(1);
 });
-
-function printAttributes(obj) {
-  let header = [
-    'category',
-    'label',
-    'description',
-    'dataset',
-    'datamodel',
-  ];
-  console.log(header.join('\t'));
-  obj.categories.forEach((category) => {
-    category.attributes.forEach((attrName) => {
-      try {
-        const attr = obj.attributes[attrName];
-        const fields = [category.label,
-                        attr.label,
-                        attr.description,
-                        attr.dataset,
-                        attr.datamodel];
-        console.log(fields.join('\t'));
-      } catch (err) {
-        console.error(`cannot parse ${attrName}`);
-        process.exit(1);
-      }
-    });
-  });
-}
