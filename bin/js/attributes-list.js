@@ -8,7 +8,6 @@ program
   .option('-j, --json', 'output JSON to stdout')
   .option('-l, --list', 'list all IDs')
   .option('-q, --quit', 'show config and quit')
-  .option('-v, --verbose', 'verbose')
   .option('-b, --branch <branch>', 'branch', 'develop')
   .option('--js', 'use jsdelivr instead of raw.githubusercontent')
   .parse(process.argv);
@@ -66,12 +65,7 @@ function printAttributes(obj) {
     'description',
     'dataset',
     'datamodel',
-    // 'count_ids'
   ];
-  if (opts.verbose) {
-    header.pop();
-    header.push('unique_count', 'redundant_count', 'DAG_check');
-  }
   console.log(header.join('\t'));
   const attrs = obj.attributes;
   obj.categories.forEach((category) => {
