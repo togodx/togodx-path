@@ -39,7 +39,6 @@ axios.get(uri).then(res => {
     console.log(JSON.stringify(res.data, null, '  '));
     process.exit();
   } else {
-    const attributesCount = printAttributes(res.data);
     if (opts.json) {
       let out = {};
       for (let i=0; i<datasets.length; i++) {
@@ -59,7 +58,7 @@ axios.get(uri).then(res => {
         }
       }
     } else {
-      console.log(attributesCount);
+      printAttributes(res.data);
     }
   }
 }).catch(err => {
@@ -68,7 +67,6 @@ axios.get(uri).then(res => {
 });
 
 function printAttributes(obj) {
-  let out = [];
   let header = [
     'category',
     'label',
@@ -81,19 +79,18 @@ function printAttributes(obj) {
     header.pop();
     header.push('unique_count', 'redundant_count', 'DAG_check');
   }
-  out.push(header.join('\t'));
+  console.log(header.join('\t'));
   const attrs = obj.attributes;
   obj.categories.forEach((category) => {
     category.attributes.forEach((attrName) => {
       try {
-        out.push(parseJson(attrName, attrs[attrName], category));
+        console.log(parseJson(attrName, attrs[attrName], category));
       } catch (err) {
         console.error(`cannot parse ${attrName}`);
         process.exit(1);
       }
     });
   });
-  return out.join('\n');
 }
 
 function parseJson(attrName, attrObj, category) {
