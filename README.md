@@ -43,3 +43,8 @@ Add attributes
 ```
 $ cat graph/dataset-count.pg =(./bin/js/attributes-pg.js) > graph/dataset-attr.pg
 ```
+
+## Supplementary tables
+* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-count-ids.tsv
+* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-list.tsv
+* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod.tsv
