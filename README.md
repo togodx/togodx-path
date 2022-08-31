@@ -15,8 +15,8 @@ Display attributes
 
 Reproducing the graph of ID links
 ```
-$ ./bin/make_graph.pl > graph/dataset.pg
-$ ./bin/make_graph.pl -l > tsv/dataset-links.tsv
+$ ./bin/create_graph.pl > graph/dataset.pg
+$ ./bin/create_graph.pl -l > tsv/dataset-links.tsv
 $ rm -rf ./tmp/       # Remove temporary (cached) files after creating graph
 ```
 
@@ -37,7 +37,7 @@ $ ./bin/js/id-pairs-count-tsv2json.js tsv/id-pairs-count.tsv > json/id-pairs-cou
 
 Add ID counts
 ```
-$ ./bin/make_graph.pl -c tsv/dataset-count-ids.tsv > graph/dataset-count.pg
+$ ./bin/create_graph.pl -c tsv/dataset-count-ids.tsv > graph/dataset-count.pg
 ```
 
 Add attributes
