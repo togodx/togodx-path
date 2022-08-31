@@ -3,7 +3,7 @@ const program = require('commander');
 const axios = require('axios');
 
 program
-  .option('-t, --tsv', 'list edges of paths in tsv')
+  .option('-l, --list', 'list edges of paths in tsv')
   .parse(process.argv);
 
 let opts = program.opts();
@@ -23,7 +23,7 @@ targetDatasets.forEach((source) => {
     if (source !== target) {
       let api = `https://integbio.jp/togosite_dev/sparqlist/api/togoid_route?source=${source}&target=${target}`;
       const promise = axios.get(api).then(res => {
-        if (opts.tsv) {
+        if (opts.list) {
           printPaths(res.data);
         } else {
           tmp[source][target] = res.data;
@@ -37,7 +37,7 @@ targetDatasets.forEach((source) => {
   });
 });
 
-if (!opts.tsv) {
+if (!opts.list) {
   Promise.all(promises).then(() => {
     targetDatasets.forEach((source) => {
       targetDatasets.forEach((target) => {

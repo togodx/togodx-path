@@ -226,7 +226,7 @@ sub get_nodes_end_edges {
 
     if (!-f $paths_tmp) {
         if (-f $paths_js) {
-            system "$paths_js --tsv | sort -u > $paths_tmp";
+            system "$paths_js --list | sort -u > $paths_tmp";
         } else {
             die;
         }
