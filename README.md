@@ -27,10 +27,10 @@ $ ./bin/js/paths.js > json/paths.json
 
 Count IDs
 ```
-$ ./bin/js/dataset-count-ids.js data/json/ > tsv/attribute-count-ids.tsv
-$ ./bin/js/dataset-count-ids.js data/json/ -d > tsv/dataset-count-ids.tsv
-$ ./bin/js/dataset-count-ids.js data/json/ -d -j > json/dataset-count-ids.json
-$ ./bin/js/dataset-count-ids.js data/json/ -l > tsv/ids.tsv
+$ ./bin/js/attributes-count-ids.js data/json/ > tsv/attribute-count-ids.tsv
+$ ./bin/js/attributes-count-ids.js data/json/ -d > tsv/dataset-count-ids.tsv
+$ ./bin/js/attributes-count-ids.js data/json/ -d -j > json/dataset-count-ids.json
+$ ./bin/js/attributes-count-ids.js data/json/ -l > tsv/ids.tsv
 $ ./bin/id-pairs-count.pl data/relation/output/ > tsv/id-pairs-count.tsv
 $ ./bin/js/id-pairs-count-tsv2json.js tsv/id-pairs-count.tsv > json/id-pairs-count.tsv.json
 ```
