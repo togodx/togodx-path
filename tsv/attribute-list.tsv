@@ -1,0 +1,51 @@
+category	attribute	dataset	datamodel	count_ids
+Gene	Gene biotype	ensembl_gene	classification	61498
+Gene	Chromosome	ensembl_gene	classification	61498
+Gene	# of paralogs	ncbigene	classification	19129
+Gene	Evolutionary divergence	ncbigene	classification	19129
+Gene	Tissue-specific high expression (RefEx GeneChip)	ncbigene	classification	12365
+Gene	Tissue-specific low expression (RefEx GeneChip)	ncbigene	classification	12365
+Gene	Tissue-specific high expression (GTEx)	ensembl_gene	classification	44049
+Gene	No expression in tissues (GTEx)	ensembl_gene	classification	48652
+Gene	Tissue-specific high expression (HPA)	ensembl_gene	classification	19597
+Gene	Cell type-specific high expression (HPA)	ensembl_gene	classification	19597
+Protein	Protein domains	uniprot	classification	79052
+Protein	Cellular component	uniprot	classification	79052
+Protein	Biological process	uniprot	classification	79052
+Protein	Molecular function	uniprot	classification	79052
+Protein	Ligands	uniprot	classification	79052
+Protein	Molecular mass	uniprot	distribution	79052
+Protein	PTMs	uniprot	classification	79052
+Protein	# of transmembrane domains	uniprot	distribution	79052
+Protein	# of phosphorylation sites	uniprot	distribution	79052
+Protein	# of glycosylation sites	uniprot	distribution	79052
+Protein	Disease-related proteins	uniprot	classification	79052
+Protein	Tissues w/expression reported	uniprot	classification	79052
+Protein	Evidence of existence	uniprot	classification	20333
+Structure	Structure data existence	uniprot	classification	79052
+Structure	Rate of helical regions	uniprot	distribution	6449
+Structure	Rate of beta strand regions	uniprot	distribution	6001
+Structure	# of peptides in a PDB entry	pdb	distribution	186469
+Structure	Analysis methods	pdb	classification	190482
+Interaction	Proteins in pathway	uniprot	classification	79052
+Interaction	Compounds in pathway	chebi	classification	1816
+Interaction	# of interacting proteins	uniprot	distribution	78931
+Interaction	ChEMBL assay existence	uniprot	classification	79052
+Compound	Chemical role	chebi	classification	1393
+Compound	Application type	chebi	classification	7771
+Compound	Action type	chembl_compound	classification	4893
+Compound	Biological role	chebi	classification	21765
+Compound	Drug indication	chembl_compound	classification	7825
+Compound	Drug development phase	chembl_compound	classification	9574
+Compound	PubChem ATC classification	pubchem_compound	classification	3382
+Compound	ChEMBL ATC classification	chembl_compound	classification	3400
+Glycan	Molecular mass of glycans	glytoucan	distribution	7332
+Glycan	Tissues	glytoucan	classification	5200
+Glycan	Subsumption 	glytoucan	classification	7042
+Disease	Diseases in Mondo	mondo	classification	15825
+Disease	Diseases in MeSH	mesh	classification	3208
+Disease	Diseases in NANDO	nando	classification	2081
+Disease	Cross referenced disease DBs in Mondo	mondo	classification	23167
+Disease	Phenotypic abnormality	hp	classification	10318
+Variant	GWAS	togovar	classification	174576
+Variant	Clinical significance	togovar	classification	473565
