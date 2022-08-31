@@ -1,26 +1,26 @@
 # TogoDX path
 
-ID links between datasets
+Show ID links
 * https://togodx.github.io/togodx-path/path-selected.html
 
-Highlighting ID conversion path
+Highligh ID conversion path
 * https://togodx.github.io/togodx-path/path-highlight.html
 
-Checking ID counts
+Check ID counts
 * https://togodx.github.io/togodx-path/path-count.html
 
-Display attributes
+Show attributes
 * https://togodx.github.io/togodx-path/path-attr.html
 * https://togodx.github.io/togodx-path/path-bold-attr.html
 
-Reproducing the graph of ID links
+Create the graph of ID links
 ```
 $ ./bin/create_graph.pl > graph/dataset.pg
 $ ./bin/create_graph.pl -l > tsv/dataset-links.tsv
 $ rm -rf ./tmp/       # Remove temporary (cached) files after creating graph
 ```
 
-Reproducing the path used in TogoDX/Human
+List paths used in TogoDX/Human
 ```
 $ ./bin/js/paths.js > json/paths.json
 ```
