@@ -69,7 +69,11 @@ axios.get(uri).then(res => {
 
 function printAttributes(obj) {
   let out = [];
-  let header = ['attribute', 'dataset', 'datamodel', 'count_ids'];
+  let header = [
+    'attribute',
+    'dataset',
+    'datamodel',
+    'count_ids'];
   if (opts.verbose) {
     header.pop();
     header.push('unique_count', 'redundant_count', 'DAG_check');
@@ -127,7 +131,12 @@ function parseJson(attrName, attrObj) {
     }
   });
 
-  let out = `${attrName}\t${attrObj.dataset}\t${attrObj.datamodel}\t${uniqIds.size}`
+  let out = [
+    attrName,
+    attrObj.dataset,
+    attrObj.datamodel,
+    uniqIds.size
+  ].join('\t');
   if (opts.verbose) {
     out += '\t';
     if (uniqIds.size !== totalCount) {
