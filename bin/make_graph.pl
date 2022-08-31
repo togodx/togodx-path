@@ -189,7 +189,7 @@ sub get_dataset_category {
     for my $line (@category) {
         my @f = split("\t", $line);
         my $dataset = $f[0];
-        my $category = $f[1];
+        my $category = $f[2];
         $DATASET_CATEGORY{$dataset} = $category;
         ### Reaction => Interaction ###
         if ($category eq "Reaction") {
