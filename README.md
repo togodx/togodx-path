@@ -46,6 +46,10 @@ $ cat graph/dataset-count.pg =(./bin/js/attributes-pg.js) > graph/dataset-attr.p
 ```
 
 ## Supplementary tables
+```
+$ ./bin/js/attributes-list.js data/json/ > tsv/attribute-list.tsv
+$ ./bin/js/attributes-list.js > tsv/attribute-description.tsv
+```
 * https://github.com/togodx/togodx-path/blob/main/tsv/attribute-count-ids.tsv
 * https://github.com/togodx/togodx-path/blob/main/tsv/attribute-list.tsv
 * https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod.tsv
