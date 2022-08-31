@@ -4,6 +4,7 @@ const axios = require('axios');
 
 program
   .option('-l, --list', 'list edges of paths in tsv')
+  .option('-t, --tsv', 'print paths in tsv')
   .parse(process.argv);
 
 let opts = program.opts();
@@ -42,11 +43,19 @@ if (!opts.list) {
     targetDatasets.forEach((source) => {
       targetDatasets.forEach((target) => {
         if (source !== target) {
-          out[source][target] = tmp[source][target];
+          if (opts.tsv) {
+            tmp[source][target].forEach((path) => {
+              console.log(source + '-' + target + '\t' + path.join('-'));
+            });
+          } else {
+            out[source][target] = tmp[source][target];
+          }
         }
       });
     });
-    console.log(JSON.stringify(out, null, '  '));
+    if (!opts.tsv) {
+      console.log(JSON.stringify(out, null, '  '));
+    }
   }).catch(err => {
     console.error(err);
   });
