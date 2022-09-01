@@ -53,10 +53,10 @@
         edge: (values, id, selected, hovering) => {
           if (selected) {
             values.color = blitzboard.edgeMap[id].properties.color[0];
-            values.width = 5.2;
+            values.width = 5.2; // 2.7 + 2.5
             values.shadowSize = 9;
           } else if (hovering) {
-            values.width = 3.2;
+            values.width = 3.2; // 2.7 + 0.5
           }
         }
       }
