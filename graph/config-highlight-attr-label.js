@@ -11,7 +11,6 @@
       if (pathList[n.id]) {
         blitzboard.pathSrc = n.id;
         blitzboard.network.setSelection({ nodes: [ n.id ] });
-        // pathSourceNode.textContent = blitzboard.nodeMap[n.id].properties.display_label[0];
         pathNodeList.textContent = `${n.id} - (mouseover the other one)`;
       }
     },
@@ -27,10 +26,8 @@
           pathNodeList.appendChild(child);
           child.textContent = `${blitzboard.pathSrc}`;
           for (let i = 0; i < path.length - 1; i++) {
-            // nodeSet.add(path[i+1]);
             if (blitzboard.hasEdge(path[i], path[i+1])) {
               edgeSet.add(`${path[i]}-${path[i+1]}`);
-              // const display_label = blitzboard.edgeMap[`${path[i]}-${path[i+1]}`].properties.display_label[0];
             }
             if (blitzboard.hasEdge(path[i+1], path[i])) {
               edgeSet.add(`${path[i+1]}-${path[i]}`);
