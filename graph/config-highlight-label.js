@@ -48,7 +48,6 @@
     width: 2.7,
     color: '@color',
     opacity: 0.6,
-    selectionWidth: 2.5,
     labelHighlightBold: false,
     chosen: {
       "": {

@@ -51,7 +51,6 @@
     width: '@width',
     color: '@color',
     opacity: '@opacity',
-    selectionWidth: 2.5,
     chosen: {
       "": {
         edge: (values, id, selected, hovering) => {
