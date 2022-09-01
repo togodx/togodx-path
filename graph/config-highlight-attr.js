@@ -48,19 +48,17 @@
   },
   edge: {
     caption: [],
-    width: 2.7,
+    width: '@width',
     color: '@color',
-    opacity: 0.6,
+    opacity: '@opacity',
     selectionWidth: 2.5,
     chosen: {
       "": {
         edge: (values, id, selected, hovering) => {
           if (selected) {
             values.color = blitzboard.edgeMap[id].properties.color[0];
-            values.width = 5.2;
+            values.width = 7;
             values.shadowSize = 9;
-          } else if (hovering) {
-            values.width = 3.2;
           }
         }
       }
