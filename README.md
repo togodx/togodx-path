@@ -11,7 +11,6 @@ Check ID counts
 
 Show attributes
 * https://togodx.github.io/togodx-path/path-attr.html
-* https://togodx.github.io/togodx-path/path-bold-attr.html
 
 Create the graph of ID links
 ```
