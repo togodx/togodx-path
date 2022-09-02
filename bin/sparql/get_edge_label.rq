@@ -1,6 +1,6 @@
 #!/usr/bin/env spang2
 # @option -vac
-# @endpoint https://orth.dbcls.jp/sparql-test
+# @endpoint https://spang.dbcls.jp/sparql
 # @param start=uniprot
 # @param end=orphanet
 
