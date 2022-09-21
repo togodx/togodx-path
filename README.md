@@ -12,6 +12,8 @@ Check ID counts
 Show attributes
 * https://togodx.github.io/togodx-path/path-attr.html
 
+## Data preparation
+
 Create the graph of ID links
 ```
 $ ./bin/create_graph.pl > graph/dataset.pg
@@ -45,6 +47,7 @@ $ cat graph/dataset-count.pg =(./bin/js/attributes-pg.js) > graph/dataset-attr.p
 ```
 
 ## Supplementary tables
+
 ```
 $ ./bin/js/attributes-list.js data/json/ > tsv/attribute-list.tsv
 $ ./bin/js/attributes-list.js > tsv/attribute-description.tsv
