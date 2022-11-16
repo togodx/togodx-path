@@ -1,5 +1,15 @@
 # TogoDX path
 
+## v2022-11
+
+Highligh ID conversion path
+* https://togodx.github.io/togodx-path/path-highlight-2022-11.html
+
+Show attributes
+* https://togodx.github.io/togodx-path/path-attr-2022-11.html
+
+## Previous version
+
 Show ID links
 * https://togodx.github.io/togodx-path/path-selected.html
 
