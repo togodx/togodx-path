@@ -10,6 +10,9 @@ ID links and  attributes
 * https://togodx.github.io/togodx-path/path-attr-label-2022-11.html
 ![images/path-attr-label-2022-11.png](images/path-attr-label-2022-11.png)
 
+Table of ID links
+* https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-2022-11.tsv
+
 Table of attributes
 * https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod-2022-11.tsv
 
@@ -26,6 +29,9 @@ ID links (with ID counts)
 
 ID links and  attributes
 * https://togodx.github.io/togodx-path/path-attr.html
+
+Table of ID links
+* https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links.tsv
 
 Table of attributes
 * https://github.com/togodx/togodx-path/blob/main/tsv/attribute-count-ids.tsv
