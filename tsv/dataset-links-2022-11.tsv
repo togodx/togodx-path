@@ -1,0 +1,39 @@
+source	source category	target	target category	display_label (biological meaning)
+chembl_compound	Compound	chebi	Compound	is equivalent to
+chembl_compound	Compound	chembl_target	Protein	interacts with
+chembl_compound	Compound	mesh	Disease	has related disease
+chembl_compound	Compound	pubchem_compound	Compound	is nearly equivalent to
+chembl_target	Protein	uniprot	Protein	is equivalent to
+clinvar	Variant	medgen	Disease	has related disease
+ensembl_gene	Gene	ensembl_transcript	Transcript	is transcribed to
+ensembl_gene	Gene	ncbigene	Gene	is nearly equivalent to
+ensembl_gene	Gene	uniprot	Protein	has gene product
+glytoucan	Glycan	doid	Disease	has related disease
+glytoucan	Glycan	uniprot	Protein	is attached to
+hgnc	Gene	uniprot	Protein	has gene product
+medgen	Disease	hp	Disease	is nearly equivalent to
+medgen	Disease	mesh	Disease	is nearly equivalent to
+medgen	Disease	mondo	Disease	is nearly equivalent to
+medgen	Disease	ncbigene	Gene	is related with
+mondo	Disease	doid	Disease	is nearly equivalent to
+mondo	Disease	mesh	Disease	is nearly equivalent to
+nando	Disease	mondo	Disease	is nearly equivalent to
+ncbigene	Gene	ensembl_gene	Gene	is nearly equivalent to
+ncbigene	Gene	ensembl_transcript	Transcript	is transcribed to
+pdb	Structure	uniprot	Protein	is 3D structure of
+pubchem_compound	Compound	chebi	Compound	is nearly equivalent to
+pubchem_compound	Compound	chembl_compound	Compound	is nearly equivalent to
+pubchem_compound	Compound	glytoucan	Glycan	is nearly equivalent to
+reactome_reaction	Interaction	chebi	Compound	has participant molecule
+reactome_reaction	Interaction	uniprot	Protein	has participant molecule
+togovar	Variant	clinvar	Variant	has clinical significance
+togovar	Variant	ensembl_gene	Gene	is located in
+togovar	Variant	ensembl_transcript	Transcript	is located in
+togovar	Variant	hgnc	Gene	is located in
+togovar	Variant	ncbigene	Gene	is located in
+uniprot	Protein	chembl_target	Protein	is equivalent to
+uniprot	Protein	ensembl_gene	Gene	is product of gene
+uniprot	Protein	ensembl_transcript	Transcript	is tranlated from
+uniprot	Protein	hgnc	Gene	is product of gene
+uniprot	Protein	ncbigene	Gene	is product of gene
+uniprot	Protein	pdb	Structure	has 3D structure
