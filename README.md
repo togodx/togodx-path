@@ -8,22 +8,29 @@ ID links
 
 ID links and  attributes
 * https://togodx.github.io/togodx-path/path-attr-label-2022-11.html
-
 ![images/path-attr-label-2022-11.png](images/path-attr-label-2022-11.png)
+
+Table of attributes
+* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod-2022-11.tsv
 
 ## Previous version
 
-Show ID links
+ID links
 * https://togodx.github.io/togodx-path/path-selected.html
 
-Highligh ID conversion path
+ID links (with highlighting)
 * https://togodx.github.io/togodx-path/path-highlight.html
 
-Check ID counts
+ID links (with ID counts)
 * https://togodx.github.io/togodx-path/path-count.html
 
-Show attributes
+ID links and  attributes
 * https://togodx.github.io/togodx-path/path-attr.html
+
+Table of attributes
+* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-count-ids.tsv
+* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-list.tsv
+* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod.tsv
 
 ## Data preparation
 
@@ -59,12 +66,8 @@ Add attributes
 $ cat graph/dataset-count.pg =(./bin/js/attributes-pg.js) > graph/dataset-attr.pg
 ```
 
-## Supplementary tables
-
+Creating supplementary tables
 ```
 $ ./bin/js/attributes-list.js data/json/ > tsv/attribute-list.tsv
 $ ./bin/js/attributes-description.js > tsv/attribute-description.tsv
 ```
-* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-count-ids.tsv
-* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-list.tsv
-* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod.tsv
