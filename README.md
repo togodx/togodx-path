@@ -2,10 +2,10 @@
 
 ## v2022-11
 
-Highligh ID conversion path
+ID links
 * https://togodx.github.io/togodx-path/path-highlight-2022-11.html
 
-Show attributes
+ID links and  attributes
 * https://togodx.github.io/togodx-path/path-attr-2022-11.html
 
 ## Previous version
@@ -60,7 +60,7 @@ $ cat graph/dataset-count.pg =(./bin/js/attributes-pg.js) > graph/dataset-attr.p
 
 ```
 $ ./bin/js/attributes-list.js data/json/ > tsv/attribute-list.tsv
-$ ./bin/js/attributes-list.js > tsv/attribute-description.tsv
+$ ./bin/js/attributes-description.js > tsv/attribute-description.tsv
 ```
 * https://github.com/togodx/togodx-path/blob/main/tsv/attribute-count-ids.tsv
 * https://github.com/togodx/togodx-path/blob/main/tsv/attribute-list.tsv
