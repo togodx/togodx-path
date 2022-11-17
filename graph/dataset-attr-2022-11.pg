@@ -84,8 +84,6 @@ uniprot
   :Protein
   display_label: "UniProt"
   color: "#79A63A"
-  width: 5
-  opacity: 0.7
 chembl_compound -> chebi
   link: "chembl_compound-chebi"
   display_label: "is equivalent to"
@@ -312,6 +310,8 @@ uniprot -> pdb
   link: "uniprot-pdb"
   display_label: "has 3D structure"
   color: "#79A63A"
+  width: 5
+  opacity: 0.7
 
 gene_biotype_ensembl -- ensembl_gene
   attribute: "gene_biotype_ensembl"
