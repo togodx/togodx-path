@@ -19,7 +19,7 @@ Table of attributes
 ## Previous version
 
 ID links
-* https://togodx.github.io/togodx-path/path-selected.html
+* https://togodx.github.io/togodx-path/path-selected.html (linked from [news v1.1](https://dbcls.rois.ac.jp/ja/2022/06/20/post1.html))
 
 ID links (with highlighting)
 * https://togodx.github.io/togodx-path/path-highlight.html
@@ -31,7 +31,7 @@ ID links and  attributes
 * https://togodx.github.io/togodx-path/path-attr.html
 
 Table of ID links
-* https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links.tsv
+* https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links.tsv (linked from [news v1.1](https://dbcls.rois.ac.jp/ja/2022/06/20/post1.html))
 
 Table of attributes
 * https://github.com/togodx/togodx-path/blob/main/tsv/attribute-count-ids.tsv
