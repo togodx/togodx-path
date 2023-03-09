@@ -35,7 +35,7 @@ my $EDGE_LABEL_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNm
 my $CATEGORY_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=927983300";
 
 my $DATASET_LINKS_ALL_JS = "./bin/js/dataset-links-all.js";
-my $PATHS_JS = "./bin/js/paths.js";
+my $PATHS_JS = "./bin/js/paths-2022-11.js";
 
 my $DIR = dirname(realpath($0));
 chdir "$DIR/.." or die "Cannot chdir to $DIR/..: $!";
@@ -50,7 +50,7 @@ if (-f $DATASET_LINKS_ALL_JS && -f $PATHS_JS) {
 ### Temporary files
 my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
 my $DATASET_LINKS_ALL_TMP = "tmp/dataset-links-all";
-my $PATHS_TMP = "tmp/paths.tsv";
+my $PATHS_TMP = "tmp/edges.tsv";
 if (!-d "tmp") {
     mkdir("tmp") or die "$!";
 }
