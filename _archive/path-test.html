@@ -15,12 +15,12 @@
          document.querySelector('#main-area').appendChild(child);
          let blitzboard = new Blitzboard(child);
          let graph, config;
-         const graphPromise = fetch('./path/graph.pg').then(res => {
+         const graphPromise = fetch('./graph/graph.pg').then(res => {
              return res.text();
          }).then(text => {
              graph = text;
          });
-         const configPromise = fetch('./path/config.js').then(res => {
+         const configPromise = fetch('./graph/config.js').then(res => {
              return res.text();
          }).then(text => {
              config = text;
