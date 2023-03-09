@@ -9,7 +9,9 @@ program
 
 let opts = program.opts();
 
-const targetDatasets = ['ncbigene', 'ensembl_gene', 'uniprot', 'pdb', 'chebi', 'chembl_compound', 'pubchem_compound', 'glytoucan', 'mondo', 'mesh', 'nando', 'hp', 'togovar'];
+const targetDatasets = ['ncbigene', 'ensembl_gene',
+                        'ensembl_transcript', // Added in v2022-11
+                        'uniprot', 'pdb', 'chebi', 'chembl_compound', 'pubchem_compound', 'glytoucan', 'mondo', 'mesh', 'nando', 'hp', 'togovar'];
 
 let tmp = {};
 let out = {};
@@ -23,6 +25,7 @@ targetDatasets.forEach((source) => {
   targetDatasets.forEach((target) => {
     if (source !== target) {
       let api = `https://integbio.jp/togosite_dev/sparqlist/api/togoid_route?source=${source}&target=${target}`;
+      // let api = `http://ep.dbcls.jp/togoid/sparqlist/api/togodx_route?source=${source}&target=${target}`;
       const promise = axios.get(api).then(res => {
         if (opts.list) {
           printPaths(res.data);
