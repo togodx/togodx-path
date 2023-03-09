@@ -15,10 +15,13 @@ getopts('lc:', \%OPT);
 
 STDOUT->autoflush;
 
-my @TARGET_DATASET = ("ncbigene", "ensembl_gene", "uniprot", "pdb", "chebi", "chembl_compound", "pubchem_compound", "glytoucan", "mondo", "mesh", "nando", "hp", "togovar");
+my @TARGET_DATASET = ("ncbigene", "ensembl_gene",
+                      "ensembl_transcript", # Added in v2022-11
+                      "uniprot", "pdb", "chebi", "chembl_compound", "pubchem_compound", "glytoucan", "mondo", "mesh", "nando", "hp", "togovar");
 
 my %CATEGORY_COLOR = (
     "Gene" => "#3AA64C",
+    "Transcript" => "#3AA64C",
     "Protein" => "#79A63A",
     "Structure" => "#A6823A",
     "Interaction" => "#A63A43",
@@ -49,7 +52,7 @@ if (-f $DATASET_LINKS_ALL_JS && -f $PATHS_JS) {
 ### Temporary files
 my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
 my $DATASET_LINKS_ALL_TMP = "tmp/dataset-links-all";
-my $PATHS_TMP = "tmp/paths.tsv";
+my $PATHS_TMP = "tmp/edges.tsv";
 if (!-d "tmp") {
     mkdir("tmp") or die "$!";
 }
