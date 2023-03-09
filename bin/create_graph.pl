@@ -33,8 +33,10 @@ my %CATEGORY_COLOR = (
 
 ### External files ###
 my $TOGOID_ONTOLOGY = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/togoid-ontology.ttl";
-my $EDGE_LABEL_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=1295950655";
-my $CATEGORY_SHEET = "https://docs.google.com/spreadsheets/d/16I2HJCpDBeoencNmzfW576q73LIciTMZOCrD7PjtXS4/export?format=tsv&gid=927983300";
+my $EDGE_LABEL_SHEET = `cat bin/etc/edge_label_sheet`;
+chomp($EDGE_LABEL_SHEET);
+my $CATEGORY_SHEET = `cat bin/etc/category_sheet`;
+chomp($CATEGORY_SHEET);
 
 my $DATASET_LINKS_ALL_JS = "./bin/js/dataset-links-all.js";
 my $PATHS_JS = "./bin/js/paths.js";
