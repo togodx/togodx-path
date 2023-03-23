@@ -132,7 +132,6 @@
   "glytoucan-protein": {
     "uniprot": [ [ "glytoucan", "uniprot" ] ],
     "pdb": [ [ "glytoucan", "pdb" ] ]
-
   },
   "glytoucan": {
     "chebi": [ [ "glytoucan", "pubchem_compound", "chebi" ] ],
