@@ -8,8 +8,10 @@ clinvar	Variant	medgen	Disease	has related disease
 ensembl_gene	Gene	ensembl_transcript	Transcript	is transcribed to
 ensembl_gene	Gene	ncbigene	Gene	is nearly equivalent to
 ensembl_gene	Gene	uniprot	Protein	has gene product
-glytoucan	Glycan	doid	Disease	has related disease
 glytoucan	Glycan	uniprot	Protein	is attached to
+glytoucan	Glycan	ncbigene	Gene	is substrate for
+glytoucan	Glycan	pdb	Structure	is participant molecule in
+glytoucan	Glycan	pubchem_compound	Compound	is nearly equivalent to
 hgnc	Gene	uniprot	Protein	has gene product
 medgen	Disease	hp	Disease	is nearly equivalent to
 medgen	Disease	mesh	Disease	is nearly equivalent to

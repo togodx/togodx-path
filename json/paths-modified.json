@@ -119,20 +119,25 @@
     "hp": [ [ "pubchem_compound", "chembl_compound", "mesh", "mondo", "medgen", "hp" ] ],
     "togovar": [ [ "pubchem_compound", "chebi", "reactome_reaction", "uniprot", "hgnc", "togovar" ], [ "pubchem_compound", "chembl_compound", "chembl_target", "uniprot", "hgnc", "togovar" ] ]
   },
-  "glytoucan": {
-    "ncbigene": [ [ "glytoucan", "uniprot", "ncbigene" ] ],
-    "ensembl_gene": [ [ "glytoucan", "uniprot", "ensembl_gene" ] ],
-    "ensembl_transcript": [ [ "glytoucan", "uniprot", "ensembl_transcript" ] ],
+  "glytoucan-genes": {
+    "ncbigene": [ [ "glytoucan", "ncbigene" ] ],
+    "ensembl_gene": [ [ "glytoucan", "ncbigene", "ensembl_gene" ] ],
+    "ensembl_transcript": [ [ "glytoucan", "ncbigene", "ensembl_transcript" ] ],
+    "mondo": [ [ "glytoucan", "ncbigene", "doid", "mondo" ] ],
+    "mesh": [ [ "glytoucan", "ncbigene", "doid", "mondo", "mesh" ] ],
+    "nando": [ [ "glytoucan", "ncbigene", "doid", "mondo", "nando" ] ],
+    "hp": [ [ "glytoucan", "ncbigene", "doid", "mondo", "medgen", "hp" ] ],
+    "togovar": [ [ "glytoucan", "ncbigene", "togovar" ] ]
+  },
+  "glytoucan-protein": {
     "uniprot": [ [ "glytoucan", "uniprot" ] ],
-    "pdb": [ [ "glytoucan", "uniprot", "pdb" ] ],
+    "pdb": [ [ "glytoucan", "pdb" ] ]
+
+  },
+  "glytoucan": {
     "chebi": [ [ "glytoucan", "pubchem_compound", "chebi" ] ],
     "chembl_compound": [ [ "glytoucan", "pubchem_compound", "chembl_compound" ] ],
-    "pubchem_compound": [ [ "glytoucan", "pubchem_compound" ] ],
-    "mondo": [ [ "glytoucan", "doid", "mondo" ] ],
-    "mesh": [ [ "glytoucan", "doid", "mondo", "mesh" ] ],
-    "nando": [ [ "glytoucan", "doid", "mondo", "nando" ] ],
-    "hp": [ [ "glytoucan", "doid", "mondo", "medgen", "hp" ] ],
-    "togovar": [ [ "glytoucan", "uniprot", "hgnc", "togovar" ] ]
+    "pubchem_compound": [ [ "glytoucan", "pubchem_compound" ] ]
   },
   "mondo": {
     "ncbigene": [ [ "mondo", "medgen", "ncbigene" ] ],
