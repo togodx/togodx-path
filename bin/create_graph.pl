@@ -39,22 +39,22 @@ my $CATEGORY_SHEET = `cat bin/etc/category_sheet`;
 chomp($CATEGORY_SHEET);
 
 my $DATASET_LINKS_ALL_JS = "./bin/js/dataset-links-all.js";
-my $PATHS_JS = "./bin/js/paths.js";
+my $EDGES_JS = "./bin/js/paths-to-edges.js";
 
 my $DIR = dirname(realpath($0));
 chdir "$DIR/.." or die "Cannot chdir to $DIR/..: $!";
-if (-f $DATASET_LINKS_ALL_JS && -f $PATHS_JS) {
+if (-f $DATASET_LINKS_ALL_JS && -f $EDGES_JS) {
     if (!-d "bin/js/node_modules") {
         system "cd bin/js; npm install";
     }
 } else {
-    die "Not found: $DATASET_LINKS_ALL_JS $PATHS_JS\n";
+    die "Not found: $DATASET_LINKS_ALL_JS $EDGES_JS\n";
 }
 
 ### Temporary files
 my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
 my $DATASET_LINKS_ALL_TMP = "tmp/dataset-links-all";
-my $PATHS_TMP = "tmp/edges.tsv";
+my $PATHS_JSON = "json/paths.json";
 if (!-d "tmp") {
     mkdir("tmp") or die "$!";
 }
@@ -62,7 +62,7 @@ if (!-d "tmp") {
 
 my %NODE = ();
 my %EDGE = ();
-get_nodes_end_edges($PATHS_JS, $PATHS_TMP);
+get_nodes_end_edges($EDGES_JS, $PATHS_JSON);
 
 my %NODE_LABEL = ();
 get_node_label($TOGOID_ONTOLOGY, $TOGOID_ONTOLOGY_TMP);
@@ -200,6 +200,10 @@ sub get_dataset_category {
         if ($category eq "Reaction") {
             $DATASET_CATEGORY{$dataset} = "Interaction";
         }
+        ### Phenotype => Disease ###
+        if ($category eq "Phenotype") {
+            $DATASET_CATEGORY{$dataset} = "Disease";
+        }
     }
 }
 
@@ -227,22 +231,11 @@ sub get_node_label {
 }
 
 sub get_nodes_end_edges {
-    my ($paths_js, $paths_tmp) = @_;
+    my ($edges_js, $paths_json) = @_;
 
-    if (!-f $paths_tmp) {
-        if (-f $paths_js) {
-            system "$paths_js --list | sort -u > $paths_tmp";
-        } else {
-            die;
-        }
-    }
-    open(PATHS, "$paths_tmp") || die "$!";
-    my @link = <PATHS>;
-    chomp(@link);
-    close(PATHS);
-
-    for my $link (@link) {
-        my @f = split("\t", $link);
+    for my $edge (`$edges_js $paths_json`) {
+        chomp($edge);
+        my @f = split("\t", $edge);
         if (@f != 2) {
             die;
         }
