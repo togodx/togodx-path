@@ -40,16 +40,16 @@ Table of attributes
 
 ## Data preparation
 
-Create the graph of ID links
-```
-$ ./bin/create_graph.pl json/paths.json > graph/dataset.pg
-$ ./bin/create_graph.pl -l json/paths.json > tsv/dataset-links.tsv
-$ rm -rf ./tmp/       # Remove temporary (cached) files after creating graph
-```
-
-List paths used in TogoDX/Human
+Create paths used in TogoDX/Human
 ```
 $ ./bin/js/paths.js > json/paths.json
+```
+
+Create the graph of ID links
+```
+$ rm -rf ./tmp/       # Clear cached files
+$ ./bin/create_graph.pl json/paths.json > graph/dataset.pg
+$ ./bin/create_graph.pl -l json/paths.json > tsv/dataset-links.tsv
 ```
 
 Count IDs
