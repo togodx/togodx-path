@@ -57,11 +57,44 @@ if (!opts.list) {
       });
     });
     if (!opts.tsv) {
-      console.log(JSON.stringify(out, null, '  '));
+      // console.log(JSON.stringify(out, null, '  '));
+      console.log(getJson(out));
     }
   }).catch(err => {
     console.error(err);
   });
+}
+
+function getJson(out) {
+  let arr = [];
+  Object.entries(out).forEach(([key, value]) => {
+    arr.push(`  "${key}": {\n${getTargetPaths(value)}\n  }`);
+  });
+  return '{\n' + arr.join(',\n') + '\n}';
+}
+
+function getTargetPaths(value) {
+  let arr = [];
+  Object.entries(value).forEach(([target, paths]) => {
+    arr.push(`    "${target}": [ ${getPaths(paths)} ]`);
+  });
+  return arr.join(',\n');
+}
+
+function getPaths(paths) {
+  let arr = [];
+  paths.forEach((path) => {
+    arr.push(`[ ${getPath(path)} ]`);
+  });
+  return arr.join(', ');
+}
+
+function getPath(path) {
+  let arr = [];
+  path.forEach((node) => {
+    arr.push(`"${node}"`);
+  });
+  return arr.join(', ');
 }
 
 function printPaths(paths) {
