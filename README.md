@@ -80,13 +80,14 @@ $ ./bin/js/attributes-description.js > tsv/attribute-description.tsv
 
 ## Test modified paths
 
-* https://togodx.github.io/togodx-path/path-modified.html
 
-Edit `json/paths-modified.json`
+Edit `json/paths-modified.json` manually.
 
+Update graph data:
 ```
 $ ./bin/create_graph.pl json/paths-modified.json > graph/dataset-modified.pg
 $ ./bin/create_graph.pl -l json/paths-modified.json > tsv/dataset-links-modified.tsv
 ```
 
-Use `json/paths-modified.json`, `graph/dataset-modified.pg`, and `tsv/dataset-links-modified.tsv` in `path-modified.html`.
+Test:
+* https://togodx.github.io/togodx-path/path-modified.html
