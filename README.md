@@ -42,8 +42,8 @@ Table of attributes
 
 Create the graph of ID links
 ```
-$ ./bin/create_graph.pl > graph/dataset.pg
-$ ./bin/create_graph.pl -l > tsv/dataset-links.tsv
+$ ./bin/create_graph.pl json/paths.json > graph/dataset.pg
+$ ./bin/create_graph.pl -l json/paths.json > tsv/dataset-links.tsv
 $ rm -rf ./tmp/       # Remove temporary (cached) files after creating graph
 ```
 
@@ -77,3 +77,16 @@ Creating supplementary tables
 $ ./bin/js/attributes-list.js data/json/ > tsv/attribute-list.tsv
 $ ./bin/js/attributes-description.js > tsv/attribute-description.tsv
 ```
+
+## Test modified paths
+
+* https://togodx.github.io/togodx-path/path-modified.html
+
+Edit `json/paths-modified.json`
+
+```
+$ ./bin/create_graph.pl json/paths-modified.json > graph/dataset-modified.pg
+$ ./bin/create_graph.pl -l json/paths-modified.json > tsv/dataset-links-modified.tsv
+```
+
+Use `json/paths-modified.json`, `graph/dataset-modified.pg`, and `tsv/dataset-links-modified.tsv` in `path-modified.html`.
