@@ -33,8 +33,8 @@ my %CATEGORY_COLOR = (
 
 ### External files ###
 my $TOGOID_ONTOLOGY = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/togoid-ontology.ttl";
-my $EDGE_LABEL_SHEET = `cat bin/etc/edge_label_sheet`;
-chomp($EDGE_LABEL_SHEET);
+my $TOGOID_LINK = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/pair_link.tsv";
+my $TIO_LABEL = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/property.tsv";
 my $CATEGORY_SHEET = `cat bin/etc/category_sheet`;
 chomp($CATEGORY_SHEET);
 
@@ -68,7 +68,7 @@ my %NODE_LABEL = ();
 get_node_label($TOGOID_ONTOLOGY, $TOGOID_ONTOLOGY_TMP);
 
 my %EDGE_LABEL = ();
-get_edge_label($EDGE_LABEL_SHEET);
+get_edge_label($TOGOID_LINK, $TIO_LABEL);
 
 my %DATASET_CATEGORY = ();
 get_dataset_category($CATEGORY_SHEET);
@@ -171,17 +171,30 @@ sub dataset_links_all {
 }
 
 sub get_edge_label {
-    my ($edge_label_sheet) = @_;
+    my ($togoid_link, $tio_label) = @_;
 
-    my @table = `curl -LSsf "$edge_label_sheet"`;
-    chomp(@table);
-
-    for my $line (@table) {
+    my %display_label = ();
+    for my $line (`curl -LSsf $tio_label`) {
+        chomp($line);
         my @f = split("\t", $line);
-        my $source = $f[6];
-        my $target = $f[8];
-        my $edge_label = $f[29];
-        $EDGE_LABEL{$source}{$target} = $edge_label;
+        if (@f != 6) {
+            die;
+        }
+        my $tio = $f[0];
+        my $label = $f[2];
+        $display_label{$tio} = $label;
+    }
+
+    for my $line (`curl -LSsf $togoid_link`) {
+        chomp($line);
+        my @f = split("\t", $line);
+        if (@f != 4) {
+            die;
+        }
+        my $source = $f[0];
+        my $target = $f[1];
+        my $tio = $f[2];
+        $EDGE_LABEL{$source}{$target} = $display_label{$tio};
     }
 }
 
