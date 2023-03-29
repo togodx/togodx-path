@@ -3,7 +3,6 @@ const program = require('commander');
 const axios = require('axios');
 
 program
-  .option('-l, --list', 'list edges of paths in tsv')
   .option('-t, --tsv', 'print paths in tsv')
   .parse(process.argv);
 
@@ -27,11 +26,7 @@ targetDatasets.forEach((source) => {
       let api = `https://integbio.jp/togosite_dev/sparqlist/api/togoid_route?source=${source}&target=${target}`;
       // let api = `http://ep.dbcls.jp/togoid/sparqlist/api/togodx_route?source=${source}&target=${target}`;
       const promise = axios.get(api).then(res => {
-        if (opts.list) {
-          printPaths(res.data);
-        } else {
-          tmp[source][target] = res.data;
-        }
+        tmp[source][target] = res.data;
       }).catch(err => {
         console.error(err);
         process.exit(1);
@@ -41,29 +36,27 @@ targetDatasets.forEach((source) => {
   });
 });
 
-if (!opts.list) {
-  Promise.all(promises).then(() => {
-    targetDatasets.forEach((source) => {
-      targetDatasets.forEach((target) => {
-        if (source !== target) {
-          if (opts.tsv) {
-            tmp[source][target].forEach((path) => {
-              console.log(source + '-' + target + '\t' + path.join('-'));
-            });
-          } else {
-            out[source][target] = tmp[source][target];
-          }
+Promise.all(promises).then(() => {
+  targetDatasets.forEach((source) => {
+    targetDatasets.forEach((target) => {
+      if (source !== target) {
+        if (opts.tsv) {
+          tmp[source][target].forEach((path) => {
+            console.log(source + '-' + target + '\t' + path.join('-'));
+          });
+        } else {
+          out[source][target] = tmp[source][target];
         }
-      });
+      }
     });
-    if (!opts.tsv) {
-      // console.log(JSON.stringify(out, null, '  '));
-      console.log(getJson(out));
-    }
-  }).catch(err => {
-    console.error(err);
   });
-}
+  if (!opts.tsv) {
+    // console.log(JSON.stringify(out, null, '  '));
+    console.log(getJson(out));
+  }
+}).catch(err => {
+  console.error(err);
+});
 
 function getJson(out) {
   let arr = [];
@@ -95,12 +88,4 @@ function getPath(path) {
     arr.push(`"${node}"`);
   });
   return arr.join(', ');
-}
-
-function printPaths(paths) {
-  paths.forEach((path) => {
-    for (let i = 0; i < path.length - 1; i++) {
-      console.log(path[i] + '\t' + path[i + 1]);
-    }
-  });
 }
