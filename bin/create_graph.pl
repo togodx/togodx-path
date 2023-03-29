@@ -5,13 +5,19 @@ use Getopt::Std;
 use Cwd 'realpath';
 my $PROGRAM = basename $0;
 my $USAGE=
-"Usage: $PROGRAM
+"Usage: $PROGRAM json/paths.json
 -l: print dataset-links.tsv
 -c DATASET_COUNT_FILE
 ";
 
 my %OPT;
 getopts('lc:', \%OPT);
+
+if (!@ARGV) {
+    print STDERR $USAGE;
+    exit 1;
+}
+my ($PATHS_JSON) = @ARGV;
 
 STDOUT->autoflush;
 
@@ -54,7 +60,6 @@ if (-f $DATASET_LINKS_ALL_JS && -f $EDGES_JS) {
 ### Temporary files
 my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
 my $DATASET_LINKS_ALL_TMP = "tmp/dataset-links-all";
-my $PATHS_JSON = "json/paths.json";
 if (!-d "tmp") {
     mkdir("tmp") or die "$!";
 }
