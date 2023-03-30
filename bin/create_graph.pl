@@ -55,12 +55,6 @@ if (-f $EDGES_JS) {
 } else {
     die "Not found: $EDGES_JS\n";
 }
-
-### Temporary files
-my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
-if (!-d "tmp") {
-    mkdir("tmp") or die "$!";
-}
 ####################
 
 my %NODE = ();
@@ -68,7 +62,7 @@ my %EDGE = ();
 get_nodes_end_edges($EDGES_JS, $PATHS_JSON);
 
 my %NODE_LABEL = ();
-get_node_label($TOGOID_ONTOLOGY, $TOGOID_ONTOLOGY_TMP);
+get_node_label($TOGOID_ONTOLOGY);
 
 my @TOGOID_LINK = ();
 my %EDGE_LABEL = ();
@@ -209,17 +203,11 @@ sub get_dataset_category {
 }
 
 sub get_node_label {
-    my ($togoid_ontology, $togoid_ontology_tmp) = @_;
-
-    if (!-s $togoid_ontology_tmp) {
-        system "curl -LSsf $togoid_ontology > $togoid_ontology_tmp";
-    }
-    open(ONTOLOGY, $togoid_ontology_tmp) || die "$!";
-    my @ontology = <ONTOLOGY>;
-    chomp(@ontology);
+    my ($togoid_ontology) = @_;
 
     my $dataset;
-    for my $line (@ontology) {
+    for my $line (`curl -LSsf $togoid_ontology`) {
+        chomp($line);
         if ($line =~ /^\S/) {
             $dataset = "";
         } elsif ($line =~ /^ +dcterms:identifier +"(.+)" +;/) {
@@ -228,7 +216,6 @@ sub get_node_label {
             $NODE_LABEL{$dataset} = $1;
         }
     }
-    close(ONTOLOGY);
 }
 
 sub get_nodes_end_edges {
