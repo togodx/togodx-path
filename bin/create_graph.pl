@@ -38,11 +38,9 @@ my %CATEGORY_COLOR = (
     );
 
 ### External files ###
-my $TOGOID_ONTOLOGY = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/togoid-ontology.ttl";
+my $TOGOID_DATASET = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/dataset.tsv";
 my $TOGOID_LINK = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/pair_link.tsv";
 my $TIO_LABEL = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/property.tsv";
-my $CATEGORY_SHEET = `cat bin/etc/category_sheet`;
-chomp($CATEGORY_SHEET);
 
 my $EDGES_JS = "./bin/js/paths-to-edges.js";
 
@@ -62,14 +60,13 @@ my %EDGE = ();
 get_nodes_end_edges($EDGES_JS, $PATHS_JSON);
 
 my %NODE_LABEL = ();
-get_node_label($TOGOID_ONTOLOGY);
 
 my @TOGOID_LINK = ();
 my %EDGE_LABEL = ();
 get_edge_label($TOGOID_LINK, $TIO_LABEL);
 
 my %DATASET_CATEGORY = ();
-get_dataset_category($CATEGORY_SHEET);
+get_dataset_category($TOGOID_DATASET);
 
 my %DATASET_COUNT = ();
 
@@ -181,15 +178,18 @@ sub get_edge_label {
 }
 
 sub get_dataset_category {
-    my ($category_sheet) = @_;
+    my ($togoid_dataset) = @_;
 
-    my @category = `curl -LSsf "$category_sheet"`;
-    chomp(@category);
-
-    for my $line (@category) {
+    for my $line (`curl -LSsf $togoid_dataset`) {
+        chomp($line);
         my @f = split("\t", $line);
+        if (@f != 3) {
+            die;
+        }
         my $dataset = $f[0];
+        my $label = $f[1];
         my $category = $f[2];
+        $NODE_LABEL{$dataset} = $label;
         $DATASET_CATEGORY{$dataset} = $category;
         ### Reaction => Interaction ###
         if ($category eq "Reaction") {
@@ -198,22 +198,6 @@ sub get_dataset_category {
         ### Phenotype => Disease ###
         if ($category eq "Phenotype") {
             $DATASET_CATEGORY{$dataset} = "Disease";
-        }
-    }
-}
-
-sub get_node_label {
-    my ($togoid_ontology) = @_;
-
-    my $dataset;
-    for my $line (`curl -LSsf $togoid_ontology`) {
-        chomp($line);
-        if ($line =~ /^\S/) {
-            $dataset = "";
-        } elsif ($line =~ /^ +dcterms:identifier +"(.+)" +;/) {
-            $dataset = $1;
-        } elsif ($line =~ /^ +rdfs:label +"(.+)" +;/ && $dataset) {
-            $NODE_LABEL{$dataset} = $1;
         }
     }
 }
