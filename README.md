@@ -47,7 +47,6 @@ $ ./bin/js/paths.js > json/paths.json
 
 Create the graph of ID links
 ```
-$ rm -rf ./tmp/       # Clear cached files
 $ ./bin/create_graph.pl json/paths.json > graph/dataset.pg
 $ ./bin/create_graph.pl -l json/paths.json > tsv/dataset-links.tsv
 ```
