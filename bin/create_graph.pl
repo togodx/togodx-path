@@ -59,14 +59,13 @@ my %NODE = ();
 my %EDGE = ();
 get_nodes_end_edges($EDGES_JS, $PATHS_JSON);
 
-my %NODE_LABEL = ();
-
 my @TOGOID_LINK = ();
 my %EDGE_LABEL = ();
 get_edge_label($TOGOID_LINK, $TIO_LABEL);
 
 my %DATASET_CATEGORY = ();
-get_dataset_category($TOGOID_DATASET);
+my %DATASET_LABEL = ();
+get_dataset_label($TOGOID_DATASET);
 
 my %DATASET_COUNT = ();
 
@@ -109,12 +108,12 @@ if ($OPT{l}) {
     }
 
     for my $node (sort keys %NODE) {
-        my $node_label = $NODE_LABEL{$node} || die;
+        my $dataset_label = $DATASET_LABEL{$node} || die;
         my $category = $DATASET_CATEGORY{$node} || die;
         my $color = $CATEGORY_COLOR{$category} || die;
         print "$node\n";
         print "  :$category\n";
-        print "  display_label: \"$node_label\"\n";
+        print "  display_label: \"$dataset_label\"\n";
         print "  color: \"$color\"\n";
         if ($DATASET_COUNT{$node}) {
             my $count = $DATASET_COUNT{$node};
@@ -177,7 +176,7 @@ sub get_edge_label {
     }
 }
 
-sub get_dataset_category {
+sub get_dataset_label {
     my ($togoid_dataset) = @_;
 
     for my $line (`curl -LSsf $togoid_dataset`) {
@@ -189,7 +188,7 @@ sub get_dataset_category {
         my $dataset = $f[0];
         my $label = $f[1];
         my $category = $f[2];
-        $NODE_LABEL{$dataset} = $label;
+        $DATASET_LABEL{$dataset} = $label;
         $DATASET_CATEGORY{$dataset} = $category;
         ### Reaction => Interaction ###
         if ($category eq "Reaction") {
