@@ -92,4 +92,4 @@ Test:
 * Start HTTP server `$ python3 -m http.server` and access localhost:8000/path-modified.html
 
 or
-* https://togodx.github.io/togodx-path/path-modified.html
+* Access https://togodx.github.io/togodx-path/path-modified.html
