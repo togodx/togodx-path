@@ -44,22 +44,20 @@ my $TIO_LABEL = "https://raw.githubusercontent.com/togoid/togoid-config/main/ont
 my $CATEGORY_SHEET = `cat bin/etc/category_sheet`;
 chomp($CATEGORY_SHEET);
 
-my $DATASET_LINKS_ALL_JS = "./bin/js/dataset-links-all.js";
 my $EDGES_JS = "./bin/js/paths-to-edges.js";
 
 my $DIR = dirname(realpath($0));
 chdir "$DIR/.." or die "Cannot chdir to $DIR/..: $!";
-if (-f $DATASET_LINKS_ALL_JS && -f $EDGES_JS) {
+if (-f $EDGES_JS) {
     if (!-d "bin/js/node_modules") {
         system "cd bin/js; npm install";
     }
 } else {
-    die "Not found: $DATASET_LINKS_ALL_JS $EDGES_JS\n";
+    die "Not found: $EDGES_JS\n";
 }
 
 ### Temporary files
 my $TOGOID_ONTOLOGY_TMP = "tmp/togoid-ontology.ttl";
-my $DATASET_LINKS_ALL_TMP = "tmp/dataset-links-all";
 if (!-d "tmp") {
     mkdir("tmp") or die "$!";
 }
@@ -72,6 +70,7 @@ get_nodes_end_edges($EDGES_JS, $PATHS_JSON);
 my %NODE_LABEL = ();
 get_node_label($TOGOID_ONTOLOGY, $TOGOID_ONTOLOGY_TMP);
 
+my @TOGOID_LINK = ();
 my %EDGE_LABEL = ();
 get_edge_label($TOGOID_LINK, $TIO_LABEL);
 
@@ -82,7 +81,7 @@ my %DATASET_COUNT = ();
 
 if ($OPT{l}) {
     print "source\tsource category\ttarget\ttarget category\tdisplay_label (biological meaning)\n";
-    for my $edge (dataset_links_all()) {
+    for my $edge (@TOGOID_LINK) {
         my @f = split("-", $edge);
         if (@f != 2) {
             die;
@@ -137,7 +136,7 @@ if ($OPT{l}) {
     }
 
     ### Print edges ###
-    for my $edge (dataset_links_all()) {
+    for my $edge (@TOGOID_LINK) {
         my @f = split("-", $edge);
         if (@f != 2) {
             die;
@@ -158,23 +157,6 @@ if ($OPT{l}) {
 ################################################################################
 ### Function ###################################################################
 ################################################################################
-sub dataset_links_all {
-
-    if (!-f $DATASET_LINKS_ALL_TMP) {
-        if (-f $DATASET_LINKS_ALL_JS) {
-            system "$DATASET_LINKS_ALL_JS > $DATASET_LINKS_ALL_TMP";
-        } else {
-            die;
-        }
-    }
-    open(LIST, $DATASET_LINKS_ALL_TMP) || die "$!";
-    my @list = <LIST>;
-    chomp(@list);
-    close(LIST);
-
-    return @list;
-}
-
 sub get_edge_label {
     my ($togoid_link, $tio_label) = @_;
 
@@ -199,6 +181,7 @@ sub get_edge_label {
         my $source = $f[0];
         my $target = $f[1];
         my $tio = $f[2];
+        push(@TOGOID_LINK, "${source}-${target}");
         $EDGE_LABEL{$source}{$target} = $display_label{$tio};
     }
 }
