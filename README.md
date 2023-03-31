@@ -40,16 +40,18 @@ Table of attributes
 
 ## Data preparation
 
-Create paths used in TogoDX/Human
+Get paths
 ```
 $ ./bin/js/paths.js > json/paths.json
 ```
 
-Create the graph of ID links
+Create graph data
 ```
 $ ./bin/create_graph.pl json/paths.json > graph/dataset.pg
 $ ./bin/create_graph.pl -l json/paths.json > tsv/dataset-links.tsv
 ```
+
+### Optional:
 
 Count IDs
 ```
