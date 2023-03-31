@@ -2,7 +2,7 @@
 use strict;
 use File::Basename;
 use Getopt::Std;
-use Cwd 'realpath';
+use JSON;
 my $PROGRAM = basename $0;
 my $USAGE=
 "Usage: $PROGRAM json/paths.json
@@ -41,23 +41,11 @@ my %CATEGORY_COLOR = (
 my $TOGOID_DATASET = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/dataset.tsv";
 my $TOGOID_LINK = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/pair_link.tsv";
 my $TIO_LABEL = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/property.tsv";
-
-my $EDGES_JS = "./bin/js/paths-to-edges.js";
-
-my $DIR = dirname(realpath($0));
-chdir "$DIR/.." or die "Cannot chdir to $DIR/..: $!";
-if (-f $EDGES_JS) {
-    if (!-d "bin/js/node_modules") {
-        system "cd bin/js; npm install";
-    }
-} else {
-    die "Not found: $EDGES_JS\n";
-}
 ####################
 
 my %NODE = ();
 my %EDGE = ();
-get_nodes_end_edges($EDGES_JS, $PATHS_JSON);
+get_nodes_end_edges($PATHS_JSON);
 
 my @TOGOID_LINK = ();
 my %EDGE_LABEL = ();
@@ -202,17 +190,27 @@ sub get_dataset_label {
 }
 
 sub get_nodes_end_edges {
-    my ($edges_js, $paths_json) = @_;
+    my ($json_file) = @_;
 
-    for my $edge (`$edges_js $paths_json`) {
-        chomp($edge);
-        my @f = split("\t", $edge);
-        if (@f != 2) {
-            die;
+    open(JSON, "$json_file") || die "$!";
+    my @line = <JSON>;
+    close(JSON);
+    my $json = join("", @line);
+
+    my $r_hash = decode_json($json);
+    for my $key (keys %{$r_hash}) {
+        for my $target(keys %{${$r_hash}{$key}}) {
+            my @path = @{${$r_hash}{$key}{$target}};
+            for my $path (@path) {
+                my @node = @{$path};
+                for (my $i=0; $i<@node-1; $i++) {
+                    my $source = $node[$i];
+                    my $target = $node[$i+1];
+                    $NODE{$source} = 1;
+                    $NODE{$target} = 1;
+                    $EDGE{$source}{$target} = 1;
+                }
+            }
         }
-        my ($source, $target) = @f;
-        $NODE{$source} = 1;
-        $NODE{$target} = 1;
-        $EDGE{$source}{$target} = 1;
     }
 }
