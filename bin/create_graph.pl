@@ -40,16 +40,16 @@ my %CATEGORY_COLOR = (
 ### External files ###
 my $TOGOID_DATASET = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/dataset.tsv";
 my $TOGOID_LINK = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/pair_link.tsv";
-my $TIO_LABEL = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/property.tsv";
+my $LINK_LABEL = "https://raw.githubusercontent.com/togoid/togoid-config/main/ontology/property.tsv";
 ####################
 
 my %NODE = ();
 my %EDGE = ();
-get_nodes_end_edges($PATHS_JSON);
+get_nodes_and_edges($PATHS_JSON);
 
 my @TOGOID_LINK = ();
-my %EDGE_LABEL = ();
-get_edge_label($TOGOID_LINK, $TIO_LABEL);
+my %LINK_LABEL = ();
+get_togoid_link($TOGOID_LINK, $LINK_LABEL);
 
 my %DATASET_CATEGORY = ();
 my %DATASET_LABEL = ();
@@ -71,7 +71,7 @@ if ($OPT{l}) {
                        $DATASET_CATEGORY{$source},
                        $target,
                        $DATASET_CATEGORY{$target},
-                       $EDGE_LABEL{$source}{$target}
+                       $LINK_LABEL{$source}{$target}
                 ), "\n";
         }
     }
@@ -121,12 +121,12 @@ if ($OPT{l}) {
         }
         my ($source, $target) = @f;
         if ($EDGE{$source}{$target}) {
-            my $edge_label = $EDGE_LABEL{$source}{$target} || die;
+            my $link_label = $LINK_LABEL{$source}{$target} || die;
             my $category = $DATASET_CATEGORY{$source} || die;
             my $color = $CATEGORY_COLOR{$category} || die;
             print "$source -> $target\n";
             print "  link: \"$source-$target\"\n";
-            print "  display_label: \"$edge_label\"\n";
+            print "  display_label: \"$link_label\"\n";
             print "  color: \"$color\"\n";
         }
     }
@@ -135,11 +135,11 @@ if ($OPT{l}) {
 ################################################################################
 ### Function ###################################################################
 ################################################################################
-sub get_edge_label {
-    my ($togoid_link, $tio_label) = @_;
+sub get_togoid_link {
+    my ($togoid_link, $link_label) = @_;
 
     my %display_label = ();
-    for my $line (`curl -LSsf $tio_label`) {
+    for my $line (`curl -LSsf $link_label`) {
         chomp($line);
         my @f = split("\t", $line);
         if (@f != 6) {
@@ -160,7 +160,7 @@ sub get_edge_label {
         my $target = $f[1];
         my $tio = $f[2];
         push(@TOGOID_LINK, "${source}-${target}");
-        $EDGE_LABEL{$source}{$target} = $display_label{$tio};
+        $LINK_LABEL{$source}{$target} = $display_label{$tio};
     }
 }
 
@@ -189,7 +189,7 @@ sub get_dataset_label {
     }
 }
 
-sub get_nodes_end_edges {
+sub get_nodes_and_edges {
     my ($json_file) = @_;
 
     open(JSON, "$json_file") || die "$!";
