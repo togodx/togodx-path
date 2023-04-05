@@ -6,10 +6,13 @@ chembl_compound	Compound	pubchem_compound	Compound	is nearly equivalent to
 chembl_target	Protein	uniprot	Protein	is equivalent to
 clinvar	Variant	medgen	Disease	has related disease
 ensembl_gene	Gene	ensembl_transcript	Transcript	is transcribed to
+ensembl_gene	Gene	hgnc	Gene	is nearly equivalent to
 ensembl_gene	Gene	ncbigene	Gene	is nearly equivalent to
 ensembl_gene	Gene	uniprot	Protein	has gene product
 glytoucan	Glycan	doid	Disease	has related disease
 glytoucan	Glycan	uniprot	Protein	is attached to
+hgnc	Gene	ensembl_gene	Gene	is nearly equivalent to
+hgnc	Gene	ncbigene	Gene	is nearly equivalent to
 hgnc	Gene	uniprot	Protein	has gene product
 medgen	Disease	hp	Disease	is nearly equivalent to
 medgen	Disease	mesh	Disease	is nearly equivalent to
@@ -20,6 +23,7 @@ mondo	Disease	mesh	Disease	is nearly equivalent to
 nando	Disease	mondo	Disease	is nearly equivalent to
 ncbigene	Gene	ensembl_gene	Gene	is nearly equivalent to
 ncbigene	Gene	ensembl_transcript	Transcript	is transcribed to
+ncbigene	Gene	hgnc	Gene	is nearly equivalent to
 pdb	Structure	uniprot	Protein	is 3D structure of
 pubchem_compound	Compound	chebi	Compound	is nearly equivalent to
 pubchem_compound	Compound	chembl_compound	Compound	is nearly equivalent to
