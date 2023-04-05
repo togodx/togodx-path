@@ -81,7 +81,6 @@ $ ./bin/js/attributes-description.js > tsv/attribute-description.tsv
 
 ## Test modified paths
 
-
 Edit `json/paths-modified.json` manually.
 
 Update graph data:
@@ -89,6 +88,8 @@ Update graph data:
 $ ./bin/create_graph.pl json/paths-modified.json > graph/dataset-modified.pg
 $ ./bin/create_graph.pl -l json/paths-modified.json > tsv/dataset-links-modified.tsv
 ```
+* `.pg` file is the essential graph data
+* `.tsv` file is optional (linked from html)
 
 Test:
 * Start HTTP server `$ python3 -m http.server` and access localhost:8000/path-modified.html
