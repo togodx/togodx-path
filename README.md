@@ -81,9 +81,9 @@ $ ./bin/js/attributes-description.js > tsv/attribute-description.tsv
 
 ## Test modified paths
 
-Edit `json/paths-modified.json` manually.
+Edit the local file `json/paths-modified.json` manually.
 
-Update graph data:
+Update the graph data:
 ```
 $ ./bin/create_graph.pl json/paths-modified.json > graph/dataset-modified.pg
 $ ./bin/create_graph.pl -l json/paths-modified.json > tsv/dataset-links-modified.tsv
