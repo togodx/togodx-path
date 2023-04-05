@@ -1,6 +1,6 @@
 {
   "ncbigene": {
-    "ensembl_gene": [ [ "ncbigene", "ensembl_gene" ] ],
+    "ensembl_gene": [ [ "ncbigene", "ensembl_gene" ], [ "ncbigene", "hgnc", "ensembl_gene" ] ],
     "ensembl_transcript": [ [ "ncbigene", "ensembl_transcript" ] ],
     "uniprot": [ [ "ncbigene", "uniprot" ] ],
     "pdb": [ [ "ncbigene", "uniprot", "pdb" ] ],
@@ -15,7 +15,7 @@
     "togovar": [ [ "ncbigene", "togovar" ] ]
   },
   "ensembl_gene": {
-    "ncbigene": [ [ "ensembl_gene", "ncbigene" ] ],
+    "ncbigene": [ [ "ensembl_gene", "ncbigene" ], [ "ensembl_gene", "hgnc", "ncbigene" ] ],
     "ensembl_transcript": [ [ "ensembl_gene", "ensembl_transcript" ] ],
     "uniprot": [ [ "ensembl_gene", "uniprot" ] ],
     "pdb": [ [ "ensembl_gene", "uniprot", "pdb" ] ],
