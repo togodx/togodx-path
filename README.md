@@ -81,16 +81,15 @@ $ ./bin/js/attributes-description.js > tsv/attribute-description.tsv
 
 ## Test modified paths
 
-Edit the local file `json/paths-modified.json` manually.
-* used for creating graph
-* also used for highlighting path
+Edit the local `json/paths-modified.json` manually.
+* `.json` is used for path highlighting, and also for creating the whole graph (union of all paths)
 
 Update the graph data:
 ```
 $ ./bin/create_graph.pl json/paths-modified.json > graph/dataset-modified.pg
 $ ./bin/create_graph.pl -l json/paths-modified.json > tsv/dataset-links-modified.tsv
 ```
-* `.pg` file is the essential graph data
+* `.pg` is the essential data
 * `.tsv` file is optional (linked from html)
 
 Test:
