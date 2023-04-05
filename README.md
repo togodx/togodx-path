@@ -4,11 +4,9 @@
 
 ID links
 * https://togodx.github.io/togodx-path/path-highlight-2022-11.html
-![images/path-highlight-2022-11.png](https://raw.githubusercontent.com/togodx/togodx-path/main/images/path-highlight-2022-11.png)
 
 ID links and  attributes
 * https://togodx.github.io/togodx-path/path-attr-label-2022-11.html
-![images/path-attr-label-2022-11.png](https://raw.githubusercontent.com/togodx/togodx-path/main/images/path-attr-label-2022-11.png)
 
 Table of ID links
 * https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-2022-11.tsv
