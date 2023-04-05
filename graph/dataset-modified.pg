@@ -107,6 +107,10 @@ ensembl_gene -> ensembl_transcript
   link: "ensembl_gene-ensembl_transcript"
   display_label: "is transcribed to"
   color: "#3AA64C"
+ensembl_gene -> hgnc
+  link: "ensembl_gene-hgnc"
+  display_label: "is nearly equivalent to"
+  color: "#3AA64C"
 ensembl_gene -> ncbigene
   link: "ensembl_gene-ncbigene"
   display_label: "is nearly equivalent to"
@@ -123,6 +127,14 @@ glytoucan -> uniprot
   link: "glytoucan-uniprot"
   display_label: "is attached to"
   color: "#673AA6"
+hgnc -> ensembl_gene
+  link: "hgnc-ensembl_gene"
+  display_label: "is nearly equivalent to"
+  color: "#3AA64C"
+hgnc -> ncbigene
+  link: "hgnc-ncbigene"
+  display_label: "is nearly equivalent to"
+  color: "#3AA64C"
 hgnc -> uniprot
   link: "hgnc-uniprot"
   display_label: "has gene product"
@@ -158,6 +170,10 @@ ncbigene -> ensembl_gene
 ncbigene -> ensembl_transcript
   link: "ncbigene-ensembl_transcript"
   display_label: "is transcribed to"
+  color: "#3AA64C"
+ncbigene -> hgnc
+  link: "ncbigene-hgnc"
+  display_label: "is nearly equivalent to"
   color: "#3AA64C"
 pdb -> uniprot
   link: "pdb-uniprot"
