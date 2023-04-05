@@ -87,7 +87,7 @@ Update the graph data:
 $ ./bin/create_graph.pl json/paths-modified.json > graph/dataset-modified.pg
 $ ./bin/create_graph.pl -l json/paths-modified.json > tsv/dataset-links-modified.tsv
 ```
-* `.pg` is essential for test
+* `.pg` is essential for the test
 * `.tsv` file is optional (linked from html)
 
 Test:
