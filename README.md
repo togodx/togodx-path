@@ -82,6 +82,8 @@ $ ./bin/js/attributes-description.js > tsv/attribute-description.tsv
 ## Test modified paths
 
 Edit the local file `json/paths-modified.json` manually.
+* used for creating graph
+* also used for highlighting path
 
 Update the graph data:
 ```
