@@ -1,5 +1,7 @@
 # TogoDX path
 
+* https://togodx.github.io/togodx-path/
+
 ## v2022-11
 
 ID links
@@ -18,9 +20,6 @@ Table of attributes
 
 ID links
 * https://togodx.github.io/togodx-path/path-selected.html (linked from [news v1.1](https://dbcls.rois.ac.jp/ja/2022/06/20/post1.html))
-
-ID links (with highlighting)
-* https://togodx.github.io/togodx-path/path-highlight.html
 
 ID links (with ID counts)
 * https://togodx.github.io/togodx-path/path-count.html
