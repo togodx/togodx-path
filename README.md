@@ -91,7 +91,7 @@ $ ./bin/create_graph.pl -l json/paths-modified.json > tsv/dataset-links-modified
 * `.tsv` file is optional (linked from html)
 
 Test:
-* Start HTTP server `$ python3 -m http.server` and access localhost:8000/path-modified.html
+* Start HTTP server `$ python3 -m http.server` and access localhost:8000/index-modified.html
 
 or
-* Access https://togodx.github.io/togodx-path/path-modified.html
+* Access https://togodx.github.io/togodx-path/index-modified.html
