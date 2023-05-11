@@ -1,6 +1,6 @@
 # TogoDX path
 
-* https://togodx.github.io/togodx-path/
+https://togodx.github.io/togodx-path/
 
 ## v2022-11
 
