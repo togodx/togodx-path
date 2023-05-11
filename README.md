@@ -79,15 +79,16 @@ $ ./bin/js/attributes-description.js > tsv/attribute-description.tsv
 ## Test modified paths
 
 Edit the local `json/paths-modified.json` manually.
-* `.json` is used for path highlighting, and also for creating the graph (union of all paths)
 
 Update the graph data:
 ```
 $ ./bin/create_graph.pl json/paths-modified.json > graph/dataset-modified.pg
+```
+
+Update tsv (referred by html):
+```
 $ ./bin/create_graph.pl -l json/paths-modified.json > tsv/dataset-links-modified.tsv
 ```
-* `.pg` is essential for the test
-* `.tsv` file is optional (linked from html)
 
 Test:
 * Start HTTP server `$ python3 -m http.server` and access localhost:8000/index-modified.html
