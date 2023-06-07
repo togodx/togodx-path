@@ -7,11 +7,11 @@ Last update: 2023-06-07
 ID links
 * https://togodx.github.io/togodx-path/path-highlight-2022-11.html (linked from [about](https://togodx.github.io/togodx-config-human/about.html), [usage](https://togodx.github.io/togodx-config-human/usage.html))
 
-ID links and  attributes
-* https://togodx.github.io/togodx-path/path-attr-label-2022-11.html
-
 Table of ID links
 * https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-2022-11.tsv (linked from [about](https://togodx.github.io/togodx-config-human/about.html), [usage](https://togodx.github.io/togodx-config-human/usage.html))
+
+ID links (with attributes)
+* https://togodx.github.io/togodx-path/path-attr-label-2022-11.html
 
 Table of attributes
 * https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod-2022-11.tsv
@@ -27,7 +27,7 @@ Table of ID links
 ID links (with ID counts)
 * https://togodx.github.io/togodx-path/path-count.html
 
-ID links and  attributes
+ID links (with attributes)
 * https://togodx.github.io/togodx-path/path-attr.html
 
 Table of attributes
