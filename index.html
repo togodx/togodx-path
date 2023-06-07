@@ -10,7 +10,7 @@
     </head>
     <body>
         <table width="800">
-            <tr><td>ID links between datasets from 8 categories shown in different colors. Larger circles represent the target datasets of TogoDX/Human. See <a href="https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-2022-11.tsv">here</a> for the list of links.</td></tr>
+            <tr><td>ID links between datasets from 8 categories shown in different colors. Larger circles represent the target datasets of TogoDX/Human. See <a href="https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-2023-06.tsv">here</a> for the list of links.</td></tr>
         </table>
         <div id='graph-area' style='width: 800px; height: 600px; border: solid 1px silver;'>
             <div id='child-area' style='width: 800px; height: 600px;'></div>
@@ -24,14 +24,14 @@
         <script>
          const pathNodeList = document.getElementById('path-node-list');
          let pathList = null;
-         fetch('./json/paths.json').then(res => {
+         fetch('./json/paths-2023-06.json').then(res => {
              return res.json();
          }).then(json => {
              pathList = json;
          });
          const blitzboard = new Blitzboard(document.getElementById('child-area'));
          let graph, config;
-         const graphPromise = fetch('./graph/dataset-2022-11.pg').then(res => {
+         const graphPromise = fetch('./graph/dataset-2023-06.pg').then(res => {
              return res.text();
          }).then(text => {
              graph = text;
