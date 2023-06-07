@@ -1,6 +1,6 @@
 # TogoDX path
-
-https://togodx.github.io/togodx-path/
+Last update: 2023-06-07
+* https://togodx.github.io/togodx-path/
 
 ## v2022-11
 
@@ -16,19 +16,19 @@ Table of ID links
 Table of attributes
 * https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod-2022-11.tsv
 
-## Previous version
+## Older version
 
 ID links
 * https://togodx.github.io/togodx-path/path-selected.html (linked from [news v1.1](https://dbcls.rois.ac.jp/ja/2022/06/20/post1.html))
+
+Table of ID links
+* https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links.tsv (linked from [news v1.1](https://dbcls.rois.ac.jp/ja/2022/06/20/post1.html))
 
 ID links (with ID counts)
 * https://togodx.github.io/togodx-path/path-count.html
 
 ID links and  attributes
 * https://togodx.github.io/togodx-path/path-attr.html
-
-Table of ID links
-* https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links.tsv (linked from [news v1.1](https://dbcls.rois.ac.jp/ja/2022/06/20/post1.html))
 
 Table of attributes
 * https://github.com/togodx/togodx-path/blob/main/tsv/attribute-count-ids.tsv
@@ -76,22 +76,20 @@ $ ./bin/js/attributes-list.js data/json/ > tsv/attribute-list.tsv
 $ ./bin/js/attributes-description.js > tsv/attribute-description.tsv
 ```
 
-## Test modified paths
+## Test paths modified
 
-Edit the local `json/paths-modified.json` manually.
+Edit `json/paths-modified.json`
 
-Update the graph data:
+Update graph:
 ```
 $ ./bin/create_graph.pl json/paths-modified.json > graph/dataset-modified.pg
 ```
 
-Update tsv (referred by html):
+Update tsv (to be referred by html):
 ```
 $ ./bin/create_graph.pl -l json/paths-modified.json > tsv/dataset-links-modified.tsv
 ```
 
 Test:
-* Start HTTP server `$ python3 -m http.server` and access localhost:8000/index-modified.html
-
-or
-* Access https://togodx.github.io/togodx-path/index-modified.html
+* Start HTTP server `$ python3 -m http.server`, and access localhost:8000/index-modified.html
+* Push modifications, and access https://togodx.github.io/togodx-path/index-modified.html
