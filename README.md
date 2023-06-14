@@ -5,43 +5,46 @@ ID links
 * https://togodx.github.io/togodx-path/
 
 Table of ID links
-* https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-2023-06.tsv
+* [dataset-links-2023-06.tsv](https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-2023-06.tsv)
 
 Paths (JSON)
-* https://github.com/togodx/togodx-path/blob/main/json/paths-2023-06.json
+* [paths-2023-06.json](https://github.com/togodx/togodx-path/blob/main/json/paths-2023-06.json)
 
 ## v2022-11
 
 ID links
-* https://togodx.github.io/togodx-path/path-highlight-2022-11.html (linked from [about](https://togodx.github.io/togodx-config-human/about.html), [usage](https://togodx.github.io/togodx-config-human/usage.html))
+* [path-highlight-2022-11.html](https://togodx.github.io/togodx-path/path-highlight-2022-11.html) (linked from [about](https://togodx.github.io/togodx-config-human/about.html), [usage](https://togodx.github.io/togodx-config-human/usage.html))
 
 Table of ID links
-* https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-2022-11.tsv (linked from [about](https://togodx.github.io/togodx-config-human/about.html), [usage](https://togodx.github.io/togodx-config-human/usage.html))
+* [dataset-links-2022-11.tsv](https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-2022-11.tsv) (linked from [about](https://togodx.github.io/togodx-config-human/about.html), [usage](https://togodx.github.io/togodx-config-human/usage.html))
 
 ID links (with attributes)
-* https://togodx.github.io/togodx-path/path-attr-label-2022-11.html
+* [path-attr-label-2022-11.html](https://togodx.github.io/togodx-path/path-attr-label-2022-11.html)
 
 Table of attributes
-* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod-2022-11.tsv
+* [attribute-description-mod-2022-11.tsv](https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod-2022-11.tsv)
+
+Paths (JSON)
+* [paths.json](https://github.com/togodx/togodx-path/blob/main/json/paths.json)
 
 ## Older version
 
 ID links
-* https://togodx.github.io/togodx-path/path-selected.html (linked from [news v1.1](https://dbcls.rois.ac.jp/ja/2022/06/20/post1.html))
+* [path-selected.html](https://togodx.github.io/togodx-path/path-selected.html) (linked from [news v1.1](https://dbcls.rois.ac.jp/ja/2022/06/20/post1.html))
 
 Table of ID links
-* https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links.tsv (linked from [news v1.1](https://dbcls.rois.ac.jp/ja/2022/06/20/post1.html))
-
-ID links (with ID counts)
-* https://togodx.github.io/togodx-path/path-count.html
+* [dataset-links.tsv](https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links.tsv) (linked from [news v1.1](https://dbcls.rois.ac.jp/ja/2022/06/20/post1.html))
 
 ID links (with attributes)
-* https://togodx.github.io/togodx-path/path-attr.html
+* [path-attr-label.html](https://togodx.github.io/togodx-path/path-attr-label.html)
+
+ID links (with ID counts)
+* [path-count.html](https://togodx.github.io/togodx-path/path-count.html)
 
 Table of attributes
-* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-count-ids.tsv
-* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-list.tsv
-* https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod.tsv
+* [attribute-description-mod.tsv](https://github.com/togodx/togodx-path/blob/main/tsv/attribute-description-mod.tsv)
+* [attribute-count-ids.tsv](https://github.com/togodx/togodx-path/blob/main/tsv/attribute-count-ids.tsv)
+* [attribute-list.tsv](https://github.com/togodx/togodx-path/blob/main/tsv/attribute-list.tsv)
 
 ## Data preparation
 
