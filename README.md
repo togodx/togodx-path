@@ -87,7 +87,7 @@ $ ./bin/js/attributes-list.js data/json/ > tsv/attribute-list.tsv
 $ ./bin/js/attributes-description.js > tsv/attribute-description.tsv
 ```
 
-## Test paths modified
+## Test modified paths
 
 Edit `json/paths-modified.json`
 
