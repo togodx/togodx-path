@@ -1,12 +1,14 @@
 # TogoDX path
 Last update: 2023-06-07
-* https://togodx.github.io/togodx-path/
 
-Paths (JSON)
-* https://github.com/togodx/togodx-path/blob/main/json/paths-2023-06.json
+ID links
+* https://togodx.github.io/togodx-path/
 
 Table of ID links
 * https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-2023-06.tsv
+
+Paths (JSON)
+* https://github.com/togodx/togodx-path/blob/main/json/paths-2023-06.json
 
 ## v2022-11
 
