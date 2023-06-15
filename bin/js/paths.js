@@ -23,8 +23,7 @@ let promises = [];
 targetDatasets.forEach((source) => {
   targetDatasets.forEach((target) => {
     if (source !== target) {
-      let api = `https://integbio.jp/togosite_dev/sparqlist/api/togoid_route?source=${source}&target=${target}`;
-      // let api = `http://ep.dbcls.jp/togoid/sparqlist/api/togodx_route?source=${source}&target=${target}`;
+      let api = `http://ep.dbcls.jp/togoid/sparqlist/api/togodx_route?source=${source}&target=${target}`;
       const promise = axios.get(api).then(res => {
         tmp[source][target] = res.data;
       }).catch(err => {
