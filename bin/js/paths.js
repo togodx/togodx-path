@@ -10,7 +10,7 @@ let opts = program.opts();
 
 const targetDatasets = ['ncbigene', 'ensembl_gene',
                         'ensembl_transcript', // Added in v2022-11
-                        'uniprot', 'pdb', 'chebi', 'chembl_compound', 'pubchem_compound', 'glytoucan', 'mondo', 'mesh', 'nando', 'hp', 'togovar'];
+                        'uniprot', 'pdb', 'chebi', 'chembl_compound', 'pubchem_compound', 'glytoucan', 'mondo', 'mesh', 'nando', 'hp_phenotype', 'togovar'];
 
 let tmp = {};
 let out = {};
