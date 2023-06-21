@@ -23,7 +23,7 @@ STDOUT->autoflush;
 
 my @TARGET_DATASET = ("ncbigene", "ensembl_gene",
                       "ensembl_transcript", # Added in v2022-11
-                      "uniprot", "pdb", "chebi", "chembl_compound", "pubchem_compound", "glytoucan", "mondo", "mesh", "nando", "hp", "togovar");
+                      "uniprot", "pdb", "chebi", "chembl_compound", "pubchem_compound", "glytoucan", "mondo", "mesh", "nando", "hp_phenotype", "togovar");
 
 my %CATEGORY_COLOR = (
     "Gene" => "#3AA64C",
@@ -33,7 +33,7 @@ my %CATEGORY_COLOR = (
     "Interaction" => "#A63A43",
     "Compound" => "#A63A94",
     "Glycan" => "#673AA6",
-    "Disease" => "#3A5EA6",
+    "Phenotype" => "#3A5EA6",
     "Variant" => "#3AA69D",
     );
 
@@ -181,10 +181,6 @@ sub get_dataset_label {
         ### Reaction => Interaction ###
         if ($category eq "Reaction") {
             $DATASET_CATEGORY{$dataset} = "Interaction";
-        }
-        ### Phenotype => Disease ###
-        if ($category eq "Phenotype") {
-            $DATASET_CATEGORY{$dataset} = "Disease";
         }
     }
 }
