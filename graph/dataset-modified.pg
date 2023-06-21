@@ -33,31 +33,41 @@ hgnc
   display_label: "HGNC"
   color: "#3AA64C"
   size: 10
-hp
-  :Disease
-  display_label: "Human Phenotype Ontology"
+hp_phenotype
+  :Phenotype
+  display_label: "HP Phenotype"
   color: "#3A5EA6"
 medgen
-  :Disease
+  :Phenotype
   display_label: "MedGen"
   color: "#3A5EA6"
   size: 10
 mesh
-  :Disease
+  :Phenotype
   display_label: "MeSH"
   color: "#3A5EA6"
 mondo
-  :Disease
+  :Phenotype
   display_label: "MONDO"
   color: "#3A5EA6"
 nando
-  :Disease
+  :Phenotype
   display_label: "NANDO"
   color: "#3A5EA6"
 ncbigene
   :Gene
   display_label: "NCBI gene"
   color: "#3AA64C"
+omim_phenotype
+  :Phenotype
+  display_label: "OMIM phenotype"
+  color: "#3A5EA6"
+  size: 10
+orphanet
+  :Phenotype
+  display_label: "Orphanet"
+  color: "#3A5EA6"
+  size: 10
 pdb
   :Structure
   display_label: "PDB"
@@ -89,7 +99,7 @@ chembl_compound -> chembl_target
   color: "#A63A94"
 chembl_compound -> mesh
   link: "chembl_compound-mesh"
-  display_label: "has related disease"
+  display_label: "has related phenotype"
   color: "#A63A94"
 chembl_compound -> pubchem_compound
   link: "chembl_compound-pubchem_compound"
@@ -101,7 +111,7 @@ chembl_target -> uniprot
   color: "#79A63A"
 clinvar -> medgen
   link: "clinvar-medgen"
-  display_label: "has related disease"
+  display_label: "has related phenotype"
   color: "#3AA69D"
 ensembl_gene -> ensembl_transcript
   link: "ensembl_gene-ensembl_transcript"
@@ -139,8 +149,20 @@ hgnc -> uniprot
   link: "hgnc-uniprot"
   display_label: "has gene product"
   color: "#3AA64C"
-medgen -> hp
-  link: "medgen-hp"
+hp_phenotype -> ncbigene
+  link: "hp_phenotype-ncbigene"
+  display_label: "is related with symptom"
+  color: "#3A5EA6"
+hp_phenotype -> omim_phenotype
+  link: "hp_phenotype-omim_phenotype"
+  display_label: "is observed in disease"
+  color: "#3A5EA6"
+hp_phenotype -> orphanet
+  link: "hp_phenotype-orphanet"
+  display_label: "is observed in disease"
+  color: "#3A5EA6"
+medgen -> hp_phenotype
+  link: "medgen-hp_phenotype"
   display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 medgen -> mesh
@@ -157,6 +179,14 @@ medgen -> ncbigene
   color: "#3A5EA6"
 mondo -> mesh
   link: "mondo-mesh"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+mondo -> omim_phenotype
+  link: "mondo-omim_phenotype"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+mondo -> orphanet
+  link: "mondo-orphanet"
   display_label: "is nearly equivalent to"
   color: "#3A5EA6"
 nando -> mondo

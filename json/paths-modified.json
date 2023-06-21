@@ -11,7 +11,7 @@
     "mondo": [ [ "ncbigene", "medgen", "mondo" ] ],
     "mesh": [ [ "ncbigene", "medgen", "mesh" ] ],
     "nando": [ [ "ncbigene", "medgen", "mondo", "nando" ] ],
-    "hp": [ [ "ncbigene", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "ncbigene", "hp_phenotype" ] ],
     "togovar": [ [ "ncbigene", "togovar" ] ]
   },
   "ensembl_gene": {
@@ -26,7 +26,7 @@
     "mondo": [ [ "ensembl_gene", "ncbigene", "medgen", "mondo" ] ],
     "mesh": [ [ "ensembl_gene", "ncbigene", "medgen", "mesh" ] ],
     "nando": [ [ "ensembl_gene", "ncbigene", "medgen", "mondo", "nando" ] ],
-    "hp": [ [ "ensembl_gene", "ncbigene", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "ensembl_gene", "ncbigene", "hp_phenotype" ] ],
     "togovar": [ [ "ensembl_gene", "togovar" ] ]
   },
   "ensembl_transcript": {
@@ -41,7 +41,7 @@
     "mondo": [ [ "ensembl_transcript", "ncbigene", "medgen", "mondo" ] ],
     "mesh": [ [ "ensembl_transcript", "ncbigene", "medgen", "mesh" ] ],
     "nando": [ [ "ensembl_transcript", "ncbigene", "medgen", "mondo", "nando" ] ],
-    "hp": [ [ "ensembl_transcript", "ncbigene", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "ensembl_transcript", "ncbigene", "hp_phenotype" ] ],
     "togovar": [ [ "ensembl_transcript", "togovar" ] ]
   },
   "uniprot": {
@@ -56,7 +56,7 @@
     "mondo": [ [ "uniprot", "ncbigene", "medgen", "mondo" ] ],
     "mesh": [ [ "uniprot", "ncbigene", "medgen", "mesh" ] ],
     "nando": [ [ "uniprot", "ncbigene", "medgen", "mondo", "nando" ] ],
-    "hp": [ [ "uniprot", "ncbigene", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "uniprot", "ncbigene", "hp_phenotype" ] ],
     "togovar": [ [ "uniprot", "hgnc", "togovar" ] ]
   },
   "pdb": {
@@ -71,7 +71,7 @@
     "mondo": [ [ "pdb", "uniprot", "ncbigene", "medgen", "mondo" ] ],
     "mesh": [ [ "pdb", "uniprot", "ncbigene", "medgen", "mesh" ] ],
     "nando": [ [ "pdb", "uniprot", "ncbigene", "medgen", "mondo", "nando" ] ],
-    "hp": [ [ "pdb", "uniprot", "ncbigene", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "pdb", "uniprot", "ncbigene", "hp_phenotype" ] ],
     "togovar": [ [ "pdb", "uniprot", "hgnc", "togovar" ] ]
   },
   "chebi": {
@@ -86,7 +86,7 @@
     "mondo": [ [ "chebi", "chembl_compound", "mesh", "mondo" ] ],
     "mesh": [ [ "chebi", "chembl_compound", "mesh" ] ],
     "nando": [ [ "chebi", "chembl_compound", "mesh", "mondo", "nando" ] ],
-    "hp": [ [ "chebi", "chembl_compound", "mesh", "mondo", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "chebi", "chembl_compound", "mesh", "mondo", "medgen", "hp_phenotype" ], [ "chebi", "chembl_compound", "mesh", "mondo", "omim_phenotype", "hp_phenotype" ], [ "chebi", "chembl_compound", "mesh", "mondo", "orphanet", "hp_phenotype" ] ],
     "togovar": [ [ "chebi", "reactome_reaction", "uniprot", "hgnc", "togovar" ], [ "chebi", "chembl_compound", "chembl_target", "uniprot", "hgnc", "togovar" ] ]
   },
   "chembl_compound": {
@@ -101,7 +101,7 @@
     "mondo": [ [ "chembl_compound", "mesh", "mondo" ] ],
     "mesh": [ [ "chembl_compound", "mesh" ] ],
     "nando": [ [ "chembl_compound", "mesh", "mondo", "nando" ] ],
-    "hp": [ [ "chembl_compound", "mesh", "mondo", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "chembl_compound", "mesh", "mondo", "medgen", "hp_phenotype" ], [ "chembl_compound", "mesh", "mondo", "omim_phenotype", "hp_phenotype" ], [ "chembl_compound", "mesh", "mondo", "orphanet", "hp_phenotype" ] ],
     "togovar": [ [ "chembl_compound", "chebi", "reactome_reaction", "uniprot", "hgnc", "togovar" ], [ "chembl_compound", "chembl_target", "uniprot", "hgnc", "togovar" ] ]
   },
   "pubchem_compound": {
@@ -116,7 +116,7 @@
     "mondo": [ [ "pubchem_compound", "chembl_compound", "mesh", "mondo" ] ],
     "mesh": [ [ "pubchem_compound", "chembl_compound", "mesh" ] ],
     "nando": [ [ "pubchem_compound", "chembl_compound", "mesh", "mondo", "nando" ] ],
-    "hp": [ [ "pubchem_compound", "chembl_compound", "mesh", "mondo", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "pubchem_compound", "chembl_compound", "mesh", "mondo", "medgen", "hp_phenotype" ], [ "pubchem_compound", "chembl_compound", "mesh", "mondo", "omim_phenotype", "hp_phenotype" ], [ "pubchem_compound", "chembl_compound", "mesh", "mondo", "orphanet", "hp_phenotype" ] ],
     "togovar": [ [ "pubchem_compound", "chebi", "reactome_reaction", "uniprot", "hgnc", "togovar" ], [ "pubchem_compound", "chembl_compound", "chembl_target", "uniprot", "hgnc", "togovar" ] ]
   },
   "glytoucan": {
@@ -129,9 +129,9 @@
     "chembl_compound": [ [ "glytoucan", "pubchem_compound", "chembl_compound" ] ],
     "pubchem_compound": [ [ "glytoucan", "pubchem_compound" ] ],
     "mondo": [ [ "glytoucan", "ncbigene", "medgen", "mondo" ] ],
-    "mesh": [ [ "glytoucan", "ncbigene", "medgen", "mesh" ] ],
+    "mesh": [ [ "glytoucan", "ncbigene", "medgen", "mondo", "mesh" ] ],
     "nando": [ [ "glytoucan", "ncbigene", "medgen", "mondo", "nando" ] ],
-    "hp": [ [ "glytoucan", "ncbigene", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "glytoucan", "ncbigene", "hp_phenotype" ] ],
     "togovar": [ [ "glytoucan", "ncbigene", "togovar" ] ]
   },
   "mondo": {
@@ -146,7 +146,7 @@
     "glytoucan": [ [ "mondo", "medgen", "ncbigene", "glytoucan" ] ],
     "mesh": [ [ "mondo", "mesh" ] ],
     "nando": [ [ "mondo", "nando" ] ],
-    "hp": [ [ "mondo", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "mondo", "medgen", "hp_phenotype" ], [ "mondo", "omim_phenotype", "hp_phenotype" ], [ "mondo", "orphanet", "hp_phenotype" ] ],
     "togovar": [ [ "mondo", "medgen", "clinvar", "togovar" ] ]
   },
   "mesh": {
@@ -158,10 +158,10 @@
     "chebi": [ [ "mesh", "chembl_compound", "chebi" ] ],
     "chembl_compound": [ [ "mesh", "chembl_compound" ] ],
     "pubchem_compound": [ [ "mesh", "chembl_compound", "pubchem_compound" ] ],
-    "glytoucan": [ [ "mesh", "medgen", "ncbigene", "glytoucan" ] ],
+    "glytoucan": [ [ "mesh", "mondo", "medgen", "ncbigene", "glytoucan" ] ],
     "mondo": [ [ "mesh", "mondo" ] ],
     "nando": [ [ "mesh", "mondo", "nando" ] ],
-    "hp": [ [ "mesh", "mondo", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "mesh", "mondo", "medgen", "hp_phenotype" ], [ "mesh", "mondo", "omim_phenotype", "hp_phenotype" ], [ "mesh", "mondo", "orphanet", "hp_phenotype" ] ],
     "togovar": [ [ "mesh", "medgen", "clinvar", "togovar" ] ]
   },
   "nando": {
@@ -176,23 +176,23 @@
     "glytoucan": [ [ "nando", "mondo", "medgen", "ncbigene", "glytoucan" ] ],
     "mondo": [ [ "nando", "mondo" ] ],
     "mesh": [ [ "nando", "mondo", "mesh" ] ],
-    "hp": [ [ "nando", "mondo", "medgen", "hp" ] ],
+    "hp_phenotype": [ [ "nando", "mondo", "medgen", "hp_phenotype" ], [ "nando", "mondo", "omim_phenotype", "hp_phenotype" ], [ "nando", "mondo", "orphanet", "hp_phenotype" ] ],
     "togovar": [ [ "nando", "mondo", "medgen", "clinvar", "togovar" ] ]
   },
-  "hp": {
-    "ncbigene": [ [ "hp", "medgen", "ncbigene" ] ],
-    "ensembl_gene": [ [ "hp", "medgen", "ncbigene", "ensembl_gene" ] ],
-    "ensembl_transcript": [ [ "hp", "medgen", "ncbigene", "ensembl_transcript" ] ],
-    "uniprot": [ [ "hp", "medgen", "ncbigene", "uniprot" ] ],
-    "pdb": [ [ "hp", "medgen", "ncbigene", "uniprot", "pdb" ] ],
-    "chebi": [ [ "hp", "medgen", "mondo", "mesh", "chembl_compound", "chebi" ] ],
-    "chembl_compound": [ [ "hp", "medgen", "mondo", "mesh", "chembl_compound" ] ],
-    "pubchem_compound": [ [ "hp", "medgen", "mondo", "mesh", "chembl_compound", "pubchem_compound" ] ],
-    "glytoucan": [ [ "hp", "medgen", "ncbigene", "glytoucan" ] ],
-    "mondo": [ [ "hp", "medgen", "mondo" ] ],
-    "mesh": [ [ "hp", "medgen", "mondo", "mesh" ] ],
-    "nando": [ [ "hp", "medgen", "mondo", "nando" ] ],
-    "togovar": [ [ "hp", "medgen", "clinvar", "togovar" ] ]
+  "hp_phenotype": {
+    "ncbigene": [ [ "hp_phenotype", "ncbigene" ] ],
+    "ensembl_gene": [ [ "hp_phenotype", "ncbigene", "ensembl_gene" ] ],
+    "ensembl_transcript": [ [ "hp_phenotype", "ncbigene", "ensembl_transcript" ] ],
+    "uniprot": [ [ "hp_phenotype", "ncbigene", "uniprot" ] ],
+    "pdb": [ [ "hp_phenotype", "ncbigene", "uniprot", "pdb" ] ],
+    "chebi": [ [ "hp_phenotype", "medgen", "mondo", "mesh", "chembl_compound", "chebi" ], [ "hp_phenotype", "omim_phenotype", "mondo", "mesh", "chembl_compound", "chebi" ], [ "hp_phenotype", "orphanet", "mondo", "mesh", "chembl_compound", "chebi" ] ],
+    "chembl_compound": [ [ "hp_phenotype", "medgen", "mondo", "mesh", "chembl_compound" ], [ "hp_phenotype", "omim_phenotype", "mondo", "mesh", "chembl_compound" ], [ "hp_phenotype", "orphanet", "mondo", "mesh", "chembl_compound" ] ],
+    "pubchem_compound": [ [ "hp_phenotype", "medgen", "mondo", "mesh", "chembl_compound", "pubchem_compound" ], [ "hp_phenotype", "omim_phenotype", "mondo", "mesh", "chembl_compound", "pubchem_compound" ], [ "hp_phenotype", "orphanet", "mondo", "mesh", "chembl_compound", "pubchem_compound" ] ],
+    "glytoucan": [ [ "hp_phenotype", "ncbigene", "glytoucan" ] ],
+    "mondo": [ [ "hp_phenotype", "medgen", "mondo" ], [ "hp_phenotype", "omim_phenotype", "mondo" ], [ "hp_phenotype", "orphanet", "mondo" ] ],
+    "mesh": [ [ "hp_phenotype", "medgen", "mondo", "mesh" ], [ "hp_phenotype", "omim_phenotype", "mondo", "mesh" ], [ "hp_phenotype", "orphanet", "mondo", "mesh" ] ],
+    "nando": [ [ "hp_phenotype", "medgen", "mondo", "nando" ], [ "hp_phenotype", "omim_phenotype", "mondo", "nando" ], [ "hp_phenotype", "orphanet", "mondo", "nando" ] ],
+    "togovar": [ [ "hp_phenotype", "medgen", "clinvar", "togovar" ] ]
   },
   "togovar": {
     "ncbigene": [ [ "togovar", "ncbigene" ] ],
@@ -207,6 +207,6 @@
     "mondo": [ [ "togovar", "clinvar", "medgen", "mondo" ] ],
     "mesh": [ [ "togovar", "clinvar", "medgen", "mesh" ] ],
     "nando": [ [ "togovar", "clinvar", "medgen", "mondo", "nando" ] ],
-    "hp": [ [ "togovar", "clinvar", "medgen", "hp" ] ]
+    "hp_phenotype": [ [ "togovar", "clinvar", "medgen", "hp_phenotype" ] ]
   }
 }
