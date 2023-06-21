@@ -1,10 +1,10 @@
 source	source category	target	target category	display_label (biological meaning)
 chembl_compound	Compound	chebi	Compound	is equivalent to
 chembl_compound	Compound	chembl_target	Protein	interacts with
-chembl_compound	Compound	mesh	Disease	has related disease
+chembl_compound	Compound	mesh	Phenotype	has related phenotype
 chembl_compound	Compound	pubchem_compound	Compound	is nearly equivalent to
 chembl_target	Protein	uniprot	Protein	is equivalent to
-clinvar	Variant	medgen	Disease	has related disease
+clinvar	Variant	medgen	Phenotype	has related phenotype
 ensembl_gene	Gene	ensembl_transcript	Transcript	is transcribed to
 ensembl_gene	Gene	hgnc	Gene	is nearly equivalent to
 ensembl_gene	Gene	ncbigene	Gene	is nearly equivalent to
@@ -14,12 +14,17 @@ glytoucan	Glycan	uniprot	Protein	is attached to
 hgnc	Gene	ensembl_gene	Gene	is nearly equivalent to
 hgnc	Gene	ncbigene	Gene	is nearly equivalent to
 hgnc	Gene	uniprot	Protein	has gene product
-medgen	Disease	hp	Disease	is nearly equivalent to
-medgen	Disease	mesh	Disease	is nearly equivalent to
-medgen	Disease	mondo	Disease	is nearly equivalent to
-medgen	Disease	ncbigene	Gene	is related with
-mondo	Disease	mesh	Disease	is nearly equivalent to
-nando	Disease	mondo	Disease	is nearly equivalent to
+hp_phenotype	Phenotype	ncbigene	Gene	is related with symptom
+hp_phenotype	Phenotype	omim_phenotype	Phenotype	is observed in disease
+hp_phenotype	Phenotype	orphanet	Phenotype	is observed in disease
+medgen	Phenotype	hp_phenotype	Phenotype	is nearly equivalent to
+medgen	Phenotype	mesh	Phenotype	is nearly equivalent to
+medgen	Phenotype	mondo	Phenotype	is nearly equivalent to
+medgen	Phenotype	ncbigene	Gene	is related with
+mondo	Phenotype	mesh	Phenotype	is nearly equivalent to
+mondo	Phenotype	omim_phenotype	Phenotype	is nearly equivalent to
+mondo	Phenotype	orphanet	Phenotype	is nearly equivalent to
+nando	Phenotype	mondo	Phenotype	is nearly equivalent to
 ncbigene	Gene	ensembl_gene	Gene	is nearly equivalent to
 ncbigene	Gene	ensembl_transcript	Transcript	is transcribed to
 ncbigene	Gene	hgnc	Gene	is nearly equivalent to
