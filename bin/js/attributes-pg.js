@@ -5,16 +5,11 @@ const axios = require('axios');
 program
   .option('-b, --branch <branch>', 'branch', 'develop')
   .option('-d, --debug', 'show URI and quit')
-  .option('--js', 'use jsdelivr instead of raw.githubusercontent')
   .parse(process.argv);
 
 const opts = program.opts();
 
-let uri = `https://raw.githubusercontent.com/togodx/togodx-config-human/${opts.branch}/config/`;
-if (opts.js) {
-  uri = `https://cdn.jsdelivr.net/gh/dbcls/togosite@${opts.branch}/config/togosite-human/`;
-}
-uri += 'attributes.dx-server.json';
+let uri = `https://raw.githubusercontent.com/togodx/togodx-config-human/${opts.branch}/config/attributes.dx-server.json`;
 
 const color = {
   "Gene": "#3AA64C",
