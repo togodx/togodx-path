@@ -1,0 +1,1137 @@
+chebi
+  :Compound
+  display_label: "ChEBI compound"
+  color: "#A63A94"
+chembl_compound
+  :Compound
+  display_label: "ChEMBL compound"
+  color: "#A63A94"
+chembl_target
+  :Protein
+  display_label: "ChEMBL target"
+  color: "#79A63A"
+  size: 10
+clinvar
+  :Variant
+  display_label: "ClinVar variant"
+  color: "#3AA69D"
+  size: 10
+ensembl_gene
+  :Gene
+  display_label: "Ensembl gene"
+  color: "#3AA64C"
+ensembl_transcript
+  :Transcript
+  display_label: "Ensembl transcript"
+  color: "#3AA64C"
+glytoucan
+  :Glycan
+  display_label: "GlyTouCan"
+  color: "#673AA6"
+hgnc
+  :Gene
+  display_label: "HGNC"
+  color: "#3AA64C"
+  size: 10
+hp_phenotype
+  :Phenotype
+  display_label: "HP Phenotype"
+  color: "#3A5EA6"
+medgen
+  :Phenotype
+  display_label: "MedGen"
+  color: "#3A5EA6"
+  size: 10
+mesh
+  :Phenotype
+  display_label: "MeSH"
+  color: "#3A5EA6"
+mondo
+  :Phenotype
+  display_label: "MONDO"
+  color: "#3A5EA6"
+nando
+  :Phenotype
+  display_label: "NANDO"
+  color: "#3A5EA6"
+ncbigene
+  :Gene
+  display_label: "NCBI gene"
+  color: "#3AA64C"
+omim_phenotype
+  :Phenotype
+  display_label: "OMIM phenotype"
+  color: "#3A5EA6"
+  size: 10
+orphanet
+  :Phenotype
+  display_label: "Orphanet"
+  color: "#3A5EA6"
+  size: 10
+pdb
+  :Structure
+  display_label: "PDB"
+  color: "#A6823A"
+pubchem_compound
+  :Compound
+  display_label: "PubChem compound"
+  color: "#A63A94"
+reactome_reaction
+  :Interaction
+  display_label: "Reactome reaction"
+  color: "#A63A43"
+  size: 10
+togovar
+  :Variant
+  display_label: "TogoVar variant"
+  color: "#3AA69D"
+uniprot
+  :Protein
+  display_label: "UniProt"
+  color: "#79A63A"
+chembl_compound -> chebi
+  link: "chembl_compound-chebi"
+  display_label: "is equivalent to"
+  color: "#A63A94"
+  width: 5
+  opacity: 0.7
+chembl_compound -> chembl_target
+  link: "chembl_compound-chembl_target"
+  display_label: "interacts with"
+  color: "#A63A94"
+  width: 5
+  opacity: 0.7
+chembl_compound -> mesh
+  link: "chembl_compound-mesh"
+  display_label: "has related phenotype"
+  color: "#A63A94"
+  width: 5
+  opacity: 0.7
+chembl_compound -> pubchem_compound
+  link: "chembl_compound-pubchem_compound"
+  display_label: "is nearly equivalent to"
+  color: "#A63A94"
+  width: 5
+  opacity: 0.7
+chembl_target -> uniprot
+  link: "chembl_target-uniprot"
+  display_label: "is equivalent to"
+  color: "#79A63A"
+  width: 5
+  opacity: 0.7
+clinvar -> medgen
+  link: "clinvar-medgen"
+  display_label: "has related phenotype"
+  color: "#3AA69D"
+  width: 5
+  opacity: 0.7
+ensembl_gene -> ensembl_transcript
+  link: "ensembl_gene-ensembl_transcript"
+  display_label: "is transcribed to"
+  color: "#3AA64C"
+  width: 5
+  opacity: 0.7
+ensembl_gene -> hgnc
+  link: "ensembl_gene-hgnc"
+  display_label: "is nearly equivalent to"
+  color: "#3AA64C"
+  width: 5
+  opacity: 0.7
+ensembl_gene -> ncbigene
+  link: "ensembl_gene-ncbigene"
+  display_label: "is nearly equivalent to"
+  color: "#3AA64C"
+  width: 5
+  opacity: 0.7
+ensembl_gene -> uniprot
+  link: "ensembl_gene-uniprot"
+  display_label: "has gene product"
+  color: "#3AA64C"
+  width: 5
+  opacity: 0.7
+glytoucan -> ncbigene
+  link: "glytoucan-ncbigene"
+  display_label: "is processed by protein coded by gene"
+  color: "#673AA6"
+  width: 5
+  opacity: 0.7
+glytoucan -> uniprot
+  link: "glytoucan-uniprot"
+  display_label: "is attached to"
+  color: "#673AA6"
+  width: 5
+  opacity: 0.7
+hgnc -> ensembl_gene
+  link: "hgnc-ensembl_gene"
+  display_label: "is nearly equivalent to"
+  color: "#3AA64C"
+  width: 5
+  opacity: 0.7
+hgnc -> ncbigene
+  link: "hgnc-ncbigene"
+  display_label: "is nearly equivalent to"
+  color: "#3AA64C"
+  width: 5
+  opacity: 0.7
+hgnc -> uniprot
+  link: "hgnc-uniprot"
+  display_label: "has gene product"
+  color: "#3AA64C"
+  width: 5
+  opacity: 0.7
+hp_phenotype -> ncbigene
+  link: "hp_phenotype-ncbigene"
+  display_label: "is related with symptom"
+  color: "#3A5EA6"
+  width: 5
+  opacity: 0.7
+hp_phenotype -> omim_phenotype
+  link: "hp_phenotype-omim_phenotype"
+  display_label: "is observed in disease"
+  color: "#3A5EA6"
+  width: 5
+  opacity: 0.7
+hp_phenotype -> orphanet
+  link: "hp_phenotype-orphanet"
+  display_label: "is observed in disease"
+  color: "#3A5EA6"
+  width: 5
+  opacity: 0.7
+medgen -> hp_phenotype
+  link: "medgen-hp_phenotype"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+  width: 5
+  opacity: 0.7
+medgen -> mesh
+  link: "medgen-mesh"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+  width: 5
+  opacity: 0.7
+medgen -> mondo
+  link: "medgen-mondo"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+  width: 5
+  opacity: 0.7
+medgen -> ncbigene
+  link: "medgen-ncbigene"
+  display_label: "is related with"
+  color: "#3A5EA6"
+  width: 5
+  opacity: 0.7
+mondo -> mesh
+  link: "mondo-mesh"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+  width: 5
+  opacity: 0.7
+mondo -> omim_phenotype
+  link: "mondo-omim_phenotype"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+  width: 5
+  opacity: 0.7
+mondo -> orphanet
+  link: "mondo-orphanet"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+  width: 5
+  opacity: 0.7
+nando -> mondo
+  link: "nando-mondo"
+  display_label: "is nearly equivalent to"
+  color: "#3A5EA6"
+  width: 5
+  opacity: 0.7
+ncbigene -> ensembl_gene
+  link: "ncbigene-ensembl_gene"
+  display_label: "is nearly equivalent to"
+  color: "#3AA64C"
+  width: 5
+  opacity: 0.7
+ncbigene -> ensembl_transcript
+  link: "ncbigene-ensembl_transcript"
+  display_label: "is transcribed to"
+  color: "#3AA64C"
+  width: 5
+  opacity: 0.7
+ncbigene -> hgnc
+  link: "ncbigene-hgnc"
+  display_label: "is nearly equivalent to"
+  color: "#3AA64C"
+  width: 5
+  opacity: 0.7
+pdb -> uniprot
+  link: "pdb-uniprot"
+  display_label: "is 3D structure of"
+  color: "#A6823A"
+  width: 5
+  opacity: 0.7
+pubchem_compound -> chebi
+  link: "pubchem_compound-chebi"
+  display_label: "is nearly equivalent to"
+  color: "#A63A94"
+  width: 5
+  opacity: 0.7
+pubchem_compound -> chembl_compound
+  link: "pubchem_compound-chembl_compound"
+  display_label: "is nearly equivalent to"
+  color: "#A63A94"
+  width: 5
+  opacity: 0.7
+pubchem_compound -> glytoucan
+  link: "pubchem_compound-glytoucan"
+  display_label: "is nearly equivalent to"
+  color: "#A63A94"
+  width: 5
+  opacity: 0.7
+reactome_reaction -> chebi
+  link: "reactome_reaction-chebi"
+  display_label: "has participant molecule"
+  color: "#A63A43"
+  width: 5
+  opacity: 0.7
+reactome_reaction -> uniprot
+  link: "reactome_reaction-uniprot"
+  display_label: "has participant molecule"
+  color: "#A63A43"
+  width: 5
+  opacity: 0.7
+togovar -> clinvar
+  link: "togovar-clinvar"
+  display_label: "has clinical significance"
+  color: "#3AA69D"
+  width: 5
+  opacity: 0.7
+togovar -> ensembl_gene
+  link: "togovar-ensembl_gene"
+  display_label: "is located in"
+  color: "#3AA69D"
+  width: 5
+  opacity: 0.7
+togovar -> ensembl_transcript
+  link: "togovar-ensembl_transcript"
+  display_label: "is located in"
+  color: "#3AA69D"
+  width: 5
+  opacity: 0.7
+togovar -> hgnc
+  link: "togovar-hgnc"
+  display_label: "is located in"
+  color: "#3AA69D"
+  width: 5
+  opacity: 0.7
+togovar -> ncbigene
+  link: "togovar-ncbigene"
+  display_label: "is located in"
+  color: "#3AA69D"
+  width: 5
+  opacity: 0.7
+uniprot -> chembl_target
+  link: "uniprot-chembl_target"
+  display_label: "is equivalent to"
+  color: "#79A63A"
+  width: 5
+  opacity: 0.7
+uniprot -> ensembl_gene
+  link: "uniprot-ensembl_gene"
+  display_label: "is product of gene"
+  color: "#79A63A"
+  width: 5
+  opacity: 0.7
+uniprot -> ensembl_transcript
+  link: "uniprot-ensembl_transcript"
+  display_label: "is tranlated from"
+  color: "#79A63A"
+  width: 5
+  opacity: 0.7
+uniprot -> hgnc
+  link: "uniprot-hgnc"
+  display_label: "is product of gene"
+  color: "#79A63A"
+  width: 5
+  opacity: 0.7
+uniprot -> ncbigene
+  link: "uniprot-ncbigene"
+  display_label: "is product of gene"
+  color: "#79A63A"
+  width: 5
+  opacity: 0.7
+uniprot -> pdb
+  link: "uniprot-pdb"
+  display_label: "has 3D structure"
+  color: "#79A63A"
+  width: 5
+  opacity: 0.7
+
+gene_biotype_ensembl -- ensembl_gene
+  attribute: "gene_biotype_ensembl"
+  category: "gene"
+  dataset: "ensembl_gene"
+  width: 2.7
+  opacity: 0.6
+gene_chromosome_ensembl -- ensembl_gene
+  attribute: "gene_chromosome_ensembl"
+  category: "gene"
+  dataset: "ensembl_gene"
+  width: 2.7
+  opacity: 0.6
+gene_number_of_paralogs_homologene -- ncbigene
+  attribute: "gene_number_of_paralogs_homologene"
+  category: "gene"
+  dataset: "ncbigene"
+  width: 2.7
+  opacity: 0.6
+gene_ortholog_existence_homologene -- ncbigene
+  attribute: "gene_ortholog_existence_homologene"
+  category: "gene"
+  dataset: "ncbigene"
+  width: 2.7
+  opacity: 0.6
+gene_evolutionary_conservation_homologene -- ncbigene
+  attribute: "gene_evolutionary_conservation_homologene"
+  category: "gene"
+  dataset: "ncbigene"
+  width: 2.7
+  opacity: 0.6
+gene_biological_process_ncbigene -- ncbigene
+  attribute: "gene_biological_process_ncbigene"
+  category: "gene"
+  dataset: "ncbigene"
+  width: 2.7
+  opacity: 0.6
+gene_cellular_component_ncbigene -- ncbigene
+  attribute: "gene_cellular_component_ncbigene"
+  category: "gene"
+  dataset: "ncbigene"
+  width: 2.7
+  opacity: 0.6
+gene_molecular_function_ncbigene -- ncbigene
+  attribute: "gene_molecular_function_ncbigene"
+  category: "gene"
+  dataset: "ncbigene"
+  width: 2.7
+  opacity: 0.6
+gene_high_level_expression_refex -- ncbigene
+  attribute: "gene_high_level_expression_refex"
+  category: "gene"
+  dataset: "ncbigene"
+  width: 2.7
+  opacity: 0.6
+gene_low_level_expression_refex -- ncbigene
+  attribute: "gene_low_level_expression_refex"
+  category: "gene"
+  dataset: "ncbigene"
+  width: 2.7
+  opacity: 0.6
+gene_high_level_expression_gtex6 -- ensembl_gene
+  attribute: "gene_high_level_expression_gtex6"
+  category: "gene"
+  dataset: "ensembl_gene"
+  width: 2.7
+  opacity: 0.6
+gene_not_expressed_in_tissues_gtex -- ensembl_gene
+  attribute: "gene_not_expressed_in_tissues_gtex"
+  category: "gene"
+  dataset: "ensembl_gene"
+  width: 2.7
+  opacity: 0.6
+gene_specific_expression_in_tissues_hpa -- ensembl_gene
+  attribute: "gene_specific_expression_in_tissues_hpa"
+  category: "gene"
+  dataset: "ensembl_gene"
+  width: 2.7
+  opacity: 0.6
+gene_specific_expression_in_cells_hpa -- ensembl_gene
+  attribute: "gene_specific_expression_in_cells_hpa"
+  category: "gene"
+  dataset: "ensembl_gene"
+  width: 2.7
+  opacity: 0.6
+transcript_biotype_ensembl -- ensembl_transcript
+  attribute: "transcript_biotype_ensembl"
+  category: "gene"
+  dataset: "ensembl_transcript"
+  width: 2.7
+  opacity: 0.6
+transcript_length_ensembl -- ensembl_transcript
+  attribute: "transcript_length_ensembl"
+  category: "gene"
+  dataset: "ensembl_transcript"
+  width: 2.7
+  opacity: 0.6
+protein_uniprotkb_section_uniprot -- uniprot
+  attribute: "protein_uniprotkb_section_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_domains_uniprot -- uniprot
+  attribute: "protein_domains_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_biological_process_uniprot -- uniprot
+  attribute: "protein_biological_process_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_cellular_component_uniprot -- uniprot
+  attribute: "protein_cellular_component_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_molecular_function_uniprot -- uniprot
+  attribute: "protein_molecular_function_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_isoform_specific_go_existence_nextprot -- uniprot
+  attribute: "protein_isoform_specific_go_existence_nextprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_ligands_uniprot -- uniprot
+  attribute: "protein_ligands_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_molecular_mass_uniprot -- uniprot
+  attribute: "protein_molecular_mass_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_ptms_uniprot -- uniprot
+  attribute: "protein_ptms_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_catalytic_activity_uniprot -- uniprot
+  attribute: "protein_catalytic_activity_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_number_of_transmembrane_domains_uniprot -- uniprot
+  attribute: "protein_number_of_transmembrane_domains_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_number_of_phosphorylation_sites_uniprot -- uniprot
+  attribute: "protein_number_of_phosphorylation_sites_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_number_of_glycosylation_sites_uniprot -- uniprot
+  attribute: "protein_number_of_glycosylation_sites_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_disease_related_proteins_uniprot -- uniprot
+  attribute: "protein_disease_related_proteins_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_isolation_source_uniprot -- uniprot
+  attribute: "protein_isolation_source_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_evidence_of_existence_nextprot -- uniprot
+  attribute: "protein_evidence_of_existence_nextprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_isoform_specific_interaction_existence_nextprot -- uniprot
+  attribute: "protein_isoform_specific_interaction_existence_nextprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+protein_pathway_annotation_uniprot -- uniprot
+  attribute: "protein_pathway_annotation_uniprot"
+  category: "protein"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+structure_data_existence_uniprot -- uniprot
+  attribute: "structure_data_existence_uniprot"
+  category: "structure"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+structure_helical_regions_uniprot -- uniprot
+  attribute: "structure_helical_regions_uniprot"
+  category: "structure"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+structure_beta_strand_regions_uniprot -- uniprot
+  attribute: "structure_beta_strand_regions_uniprot"
+  category: "structure"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+structure_number_of_turns_uniprot -- uniprot
+  attribute: "structure_number_of_turns_uniprot"
+  category: "structure"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+structure_number_of_disulfide_bonds_uniprot -- uniprot
+  attribute: "structure_number_of_disulfide_bonds_uniprot"
+  category: "structure"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+structure_disorder_annotation_uniprot -- uniprot
+  attribute: "structure_disorder_annotation_uniprot"
+  category: "structure"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+structure_number_of_peptides_pdb -- pdb
+  attribute: "structure_number_of_peptides_pdb"
+  category: "structure"
+  dataset: "pdb"
+  width: 2.7
+  opacity: 0.6
+structure_analysis_methods_pdb -- pdb
+  attribute: "structure_analysis_methods_pdb"
+  category: "structure"
+  dataset: "pdb"
+  width: 2.7
+  opacity: 0.6
+interaction_proteins_in_pathway_reactome -- uniprot
+  attribute: "interaction_proteins_in_pathway_reactome"
+  category: "interaction"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+interaction_compounds_in_pathway_reactome -- chebi
+  attribute: "interaction_compounds_in_pathway_reactome"
+  category: "interaction"
+  dataset: "chebi"
+  width: 2.7
+  opacity: 0.6
+interaction_number_of_interacting_proteins_uniprot -- uniprot
+  attribute: "interaction_number_of_interacting_proteins_uniprot"
+  category: "interaction"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+interaction_chembl_assay_existence_uniprot -- uniprot
+  attribute: "interaction_chembl_assay_existence_uniprot"
+  category: "interaction"
+  dataset: "uniprot"
+  width: 2.7
+  opacity: 0.6
+compound_chemical_role_chebi -- chebi
+  attribute: "compound_chemical_role_chebi"
+  category: "compound"
+  dataset: "chebi"
+  width: 2.7
+  opacity: 0.6
+compound_application_type_chebi -- chebi
+  attribute: "compound_application_type_chebi"
+  category: "compound"
+  dataset: "chebi"
+  width: 2.7
+  opacity: 0.6
+compound_action_type_chembl -- chembl_compound
+  attribute: "compound_action_type_chembl"
+  category: "compound"
+  dataset: "chembl_compound"
+  width: 2.7
+  opacity: 0.6
+compound_biological_role_chebi -- chebi
+  attribute: "compound_biological_role_chebi"
+  category: "compound"
+  dataset: "chebi"
+  width: 2.7
+  opacity: 0.6
+compound_drug_indication_mesh_chembl -- chembl_compound
+  attribute: "compound_drug_indication_mesh_chembl"
+  category: "compound"
+  dataset: "chembl_compound"
+  width: 2.7
+  opacity: 0.6
+compound_drug_development_phase_chembl -- chembl_compound
+  attribute: "compound_drug_development_phase_chembl"
+  category: "compound"
+  dataset: "chembl_compound"
+  width: 2.7
+  opacity: 0.6
+compound_atc_classification_pubchem -- pubchem_compound
+  attribute: "compound_atc_classification_pubchem"
+  category: "compound"
+  dataset: "pubchem_compound"
+  width: 2.7
+  opacity: 0.6
+compound_atc_classification_chembl -- chembl_compound
+  attribute: "compound_atc_classification_chembl"
+  category: "compound"
+  dataset: "chembl_compound"
+  width: 2.7
+  opacity: 0.6
+glycan_mass_glycosmos -- glytoucan
+  attribute: "glycan_mass_glycosmos"
+  category: "glycan"
+  dataset: "glytoucan"
+  width: 2.7
+  opacity: 0.6
+glycan_tissue_glycosmos -- glytoucan
+  attribute: "glycan_tissue_glycosmos"
+  category: "glycan"
+  dataset: "glytoucan"
+  width: 2.7
+  opacity: 0.6
+glycan_subsumption_glycosmos -- glytoucan
+  attribute: "glycan_subsumption_glycosmos"
+  category: "glycan"
+  dataset: "glytoucan"
+  width: 2.7
+  opacity: 0.6
+disease_diseases_mondo -- mondo
+  attribute: "disease_diseases_mondo"
+  category: "disease"
+  dataset: "mondo"
+  width: 2.7
+  opacity: 0.6
+disease_diseases_mesh -- mesh
+  attribute: "disease_diseases_mesh"
+  category: "disease"
+  dataset: "mesh"
+  width: 2.7
+  opacity: 0.6
+disease_diseases_nando -- nando
+  attribute: "disease_diseases_nando"
+  category: "disease"
+  dataset: "nando"
+  width: 2.7
+  opacity: 0.6
+disease_related_dbs_mondo -- mondo
+  attribute: "disease_related_dbs_mondo"
+  category: "disease"
+  dataset: "mondo"
+  width: 2.7
+  opacity: 0.6
+disease_phenotypic_abnormality_hpo -- hp_phenotype
+  attribute: "disease_phenotypic_abnormality_hpo"
+  category: "disease"
+  dataset: "hp_phenotype"
+  width: 2.7
+  opacity: 0.6
+variant_gwas_togovar -- togovar
+  attribute: "variant_gwas_togovar"
+  category: "variant"
+  dataset: "togovar"
+  width: 2.7
+  opacity: 0.6
+variant_clinical_significance_togovar -- togovar
+  attribute: "variant_clinical_significance_togovar"
+  category: "variant"
+  dataset: "togovar"
+  width: 2.7
+  opacity: 0.6
+
+gene_biotype_ensembl
+  :attribute
+  category: "Gene"
+  dataset: "ensembl_gene"
+  size: 15
+  color: "#3AA64C"
+gene_chromosome_ensembl
+  :attribute
+  category: "Gene"
+  dataset: "ensembl_gene"
+  size: 15
+  color: "#3AA64C"
+gene_number_of_paralogs_homologene
+  :attribute
+  category: "Gene"
+  dataset: "ncbigene"
+  size: 15
+  color: "#3AA64C"
+gene_ortholog_existence_homologene
+  :attribute
+  category: "Gene"
+  dataset: "ncbigene"
+  size: 15
+  color: "#3AA64C"
+gene_evolutionary_conservation_homologene
+  :attribute
+  category: "Gene"
+  dataset: "ncbigene"
+  size: 15
+  color: "#3AA64C"
+gene_biological_process_ncbigene
+  :attribute
+  category: "Gene"
+  dataset: "ncbigene"
+  size: 15
+  color: "#3AA64C"
+gene_cellular_component_ncbigene
+  :attribute
+  category: "Gene"
+  dataset: "ncbigene"
+  size: 15
+  color: "#3AA64C"
+gene_molecular_function_ncbigene
+  :attribute
+  category: "Gene"
+  dataset: "ncbigene"
+  size: 15
+  color: "#3AA64C"
+gene_high_level_expression_refex
+  :attribute
+  category: "Gene"
+  dataset: "ncbigene"
+  size: 15
+  color: "#3AA64C"
+gene_low_level_expression_refex
+  :attribute
+  category: "Gene"
+  dataset: "ncbigene"
+  size: 15
+  color: "#3AA64C"
+gene_high_level_expression_gtex6
+  :attribute
+  category: "Gene"
+  dataset: "ensembl_gene"
+  size: 15
+  color: "#3AA64C"
+gene_not_expressed_in_tissues_gtex
+  :attribute
+  category: "Gene"
+  dataset: "ensembl_gene"
+  size: 15
+  color: "#3AA64C"
+gene_specific_expression_in_tissues_hpa
+  :attribute
+  category: "Gene"
+  dataset: "ensembl_gene"
+  size: 15
+  color: "#3AA64C"
+gene_specific_expression_in_cells_hpa
+  :attribute
+  category: "Gene"
+  dataset: "ensembl_gene"
+  size: 15
+  color: "#3AA64C"
+transcript_biotype_ensembl
+  :attribute
+  category: "Gene"
+  dataset: "ensembl_transcript"
+  size: 15
+  color: "#3AA64C"
+transcript_length_ensembl
+  :attribute
+  category: "Gene"
+  dataset: "ensembl_transcript"
+  size: 15
+  color: "#3AA64C"
+protein_uniprotkb_section_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_domains_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_biological_process_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_cellular_component_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_molecular_function_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_isoform_specific_go_existence_nextprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_ligands_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_molecular_mass_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_ptms_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_catalytic_activity_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_number_of_transmembrane_domains_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_number_of_phosphorylation_sites_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_number_of_glycosylation_sites_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_disease_related_proteins_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_isolation_source_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_evidence_of_existence_nextprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_isoform_specific_interaction_existence_nextprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+protein_pathway_annotation_uniprot
+  :attribute
+  category: "Protein"
+  dataset: "uniprot"
+  size: 15
+  color: "#79A63A"
+structure_data_existence_uniprot
+  :attribute
+  category: "Structure"
+  dataset: "uniprot"
+  size: 15
+  color: "#A6823A"
+structure_helical_regions_uniprot
+  :attribute
+  category: "Structure"
+  dataset: "uniprot"
+  size: 15
+  color: "#A6823A"
+structure_beta_strand_regions_uniprot
+  :attribute
+  category: "Structure"
+  dataset: "uniprot"
+  size: 15
+  color: "#A6823A"
+structure_number_of_turns_uniprot
+  :attribute
+  category: "Structure"
+  dataset: "uniprot"
+  size: 15
+  color: "#A6823A"
+structure_number_of_disulfide_bonds_uniprot
+  :attribute
+  category: "Structure"
+  dataset: "uniprot"
+  size: 15
+  color: "#A6823A"
+structure_disorder_annotation_uniprot
+  :attribute
+  category: "Structure"
+  dataset: "uniprot"
+  size: 15
+  color: "#A6823A"
+structure_number_of_peptides_pdb
+  :attribute
+  category: "Structure"
+  dataset: "pdb"
+  size: 15
+  color: "#A6823A"
+structure_analysis_methods_pdb
+  :attribute
+  category: "Structure"
+  dataset: "pdb"
+  size: 15
+  color: "#A6823A"
+interaction_proteins_in_pathway_reactome
+  :attribute
+  category: "Interaction"
+  dataset: "uniprot"
+  size: 15
+  color: "#A63A43"
+interaction_compounds_in_pathway_reactome
+  :attribute
+  category: "Interaction"
+  dataset: "chebi"
+  size: 15
+  color: "#A63A43"
+interaction_number_of_interacting_proteins_uniprot
+  :attribute
+  category: "Interaction"
+  dataset: "uniprot"
+  size: 15
+  color: "#A63A43"
+interaction_chembl_assay_existence_uniprot
+  :attribute
+  category: "Interaction"
+  dataset: "uniprot"
+  size: 15
+  color: "#A63A43"
+compound_chemical_role_chebi
+  :attribute
+  category: "Compound"
+  dataset: "chebi"
+  size: 15
+  color: "#A63A94"
+compound_application_type_chebi
+  :attribute
+  category: "Compound"
+  dataset: "chebi"
+  size: 15
+  color: "#A63A94"
+compound_action_type_chembl
+  :attribute
+  category: "Compound"
+  dataset: "chembl_compound"
+  size: 15
+  color: "#A63A94"
+compound_biological_role_chebi
+  :attribute
+  category: "Compound"
+  dataset: "chebi"
+  size: 15
+  color: "#A63A94"
+compound_drug_indication_mesh_chembl
+  :attribute
+  category: "Compound"
+  dataset: "chembl_compound"
+  size: 15
+  color: "#A63A94"
+compound_drug_development_phase_chembl
+  :attribute
+  category: "Compound"
+  dataset: "chembl_compound"
+  size: 15
+  color: "#A63A94"
+compound_atc_classification_pubchem
+  :attribute
+  category: "Compound"
+  dataset: "pubchem_compound"
+  size: 15
+  color: "#A63A94"
+compound_atc_classification_chembl
+  :attribute
+  category: "Compound"
+  dataset: "chembl_compound"
+  size: 15
+  color: "#A63A94"
+glycan_mass_glycosmos
+  :attribute
+  category: "Glycan"
+  dataset: "glytoucan"
+  size: 15
+  color: "#673AA6"
+glycan_tissue_glycosmos
+  :attribute
+  category: "Glycan"
+  dataset: "glytoucan"
+  size: 15
+  color: "#673AA6"
+glycan_subsumption_glycosmos
+  :attribute
+  category: "Glycan"
+  dataset: "glytoucan"
+  size: 15
+  color: "#673AA6"
+disease_diseases_mondo
+  :attribute
+  category: "Disease"
+  dataset: "mondo"
+  size: 15
+  color: "#3A5EA6"
+disease_diseases_mesh
+  :attribute
+  category: "Disease"
+  dataset: "mesh"
+  size: 15
+  color: "#3A5EA6"
+disease_diseases_nando
+  :attribute
+  category: "Disease"
+  dataset: "nando"
+  size: 15
+  color: "#3A5EA6"
+disease_related_dbs_mondo
+  :attribute
+  category: "Disease"
+  dataset: "mondo"
+  size: 15
+  color: "#3A5EA6"
+disease_phenotypic_abnormality_hpo
+  :attribute
+  category: "Disease"
+  dataset: "hp"
+  size: 15
+  color: "#3A5EA6"
+variant_gwas_togovar
+  :attribute
+  category: "Variant"
+  dataset: "togovar"
+  size: 15
+  color: "#3AA69D"
+variant_clinical_significance_togovar
+  :attribute
+  category: "Variant"
+  dataset: "togovar"
+  size: 15
+  color: "#3AA69D"
