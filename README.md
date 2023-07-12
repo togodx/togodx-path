@@ -61,6 +61,7 @@ Create graph data
 ```
 $ ./bin/create_graph.pl json/paths.json > graph/dataset.pg
 $ ./bin/create_graph.pl -l json/paths.json > tsv/dataset-links.tsv
+$ ./bin/create_graph.pl -a json/paths.json > graph/dataset-attr.pg
 ```
 
 ### Optional:
@@ -98,6 +99,7 @@ Edit `json/paths-modified.json`
 Update graph:
 ```
 $ ./bin/create_graph.pl json/paths-modified.json > graph/dataset-modified.pg
+$ ./bin/create_graph.pl -a json/paths-modified.json > graph/dataset-attr-modified.pg
 ```
 
 Update tsv (to be referred by html):
@@ -106,5 +108,6 @@ $ ./bin/create_graph.pl -l json/paths-modified.json > tsv/dataset-links-modified
 ```
 
 Test:
-* Start HTTP server `$ python3 -m http.server`, and access localhost:8000/index-modified.html
-* Push modifications, and access https://togodx.github.io/togodx-path/index-modified.html
+* Access index-modified.html or attr-modified.html
+  * Start HTTP server `$ python3 -m http.server`, and access localhost:8000/index-modified.html
+  * Push modifications, and access https://togodx.github.io/togodx-path/index-modified.html
