@@ -7,11 +7,12 @@ my $PROGRAM = basename $0;
 my $USAGE=
 "Usage: $PROGRAM json/paths.json
 -l: print dataset-links.tsv
+-a: output attributes
 -c DATASET_COUNT_FILE
 ";
 
 my %OPT;
-getopts('lc:', \%OPT);
+getopts('lac:', \%OPT);
 
 if (!@ARGV) {
     print STDERR $USAGE;
@@ -128,8 +129,16 @@ if ($OPT{l}) {
             print "  link: \"$source-$target\"\n";
             print "  display_label: \"$link_label\"\n";
             print "  color: \"$color\"\n";
+            if ($OPT{a}) {
+                print "  width: 5\n";
+                print "  opacity: 0.7\n";
+            }
         }
     }
+}
+
+if ($OPT{a}) {
+    system "./bin/js/attributes-pg.js";
 }
 
 ################################################################################
