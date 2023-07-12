@@ -3,16 +3,10 @@
 ## v2023-07
 
 ID links
-* [index-modified.html](https://togodx.github.io/togodx-path/index-modified.html)
-
-Table of ID links
-* [dataset-links-modified.tsv](https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-modified.tsv)
+* [index-2023-07.html](https://togodx.github.io/togodx-path/index-2023-07.html)
 
 ID links (with attributes)
-* [attr-modified.html](https://togodx.github.io/togodx-path/attr-modified.html)
-
-Paths (JSON)
-* [paths-modified.json](https://github.com/togodx/togodx-path/blob/main/json/paths-modified.json)
+* [attr-2023-07.html](https://togodx.github.io/togodx-path/attr-2023-07.html)
 
 ## v2022-11
 
