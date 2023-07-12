@@ -1,18 +1,21 @@
 # TogoDX path
 
-## 2023-06-21
+## 2023-07
 (Modification for `hp_phenotype`)
 
 ID links
-* https://togodx.github.io/togodx-path/index-modified.html
+* [index-modified.html](https://togodx.github.io/togodx-path/index-modified.html)
 
 Table of ID links
 * [dataset-links-modified.tsv](https://github.com/togodx/togodx-path/blob/main/tsv/dataset-links-modified.tsv)
 
+ID links (with attributes)
+* [attr-modified.html](https://togodx.github.io/togodx-path/attr-modified.html)
+
 Paths (JSON)
 * [paths-modified.json](https://github.com/togodx/togodx-path/blob/main/json/paths-modified.json)
 
-## 2023-06-07
+## 2023-06
 (Modification for `glytoucan`)
 
 ID links
