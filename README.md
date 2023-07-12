@@ -31,7 +31,7 @@ Table of attributes
 Paths (JSON)
 * [paths.json](https://github.com/togodx/togodx-path/blob/main/json/paths.json)
 
-## Older version
+## v1.1
 
 ID links
 * [path-selected.html](https://togodx.github.io/togodx-path/path-selected.html) (linked from [news v1.1](https://dbcls.rois.ac.jp/ja/2022/06/20/post1.html))
