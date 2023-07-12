@@ -44,6 +44,8 @@ function printAttributes(obj) {
       console.log(`  attribute: "${attrId}"`);
       console.log(`  category: "${category.id}"`);
       console.log(`  dataset: "${attrs[attrId].dataset}"`);
+      console.log(`  width: 2.7`);
+      console.log(`  opacity: 0.6`);
       attrMap.set(attrId, category.label);
     });
   });
