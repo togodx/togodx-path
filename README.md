@@ -1,7 +1,6 @@
 # TogoDX path
 
 ## v2023-07
-(Modification for `hp_phenotype`)
 
 ID links
 * [index-modified.html](https://togodx.github.io/togodx-path/index-modified.html)
