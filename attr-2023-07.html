@@ -11,7 +11,7 @@
     <body>
         <table width="1000">
             <tr><td>ID links between datasets and attributes of 8 categories shown in different colors.
-                Larger circles represent the target datasets, and the stars represent attributes in TogoDX/Human.
+                Larger circles represent the target datasets, and the diamonds represent attributes in TogoDX/Human.
             </td></tr>
         </table>
         <div id='graph-area' style='width: 1000px; height: 850px; border: solid 1px silver;'>
@@ -38,7 +38,7 @@
          }).then(text => {
              graph = text;
          });
-         const configPromise = fetch('./graph/config-highlight-attr.js').then(res => {
+         const configPromise = fetch('./graph/config-attr.js').then(res => {
              return res.text();
          }).then(text => {
              config = text;
